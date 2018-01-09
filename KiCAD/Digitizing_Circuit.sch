@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -243,24 +242,24 @@ F 5 "LM393DR" H 9250 2150 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" H 9250 2150 60  0001 C CNN "Vendor"
 F 7 "296-1015-1-ND" H 9250 2150 60  0001 C CNN "Vendor Part #"
 	1    9250 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L +VDC #PWR58
-U 1 1 5A531620
-P 9150 1750
-F 0 "#PWR58" H 9150 1650 50  0001 C CNN
-F 1 "+VDC" H 9150 2000 50  0000 C CNN
-F 2 "" H 9150 1750 50  0001 C CNN
-F 3 "" H 9150 1750 50  0001 C CNN
-	1    9150 1750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L +VDC #PWR59
+U 1 1 5A531620
+P 9150 2550
+F 0 "#PWR59" H 9150 2450 50  0001 C CNN
+F 1 "+VDC" H 9150 2800 50  0000 C CNN
+F 2 "" H 9150 2550 50  0001 C CNN
+F 3 "" H 9150 2550 50  0001 C CNN
+	1    9150 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L +VDC #PWR61
 U 1 1 5A531645
 P 9150 5350
-F 0 "#PWR59" H 9150 5250 50  0001 C CNN
+F 0 "#PWR61" H 9150 5250 50  0001 C CNN
 F 1 "+VDC" H 9150 5600 50  0000 C CNN
 F 2 "" H 9150 5350 50  0001 C CNN
 F 3 "" H 9150 5350 50  0001 C CNN
@@ -268,10 +267,10 @@ F 3 "" H 9150 5350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R31
+L R R35
 U 1 1 5A531664
 P 9850 1900
-F 0 "R31" V 9930 1900 50  0000 C CNN
+F 0 "R35" V 9930 1900 50  0000 C CNN
 F 1 "6.8k" V 9850 1900 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 9780 1900 50  0001 C CNN
 F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 9850 1900 50  0001 C CNN
@@ -283,10 +282,10 @@ F 7 "311-6.80KCRCT-ND" V 9850 1900 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR61
+L +VDC #PWR62
 U 1 1 5A53166D
 P 9850 1700
-F 0 "#PWR61" H 9850 1600 50  0001 C CNN
+F 0 "#PWR62" H 9850 1600 50  0001 C CNN
 F 1 "+VDC" H 9850 1950 50  0000 C CNN
 F 2 "" H 9850 1700 50  0001 C CNN
 F 3 "" H 9850 1700 50  0001 C CNN
@@ -294,10 +293,10 @@ F 3 "" H 9850 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR62
+L +VDC #PWR63
 U 1 1 5A531677
 P 9850 4450
-F 0 "#PWR62" H 9850 4350 50  0001 C CNN
+F 0 "#PWR63" H 9850 4350 50  0001 C CNN
 F 1 "+VDC" H 9850 4700 50  0000 C CNN
 F 2 "" H 9850 4450 50  0001 C CNN
 F 3 "" H 9850 4450 50  0001 C CNN
@@ -305,14 +304,14 @@ F 3 "" H 9850 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR60
+L -VDC #PWR58
 U 1 1 5A531680
-P 9450 3400
-F 0 "#PWR60" H 9450 3300 50  0001 C CNN
-F 1 "-VDC" H 9450 3650 50  0000 C CNN
-F 2 "" H 9450 3400 50  0001 C CNN
-F 3 "" H 9450 3400 50  0001 C CNN
-	1    9450 3400
+P 9150 1750
+F 0 "#PWR58" H 9150 1650 50  0001 C CNN
+F 1 "-VDC" H 9150 2000 50  0000 C CNN
+F 2 "" H 9150 1750 50  0001 C CNN
+F 3 "" H 9150 1750 50  0001 C CNN
+	1    9150 1750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -331,10 +330,10 @@ F 7 "296-1015-1-ND" H 9250 4950 60  0001 C CNN "Vendor Part #"
 	1    0    0    1   
 $EndComp
 $Comp
-L R R32
+L R R36
 U 1 1 5A5316F0
 P 9850 4650
-F 0 "R32" V 9930 4650 50  0000 C CNN
+F 0 "R36" V 9930 4650 50  0000 C CNN
 F 1 "6.8k" V 9850 4650 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 9780 4650 50  0001 C CNN
 F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 9850 4650 50  0001 C CNN
@@ -345,9 +344,9 @@ F 7 "311-6.80KCRCT-ND" V 9850 4650 60  0001 C CNN "Vendor Part #"
 	1    9850 4650
 	1    0    0    -1  
 $EndComp
-Text GLabel 10350 2150 2    60   Input ~ 0
+Text GLabel 10700 2150 2    60   Input ~ 0
 X_HIGH
-Text GLabel 10400 4950 2    60   Input ~ 0
+Text GLabel 10750 4950 2    60   Input ~ 0
 X_LOW
 Wire Wire Line
 	2450 5300 2450 5250
@@ -404,15 +403,11 @@ Wire Wire Line
 Wire Wire Line
 	6050 4950 6300 4950
 Wire Wire Line
-	6750 4200 7200 4200
+	6800 4200 7200 4200
 Wire Wire Line
 	7200 4200 7200 5050
 Wire Wire Line
-	6900 5050 7200 5050
-Wire Wire Line
-	7200 5050 7550 5050
-Wire Wire Line
-	6450 4200 6050 4200
+	6500 4200 6050 4200
 Wire Wire Line
 	6050 4200 6050 4950
 Connection ~ 6050 4950
@@ -421,58 +416,44 @@ Wire Wire Line
 Wire Wire Line
 	6050 5150 6300 5150
 Wire Wire Line
-	9150 1750 9150 1850
-Wire Wire Line
 	9150 5350 9150 5250
 Wire Wire Line
 	9550 2150 9850 2150
 Wire Wire Line
-	9850 2150 10350 2150
-Connection ~ 9850 2150
+	9850 2150 10700 2150
 Wire Wire Line
 	9850 1750 9850 1700
 Wire Wire Line
 	9550 4950 9850 4950
 Wire Wire Line
-	9850 4950 10400 4950
+	9850 4950 10750 4950
 Wire Wire Line
 	9850 4500 9850 4450
 Wire Wire Line
-	9150 2450 9150 3500
+	9850 4800 9850 4950
 Wire Wire Line
-	9150 3500 9150 4650
-Wire Wire Line
-	9150 3500 9450 3500
-Wire Wire Line
-	9450 3500 9450 3400
-Connection ~ 9150 3500
-Wire Wire Line
-	7850 5050 8200 5050
-Wire Wire Line
-	8200 5050 8950 5050
-Wire Wire Line
-	9850 4950 9850 4800
+	9850 4950 9850 5850
 Connection ~ 9850 4950
 Connection ~ 7200 5050
 Text GLabel 7200 1250 0    60   Input ~ 0
 X_BUFFERED
 Text GLabel 7200 3700 0    60   Input ~ 0
 X_BUFFERED
-Text Notes 700  2150 0    60   ~ 0
-This circuit serves to digitize the Chua oscillator's X output.\n\n\nComparator U7A drives X_HIGH to +VDC for every positive oscillation.\nComparator U7B drives X_LOW to +VDC for every negative oscillation.\n\nThe comparator's threshold voltages are set 7% above/below the peak\nnegative/positive voltages generated by the X output signal.\n\nOp amp U2B, along with diode Q7 and C25 form a peak detector to detect\nthe peak voltage of the buffered X output signal.\n\nThis peak voltage is reduced by 7% by the resistor divider R25 and R26.\nThe resulting threshold voltage is used directly by comparator U7A, while\nop amp U6B inverts this threshold voltage for the inverting comparator U7A.
+Text Notes 700  2700 0    60   ~ 0
+This circuit serves to digitize the Chua oscillator's X output.\n\n\nComparator U7A drives X_HIGH to -VDC for every positive oscillation.\nComparator U7B drives X_LOW to +VDC for every negative oscillation.\n\nThe comparator's threshold voltages are set 7% above/below the peak\nnegative/positive voltages generated by the X output signal.\n\nOp amp U2B, along with diode Q7 and C25 form a peak detector to detect\nthe peak voltage of the buffered X output signal.\n\nThis peak voltage is reduced by 7% by the resistor divider R25 and R26.\nThe resulting threshold voltage is used directly by comparator U7A, while\nop amp U6B inverts this threshold voltage for comparator U7A.\n\nResistors R29 and R31 help to isolate any switching effects from the comparators\non the X_BUFFERED waveform.\n\nCapacitors C26 and C27 help to prevent unwanted high frequency oscillation/chatter\non the comparator's rising and falling edges.
 $Comp
 L R R28
 U 1 1 5A533BE4
-P 6600 4200
-F 0 "R28" V 6680 4200 50  0000 C CNN
-F 1 "110k" V 6600 4200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6530 4200 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 6600 4200 50  0001 C CNN
-F 4 "Yageo" V 6600 4200 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-07110KL" V 6600 4200 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 6600 4200 60  0001 C CNN "Vendor"
-F 7 "311-110KCRCT-ND" V 6600 4200 60  0001 C CNN "Vendor Part #"
-	1    6600 4200
+P 6650 4200
+F 0 "R28" V 6730 4200 50  0000 C CNN
+F 1 "110k" V 6650 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6580 4200 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 6650 4200 50  0001 C CNN
+F 4 "Yageo" V 6650 4200 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-07110KL" V 6650 4200 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 6650 4200 60  0001 C CNN "Vendor"
+F 7 "311-110KCRCT-ND" V 6650 4200 60  0001 C CNN "Vendor Part #"
+	1    6650 4200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -528,103 +509,213 @@ Wire Wire Line
 	6000 3100 7200 3100
 Wire Wire Line
 	7200 3100 7200 2250
+Connection ~ 7200 2250
+Wire Wire Line
+	8950 2050 8700 2050
+Wire Wire Line
+	8700 2050 8700 1250
+Wire Wire Line
+	8950 4850 8700 4850
+Wire Wire Line
+	8700 4850 8700 3700
+$Comp
+L R R34
+U 1 1 5A5405E4
+P 9350 3050
+F 0 "R34" V 9430 3050 50  0000 C CNN
+F 1 "10k" V 9350 3050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9280 3050 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 9350 3050 50  0001 C CNN
+F 4 "Yageo" V 9350 3050 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-0710KL" V 9350 3050 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 9350 3050 60  0001 C CNN "Vendor"
+F 7 "311-10.0KCRCT-ND" V 9350 3050 60  0001 C CNN "Vendor Part #"
+	1    9350 3050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 5050 7200 5050
+Wire Wire Line
+	7200 5050 7500 5050
+Wire Wire Line
+	9150 5850 8700 5850
+Wire Wire Line
+	8700 5850 8700 5050
+Wire Wire Line
+	7800 5050 8200 5050
+Wire Wire Line
+	8200 5050 8700 5050
+Wire Wire Line
+	8700 5050 8950 5050
+Wire Wire Line
+	9850 5850 9450 5850
+Connection ~ 8700 5050
+Wire Wire Line
+	9150 1850 9150 1750
+Wire Wire Line
+	9150 2550 9150 2450
+Wire Wire Line
+	7800 2250 8200 2250
+Wire Wire Line
+	8200 2250 8700 2250
+Wire Wire Line
+	8700 2250 8950 2250
 Wire Wire Line
 	6800 2250 7200 2250
 Wire Wire Line
-	7200 2250 8200 2250
+	7200 2250 7500 2250
 Wire Wire Line
-	8200 2250 8950 2250
+	9850 3050 9500 3050
 Wire Wire Line
-	9850 2150 9850 2050
-Connection ~ 7200 2250
+	9850 2050 9850 2150
+Wire Wire Line
+	9850 2150 9850 3050
+Connection ~ 9850 2150
+Wire Wire Line
+	9200 3050 8700 3050
+Wire Wire Line
+	8700 3050 8700 2250
+Connection ~ 8700 2250
+$Comp
+L -VDC #PWR60
+U 1 1 5A5419C6
+P 9150 4550
+F 0 "#PWR60" H 9150 4450 50  0001 C CNN
+F 1 "-VDC" H 9150 4800 50  0000 C CNN
+F 2 "" H 9150 4550 50  0001 C CNN
+F 3 "" H 9150 4550 50  0001 C CNN
+	1    9150 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4650 9150 4550
+$Comp
+L R R30
+U 1 1 5A541E31
+P 7650 2250
+F 0 "R30" V 7730 2250 50  0000 C CNN
+F 1 "1k" V 7650 2250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 2250 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7650 2250 50  0001 C CNN
+F 4 "Yageo" V 7650 2250 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-071KL" V 7650 2250 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 7650 2250 60  0001 C CNN "Vendor"
+F 7 "311-1.00KCRCT-ND" V 7650 2250 60  0001 C CNN "Vendor Part #"
+	1    7650 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R33
+U 1 1 5A541EEA
+P 9300 5850
+F 0 "R33" V 9380 5850 50  0000 C CNN
+F 1 "10k" V 9300 5850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9230 5850 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 9300 5850 50  0001 C CNN
+F 4 "Yageo" V 9300 5850 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-0710KL" V 9300 5850 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 9300 5850 60  0001 C CNN "Vendor"
+F 7 "311-10.0KCRCT-ND" V 9300 5850 60  0001 C CNN "Vendor Part #"
+	1    9300 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R32
+U 1 1 5A541F44
+P 7650 5050
+F 0 "R32" V 7730 5050 50  0000 C CNN
+F 1 "1k" V 7650 5050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 5050 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7650 5050 50  0001 C CNN
+F 4 "Yageo" V 7650 5050 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-071KL" V 7650 5050 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 7650 5050 60  0001 C CNN "Vendor"
+F 7 "311-1.00KCRCT-ND" V 7650 5050 60  0001 C CNN "Vendor Part #"
+	1    7650 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R29
+U 1 1 5A541FE7
+P 7650 1250
+F 0 "R29" V 7730 1250 50  0000 C CNN
+F 1 "1k" V 7650 1250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 1250 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7650 1250 50  0001 C CNN
+F 4 "Yageo" V 7650 1250 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-071KL" V 7650 1250 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 7650 1250 60  0001 C CNN "Vendor"
+F 7 "311-1.00KCRCT-ND" V 7650 1250 60  0001 C CNN "Vendor Part #"
+	1    7650 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7500 1250 7200 1250
+Wire Wire Line
+	8700 1250 8200 1250
+Wire Wire Line
+	8200 1250 7800 1250
 $Comp
 L C C26
-U 1 1 5A53EA63
+U 1 1 5A542100
 P 8200 1750
 F 0 "C26" H 8225 1850 50  0000 L CNN
-F 1 "150pF" H 8225 1650 50  0000 L CNN
+F 1 "1500pF" H 8225 1650 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8238 1600 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM2165C2A151JA01-01.pdf" H 8200 1750 50  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM2165C1H102JA01-01.pdf" H 8200 1750 50  0001 C CNN
 F 4 "Murata" H 8200 1750 60  0001 C CNN "Manufacturer"
-F 5 "GRM2165C2A151JA01D" H 8200 1750 60  0001 C CNN "Manufacturer Part #"
+F 5 "GRM2165C1H102JA01D" H 8200 1750 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" H 8200 1750 60  0001 C CNN "Vendor"
-F 7 "490-1603-1-ND" H 8200 1750 60  0001 C CNN "Vendor Part #"
+F 7 "490-1622-1-ND" H 8200 1750 60  0001 C CNN "Vendor Part #"
 	1    8200 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 2050 8700 2050
-Wire Wire Line
-	8700 1250 8700 2050
-Wire Wire Line
-	7850 1250 8200 1250
-Wire Wire Line
-	8200 1250 8700 1250
-Wire Wire Line
-	8200 1250 8200 1600
+	8200 1600 8200 1250
+Connection ~ 8200 1250
 Wire Wire Line
 	8200 1900 8200 2250
 Connection ~ 8200 2250
-Connection ~ 8200 1250
-Wire Wire Line
-	7550 1250 7200 1250
 $Comp
 L C C27
-U 1 1 5A53F6DB
-P 8200 4400
-F 0 "C27" H 8225 4500 50  0000 L CNN
-F 1 "150pF" H 8225 4300 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8238 4250 50  0001 C CNN
-F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM2165C2A151JA01-01.pdf" H 8200 4400 50  0001 C CNN
-F 4 "Murata" H 8200 4400 60  0001 C CNN "Manufacturer"
-F 5 "GRM2165C2A151JA01D" H 8200 4400 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 8200 4400 60  0001 C CNN "Vendor"
-F 7 "490-1603-1-ND" H 8200 4400 60  0001 C CNN "Vendor Part #"
-	1    8200 4400
+U 1 1 5A54241D
+P 8200 4350
+F 0 "C27" H 8225 4450 50  0000 L CNN
+F 1 "1500pF" H 8225 4250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8238 4200 50  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM2165C1H102JA01-01.pdf" H 8200 4350 50  0001 C CNN
+F 4 "Murata" H 8200 4350 60  0001 C CNN "Manufacturer"
+F 5 "GRM2165C1H102JA01D" H 8200 4350 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 8200 4350 60  0001 C CNN "Vendor"
+F 7 "490-1622-1-ND" H 8200 4350 60  0001 C CNN "Vendor Part #"
+	1    8200 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 4850 8700 4850
-Wire Wire Line
-	8700 3700 8700 4850
-Wire Wire Line
-	7200 3700 8200 3700
-Wire Wire Line
-	8200 3700 8700 3700
-Wire Wire Line
-	8200 4250 8200 3700
+	8200 4200 8200 3700
 Connection ~ 8200 3700
 Wire Wire Line
-	8200 4550 8200 5050
+	8200 4500 8200 5050
 Connection ~ 8200 5050
 $Comp
-L R R29
-U 1 1 5A54036F
-P 7700 1250
-F 0 "R29" V 7780 1250 50  0000 C CNN
-F 1 "10k" V 7700 1250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7630 1250 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7700 1250 50  0001 C CNN
-F 4 "Yageo" V 7700 1250 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-0710KL" V 7700 1250 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 7700 1250 60  0001 C CNN "Vendor"
-F 7 "311-10.0KCRCT-ND" V 7700 1250 60  0001 C CNN "Vendor Part #"
-	1    7700 1250
+L R R31
+U 1 1 5A542573
+P 7650 3700
+F 0 "R31" V 7730 3700 50  0000 C CNN
+F 1 "1k" V 7650 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 3700 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7650 3700 50  0001 C CNN
+F 4 "Yageo" V 7650 3700 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-071KL" V 7650 3700 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 7650 3700 60  0001 C CNN "Vendor"
+F 7 "311-1.00KCRCT-ND" V 7650 3700 60  0001 C CNN "Vendor Part #"
+	1    7650 3700
 	0    -1   -1   0   
 $EndComp
-$Comp
-L R R30
-U 1 1 5A540436
-P 7700 5050
-F 0 "R30" V 7780 5050 50  0000 C CNN
-F 1 "10k" V 7700 5050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7630 5050 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7700 5050 50  0001 C CNN
-F 4 "Yageo" V 7700 5050 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-0710KL" V 7700 5050 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 7700 5050 60  0001 C CNN "Vendor"
-F 7 "311-10.0KCRCT-ND" V 7700 5050 60  0001 C CNN "Vendor Part #"
-	1    7700 5050
-	0    -1   -1   0   
-$EndComp
+Wire Wire Line
+	7500 3700 7200 3700
+Wire Wire Line
+	8700 3700 8200 3700
+Wire Wire Line
+	8200 3700 7800 3700
 $EndSCHEMATC

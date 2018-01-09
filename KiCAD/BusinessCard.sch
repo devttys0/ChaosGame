@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -53,7 +52,7 @@ F0 "Power Circuit" 79
 F1 "power_circuit.sch" 79
 $EndSheet
 $Sheet
-S 4300 900  2500 1550
+S 4400 900  2500 1550
 U 5A4C28B9
 F0 "Chua Circuit" 79
 F1 "chua_circuit.sch" 79
@@ -71,7 +70,7 @@ F0 "Digitizing Circuit" 79
 F1 "Digitizing_Circuit.sch" 79
 $EndSheet
 $Sheet
-S 4300 3050 2500 1500
+S 4400 3050 2500 1500
 U 5A5340E6
 F0 "USB Interface Circuit" 79
 F1 "USB_Interface_Circuit.sch" 79

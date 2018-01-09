@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -94,10 +93,10 @@ Wire Wire Line
 Wire Wire Line
 	4550 4200 4800 4200
 $Comp
-L -VDC #PWR64
+L -VDC #PWR65
 U 1 1 5A538F31
 P 4550 4950
-F 0 "#PWR64" H 4550 4850 50  0001 C CNN
+F 0 "#PWR65" H 4550 4850 50  0001 C CNN
 F 1 "-VDC" H 4550 5200 50  0000 C CNN
 F 2 "" H 4550 4950 50  0001 C CNN
 F 3 "" H 4550 4950 50  0001 C CNN
@@ -107,10 +106,10 @@ $EndComp
 Wire Wire Line
 	4550 4950 4550 4800
 $Comp
-L -VDC #PWR65
+L -VDC #PWR66
 U 1 1 5A538F55
 P 5800 4950
-F 0 "#PWR65" H 5800 4850 50  0001 C CNN
+F 0 "#PWR66" H 5800 4850 50  0001 C CNN
 F 1 "-VDC" H 5800 5200 50  0000 C CNN
 F 2 "" H 5800 4950 50  0001 C CNN
 F 3 "" H 5800 4950 50  0001 C CNN
@@ -133,10 +132,10 @@ Wire Wire Line
 	5950 4700 5950 4850
 Connection ~ 5950 4850
 $Comp
-L +VDC #PWR63
+L +VDC #PWR64
 U 1 1 5A53916E
 P 4550 2850
-F 0 "#PWR63" H 4550 2750 50  0001 C CNN
+F 0 "#PWR64" H 4550 2750 50  0001 C CNN
 F 1 "+VDC" H 4550 3100 50  0000 C CNN
 F 2 "" H 4550 2850 50  0001 C CNN
 F 3 "" H 4550 2850 50  0001 C CNN
@@ -161,13 +160,13 @@ Wire Wire Line
 NoConn ~ 4800 3700
 NoConn ~ 4800 3900
 NoConn ~ 4800 4000
-Text Notes 600  1150 0    60   ~ 0
-This circuit provides a USB interface for monitoring the digitized oscillations of the Chua oscillator's X axis voltage.\n\nIn software, the FT232RL can be placed into bit-bang mode, making pins TXD and RXD digital input pins.\nThe digital value of these pins can then be read directly in software.\n\nWhen reading in the digital values of the I/O pins in software, bit 0 corresponds to the X_HIGH pin, and bit 1 corresponds to the X_LOW pin.
+Text Notes 650  1950 0    60   ~ 0
+This circuit provides a USB interface for monitoring the digitized oscillations of the Chua oscillator's X axis voltage.\n\nIn software, the FT232RL can be placed into bit-bang mode, making pins TXD and RXD digital input pins.\nThe digital value of these pins can then be read directly in software.\n\nWhen reading in the digital values of the I/O pins in software, bit 0 corresponds to the X_HIGH pin, and bit 1 corresponds to the X_LOW pin.\n\nA value of 0b00 indicates that the X axis voltage is low, that is, the XY trajectory has performed an oscillation around the left-most attractor.\n\nA value of 0b11 indicates that the X axis voltage is high, that is, the XY trajectory has performed an oscillation around the right-most attractor.\n\nA value of 0b01 indicates a transition stage between the two attractors.\n\nThe value 0b10 is undefined.
 $Comp
-L R R33
+L R R37
 U 1 1 5A53CDC6
 P 7200 3100
-F 0 "R33" V 7280 3100 50  0000 C CNN
+F 0 "R37" V 7280 3100 50  0000 C CNN
 F 1 "10k" V 7200 3100 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 7130 3100 50  0001 C CNN
 F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7200 3100 50  0001 C CNN
@@ -179,10 +178,10 @@ F 7 "311-10.0KCRCT-ND" V 7200 3100 60  0001 C CNN "Vendor Part #"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R34
+L R R38
 U 1 1 5A53CE1C
 P 7200 3200
-F 0 "R34" V 7100 3200 50  0000 C CNN
+F 0 "R38" V 7100 3200 50  0000 C CNN
 F 1 "10k" V 7200 3200 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 7130 3200 50  0001 C CNN
 F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 7200 3200 50  0001 C CNN
