@@ -36,7 +36,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -59,21 +59,27 @@ F0 "Chua Oscillator" 79
 F1 "chua_oscillator.sch" 79
 $EndSheet
 $Sheet
-S 4600 3200 2500 1500
+S 1000 3250 2500 1500
 U 5A4C1F81
 F0 "Fractal Calculator" 79
 F1 "fractal_calculator.sch" 79
 $EndSheet
 $Sheet
-S 1000 3200 2500 1500
+S 8100 1000 2500 1550
 U 5A52FB25
 F0 "Fractal Coordinate Selector" 79
 F1 "fractal_coordinate_selector.sch" 79
 $EndSheet
 $Sheet
-S 8100 1000 2500 1500
+S 4600 3250 2500 1500
 U 5A5340E6
 F0 "Fractal Clock" 79
 F1 "fractal_clock.sch" 79
+$EndSheet
+$Sheet
+S 8100 3250 2500 1500
+U 5A76A5A9
+F0 "Unused" 79
+F1 "unused.sch" 79
 $EndSheet
 $EndSCHEMATC

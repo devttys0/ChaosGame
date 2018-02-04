@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name SJ1-352XN)(type KiCad)(uri "$(KIPRJMOD)/SJ1-352XN.pretty")(options "")(descr ""))
   (lib (name RLB1314)(type KiCad)(uri "$(KIPRJMOD)/RLB1314.pretty")(options "")(descr ""))
+  (lib (name CON-SMA-EDGE)(type KiCad)(uri "$(KIPRJMOD)/CON-SMA-EDGE.pretty")(options "")(descr ""))
 )

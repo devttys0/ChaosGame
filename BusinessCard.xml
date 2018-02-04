@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/Users/craig/Documents/BusinessCard/BusinessCard.sch</source>
-    <date>Sunday, January 28, 2018 'PMt' 02:53:14 PM</date>
+    <date>Sunday, February 04, 2018 'PMt' 04:51:22 PM</date>
     <tool>Eeschema 4.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -30,52 +30,65 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="3" name="/Chua Circuit/" tstamps="/5A4C28B9/">
+    <sheet number="3" name="/Chua Oscillator/" tstamps="/5A4C28B9/">
       <title_block>
         <title/>
         <company/>
         <rev/>
         <date/>
-        <source>chua_circuit.sch</source>
+        <source>chua_oscillator.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="4" name="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/">
+    <sheet number="4" name="/Fractal Calculator/" tstamps="/5A4C1F81/">
       <title_block>
         <title/>
         <company/>
         <rev/>
         <date/>
-        <source>double_scroll_detector_circuit.sch</source>
+        <source>fractal_calculator.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="5" name="/Digitizing Circuit/" tstamps="/5A52FB25/">
+    <sheet number="5" name="/Fractal Coordinate Selector/" tstamps="/5A52FB25/">
       <title_block>
         <title/>
         <company/>
         <rev/>
         <date/>
-        <source>digitizing_circuit.sch</source>
+        <source>fractal_coordinate_selector.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="6" name="/USB Interface Circuit/" tstamps="/5A5340E6/">
+    <sheet number="6" name="/Fractal Clock/" tstamps="/5A5340E6/">
       <title_block>
         <title/>
         <company/>
         <rev/>
         <date/>
-        <source>usb_interface_circuit.sch</source>
+        <source>fractal_clock.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/Unused/" tstamps="/5A76A5A9/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>unused.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -84,7 +97,7 @@
     </sheet>
   </design>
   <components>
-    <comp ref="C3">
+    <comp ref="C27">
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
@@ -98,7 +111,7 @@
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
       <tstamp>5A4873BF</tstamp>
     </comp>
-    <comp ref="C1">
+    <comp ref="C28">
       <value>10uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf</datasheet>
@@ -140,118 +153,6 @@
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
       <tstamp>5A49281D</tstamp>
     </comp>
-    <comp ref="C8">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4B7C2E</tstamp>
-    </comp>
-    <comp ref="C10">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4B7E6A</tstamp>
-    </comp>
-    <comp ref="C12">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4B7F1A</tstamp>
-    </comp>
-    <comp ref="C9">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4B8F54</tstamp>
-    </comp>
-    <comp ref="C11">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4B9009</tstamp>
-    </comp>
-    <comp ref="C13">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4B90C6</tstamp>
-    </comp>
-    <comp ref="C6">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4C4239</tstamp>
-    </comp>
-    <comp ref="C7">
-      <value>0.01uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A4C4285</tstamp>
-    </comp>
     <comp ref="U1">
       <value>TLE2426</value>
       <footprint>SMD_Packages:SOIC-8-N</footprint>
@@ -266,7 +167,7 @@
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
       <tstamp>5A5056AC</tstamp>
     </comp>
-    <comp ref="C14">
+    <comp ref="C25">
       <value>10uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf</datasheet>
@@ -280,6 +181,20 @@
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
       <tstamp>5A5397A7</tstamp>
     </comp>
+    <comp ref="C29">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A779FF6</tstamp>
+    </comp>
     <comp ref="C15">
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
@@ -292,91 +207,343 @@
       </fields>
       <libsource lib="device" part="C"/>
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A539801</tstamp>
+      <tstamp>5A77A2F8</tstamp>
     </comp>
-    <comp ref="C4">
-      <value>0.01uF</value>
+    <comp ref="C17">
+      <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
       <fields>
         <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A53AB25</tstamp>
+      <tstamp>5A77A338</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A373</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A3B1</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A3F1</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A437</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A47F</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A4CA</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A517</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A567</tstamp>
     </comp>
     <comp ref="C5">
-      <value>0.01uF</value>
+      <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
       <fields>
         <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A53AB73</tstamp>
+      <tstamp>5A77A729</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A733</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A73D</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A747</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A751</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A75B</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A765</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A76F</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A779</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77A783</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77AD72</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77AD7C</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77AD86</tstamp>
     </comp>
     <comp ref="C2">
-      <value>0.01uF</value>
+      <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
       <fields>
         <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C103JAT2A</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-3768-1-ND</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
       <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A5D79F8</tstamp>
+      <tstamp>5A77AD90</tstamp>
     </comp>
-    <comp ref="J5">
-      <value>-VDC</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x02"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A6D4200</tstamp>
-    </comp>
-    <comp ref="J2">
-      <value>Ground</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x02"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A6D4295</tstamp>
-    </comp>
-    <comp ref="J3">
-      <value>Ground</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x02"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A6D42E8</tstamp>
-    </comp>
-    <comp ref="J4">
-      <value>+VDC</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x02"/>
-      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
-      <tstamp>5A6D4667</tstamp>
-    </comp>
-    <comp ref="R6">
-      <value>1k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+    <comp ref="C26">
+      <value>10uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf</datasheet>
       <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Manufacturer Part #">GRM21BR71A106KA73L</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
+        <field name="Vendor Part #">490-10516-1-ND</field>
       </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A488779</tstamp>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Power Circuit/" tstamps="/5A4C1AA1/"/>
+      <tstamp>5A77C18A</tstamp>
     </comp>
     <comp ref="R7">
       <value>1k</value>
@@ -389,7 +556,21 @@
         <field name="Vendor Part #">311-1.00KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A488779</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-071KL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
       <tstamp>5A488818</tstamp>
     </comp>
     <comp ref="R5">
@@ -403,10 +584,10 @@
         <field name="Vendor Part #">311-1.00KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
       <tstamp>5A488859</tstamp>
     </comp>
-    <comp ref="C17">
+    <comp ref="C31">
       <value>0.01uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
@@ -417,38 +598,10 @@
         <field name="Vendor Part #">478-3768-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
       <tstamp>5A4893E1</tstamp>
     </comp>
-    <comp ref="R1">
-      <value>1k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A48943A</tstamp>
-    </comp>
-    <comp ref="RV1">
-      <value>1k</value>
-      <footprint>Potentiometers:Potentiometer_Trimmer_Vishay_TS53YJ</footprint>
-      <datasheet>http://www.vishay.com/docs/51008/ts53.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Vishay Sfernice</field>
-        <field name="Manufacturer Part #">TS53YJ102MR10</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">TS53YJ-1.0KCT-ND</field>
-      </fields>
-      <libsource lib="device" part="POT"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A489550</tstamp>
-    </comp>
-    <comp ref="C16">
+    <comp ref="C30">
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
@@ -459,7 +612,7 @@
         <field name="Vendor Part #">478-7609-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
       <tstamp>5A4895F8</tstamp>
     </comp>
     <comp ref="L2">
@@ -473,148 +626,8 @@
         <field name="Vendor Part #">RLB1314-153KL-ND</field>
       </fields>
       <libsource lib="device" part="L"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
       <tstamp>5A4896BD</tstamp>
-    </comp>
-    <comp ref="R4">
-      <value>2.2k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-072K2L</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-2.20KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A490A64</tstamp>
-    </comp>
-    <comp ref="D1">
-      <value>BAT54</value>
-      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
-      <datasheet>https://www.diodes.com/assets/Datasheets/ds11005.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Diodes Inc.</field>
-        <field name="Manufacturer Part #">BAT54-7-F</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">BAT54-FDICT-ND</field>
-      </fields>
-      <libsource lib="device" part="D_Schottky"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A4D2FCB</tstamp>
-    </comp>
-    <comp ref="D2">
-      <value>BAT54</value>
-      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
-      <datasheet>https://www.diodes.com/assets/Datasheets/ds11005.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Diodes Inc.</field>
-        <field name="Manufacturer Part #">BAT54-7-F</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">BAT54-FDICT-ND</field>
-      </fields>
-      <libsource lib="device" part="D_Schottky"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A4D323C</tstamp>
-    </comp>
-    <comp ref="J6">
-      <value>XY Line Out</value>
-      <footprint>SJ1-352XN:SJ1-352XN</footprint>
-      <datasheet>http://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">CUI Inc.</field>
-        <field name="Manufacturer Part #">SJ1-3525N</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">CP1-3525N-ND</field>
-      </fields>
-      <libsource lib="conn" part="Audio-Jack-3_2Switches"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A4D8249</tstamp>
-    </comp>
-    <comp ref="J9">
-      <value>X</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x01"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A4E6A00</tstamp>
-    </comp>
-    <comp ref="J8">
-      <value>Y</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x01"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A4E6B2D</tstamp>
-    </comp>
-    <comp ref="U2">
-      <value>TLV272</value>
-      <footprint>SMD_Packages:SOIC-8-N</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/tlv272.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Texas Instruments</field>
-        <field name="Manufacturer Part #">TLV272CDR</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">296-26806-1-ND</field>
-      </fields>
-      <libsource lib="linear" part="TL082"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A57E258</tstamp>
-    </comp>
-    <comp ref="R12">
-      <value>2k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-072KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-2.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A67AAEC</tstamp>
-    </comp>
-    <comp ref="R8">
-      <value>10k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A67AF9F</tstamp>
-    </comp>
-    <comp ref="R13">
-      <value>2k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-072KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-2.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A67CFD3</tstamp>
-    </comp>
-    <comp ref="R9">
-      <value>10k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A67CFE6</tstamp>
     </comp>
     <comp ref="R3">
       <value>2.2k</value>
@@ -627,10 +640,136 @@
         <field name="Vendor Part #">311-2.20KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A490A64</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>2.2k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-072K2L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-2.20KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
       <tstamp>5A67DA1C</tstamp>
     </comp>
+    <comp ref="R1">
+      <value>1.37k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-072K43L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-1.37KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A6B2B5C</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>BAT54S</value>
+      <footprint>TO_SOT_Packages_SMD:TSOT-23</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/BA/BAT54.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">ON Semiconductor</field>
+        <field name="Manufacturer Part #">BAT54S</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">BAT54SFSCT-ND</field>
+      </fields>
+      <libsource lib="device" part="D_Schottky_x2_Serial_AKC"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A6FA198</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-071KL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A70C9F3</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RT0805FRE071ML</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">YAG3361CT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A70CA12</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-07100KL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-100KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A70CA1D</tstamp>
+    </comp>
     <comp ref="U3">
+      <value>LM311</value>
+      <footprint>SMD_Packages:SOIC-8-N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm211.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">LM311DR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-1388-1-ND</field>
+      </fields>
+      <libsource lib="linear" part="LM311"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A741098</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>74HC14</value>
+      <footprint>SMD_Packages:SOIC-14_N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc14.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">SN74HC14DR</field>
+        <field name="Vendor">Digkey</field>
+        <field name="Vendor Part #">296-1194-1-ND</field>
+      </fields>
+      <libsource lib="74xx" part="74HC14"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A74B7CC</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>TLV271</value>
+      <footprint>TO_SOT_Packages_SMD:TSOT-23-5_HandSoldering</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/tlv271.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">TLV271IDBVR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-13371-1-ND</field>
+      </fields>
+      <libsource lib="tlv271" part="TLV271"/>
+      <sheetpath names="/Chua Oscillator/" tstamps="/5A4C28B9/"/>
+      <tstamp>5A7526FF</tstamp>
+    </comp>
+    <comp ref="U6">
       <value>TLV272</value>
       <footprint>SMD_Packages:SOIC-8-N</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/tlv272.pdf</datasheet>
@@ -641,87 +780,80 @@
         <field name="Vendor Part #">296-26806-1-ND</field>
       </fields>
       <libsource lib="linear" part="TL082"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A67E1CE</tstamp>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A728B37</tstamp>
     </comp>
-    <comp ref="R10">
-      <value>1k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A67C917</tstamp>
-    </comp>
-    <comp ref="R11">
-      <value>1k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A67CA37</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>1.43k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071K43L</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.43KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A6B2B5C</tstamp>
-    </comp>
-    <comp ref="JP1">
-      <value>Variable</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="device" part="Jumper"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A6B2C7A</tstamp>
-    </comp>
-    <comp ref="JP2">
-      <value>Fixed</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="device" part="Jumper"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A6B2EA2</tstamp>
-    </comp>
-    <comp ref="J7">
-      <value>XY Out</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x02"/>
-      <sheetpath names="/Chua Circuit/" tstamps="/5A4C28B9/"/>
-      <tstamp>5A6D6FB5</tstamp>
-    </comp>
-    <comp ref="U4">
-      <value>LM393</value>
+    <comp ref="U8">
+      <value>TLV272</value>
       <footprint>SMD_Packages:SOIC-8-N</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/lm193.pdf</datasheet>
+      <datasheet>http://www.ti.com/lit/ds/symlink/tlv272.pdf</datasheet>
       <fields>
         <field name="Manufacturer">Texas Instruments</field>
-        <field name="Manufacturer Part #">LM393DR</field>
+        <field name="Manufacturer Part #">TLV272CDR</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">296-1015-1-ND</field>
+        <field name="Vendor Part #">296-26806-1-ND</field>
       </fields>
-      <libsource lib="linear" part="LM393"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4B0E05</tstamp>
+      <libsource lib="linear" part="TL082"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A72B7D0</tstamp>
     </comp>
-    <comp ref="R17">
+    <comp ref="U7">
+      <value>4066</value>
+      <footprint>SMD_Packages:SOIC-14_N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/cd4066b.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">CD4066BM96</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-14475-1-ND</field>
+      </fields>
+      <libsource lib="cmos4000" part="4066"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A72B361</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RT0805BRD0710KL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">YAG1763CT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A734977</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>INA826</value>
+      <footprint>SMD_Packages:SOIC-8-N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina826.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">INA826AIDR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-30238-1-ND</field>
+      </fields>
+      <libsource lib="ina826" part="INA826"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A74FC9A</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RT0805BRD0710KL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">YAG1763CT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A750118</tstamp>
+    </comp>
+    <comp ref="R11">
       <value>10k</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
@@ -732,92 +864,190 @@
         <field name="Vendor Part #">311-10.0KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4B1591</tstamp>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A75D59C</tstamp>
     </comp>
-    <comp ref="C21">
-      <value>0.1uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C104JAT4A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-7609-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4B2A5F</tstamp>
-    </comp>
-    <comp ref="R24">
-      <value>470</value>
+    <comp ref="R10">
+      <value>15k</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-07470RL</field>
+        <field name="Manufacturer Part #">RC0805FR-0715KL</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-470CRCT-ND</field>
+        <field name="Vendor Part #">311-15.0KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4B317D</tstamp>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A75D5B0</tstamp>
     </comp>
-    <comp ref="D3">
-      <value>LED</value>
-      <footprint>LEDs:LED_0805</footprint>
-      <datasheet>https://media.digikey.com/pdf/Data%20Sheets/Dialight%20PDFs/598_Series_0805_Pkg.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Dialight</field>
-        <field name="Manufacturer Part #">5988120107F</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">350-2039-1-ND</field>
-      </fields>
-      <libsource lib="device" part="LED"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4B321E</tstamp>
-    </comp>
-    <comp ref="C22">
-      <value>0.1uF</value>
+    <comp ref="C33">
+      <value>1500pF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <datasheet>http://datasheets.avx.com/C0GNP0-Dielectric.pdf</datasheet>
       <fields>
         <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Manufacturer Part #">08055A152FAT2A</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-7609-1-ND</field>
+        <field name="Vendor Part #">478-7953-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4B459B</tstamp>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A762D4F</tstamp>
     </comp>
-    <comp ref="C19">
-      <value>0.1uF</value>
+    <comp ref="J2">
+      <value>X</value>
+      <footprint>CON-SMA-EDGE:CON-SMA-EDGE</footprint>
+      <datasheet>https://media.digikey.com/pdf/Data%20Sheets/RF%20Solutions%20PDFs/CON-SMA-EDGE.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">RF Solutions</field>
+        <field name="Manufacturer Part #">CON-SMA-EDGE-S</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">CON-SMA-EDGE-S-ND</field>
+      </fields>
+      <libsource lib="conn" part="Conn_Coaxial"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A7750D5</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>2.2k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-072K2L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-2.20KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A7750E1</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Y</value>
+      <footprint>CON-SMA-EDGE:CON-SMA-EDGE</footprint>
+      <datasheet>https://media.digikey.com/pdf/Data%20Sheets/RF%20Solutions%20PDFs/CON-SMA-EDGE.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">RF Solutions</field>
+        <field name="Manufacturer Part #">CON-SMA-EDGE-S</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">CON-SMA-EDGE-S-ND</field>
+      </fields>
+      <libsource lib="conn" part="Conn_Coaxial"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A7750F4</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>2.2k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-072K2L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-2.20KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A775100</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Trigger</value>
+      <footprint>CON-SMA-EDGE:CON-SMA-EDGE</footprint>
+      <datasheet>https://media.digikey.com/pdf/Data%20Sheets/RF%20Solutions%20PDFs/CON-SMA-EDGE.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">RF Solutions</field>
+        <field name="Manufacturer Part #">CON-SMA-EDGE-S</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">CON-SMA-EDGE-S-ND</field>
+      </fields>
+      <libsource lib="conn" part="Conn_Coaxial"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A775989</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>2.2k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RC0805FR-072K2L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">311-2.20KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A775994</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RT0805BRD0710KL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">YAG1763CT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A7766FB</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <datasheet>http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Manufacturer Part #">RT0805BRD0710KL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">YAG1763CT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A776783</tstamp>
+    </comp>
+    <comp ref="C34">
+      <value>1500pF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <datasheet>http://datasheets.avx.com/C0GNP0-Dielectric.pdf</datasheet>
       <fields>
         <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Manufacturer Part #">08055A152FAT2A</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-7609-1-ND</field>
+        <field name="Vendor Part #">478-7953-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4D4EBA</tstamp>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A778A0E</tstamp>
     </comp>
-    <comp ref="Q2">
-      <value>2N3904</value>
-      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
-      <datasheet>http://www.onsemi.com/pub/Collateral/MMBT3904LT1-D.PDF</datasheet>
+    <comp ref="C32">
+      <value>1500pF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/C0GNP0-Dielectric.pdf</datasheet>
       <fields>
-        <field name="Manufacturer">ON Semiconductor</field>
-        <field name="Manufacturer Part #">MMBT3904LT3G</field>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055A152FAT2A</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">MMBT3904LT3GOSCT-ND</field>
+        <field name="Vendor Part #">478-7953-1-ND</field>
       </fields>
-      <libsource lib="transistors" part="2N3904"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4D803A</tstamp>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Fractal Calculator/" tstamps="/5A4C1F81/"/>
+      <tstamp>5A778A78</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>74HC74</value>
+      <footprint>SMD_Packages:SOIC-14_N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74ac74.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">SN74AC74DR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-1063-1-ND</field>
+      </fields>
+      <libsource lib="74xx" part="74HC74"/>
+      <sheetpath names="/Fractal Coordinate Selector/" tstamps="/5A52FB25/"/>
+      <tstamp>5A723337</tstamp>
     </comp>
     <comp ref="Q1">
       <value>2N3904</value>
@@ -830,80 +1060,10 @@
         <field name="Vendor Part #">MMBT3904LT3GOSCT-ND</field>
       </fields>
       <libsource lib="transistors" part="2N3904"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A4D80C2</tstamp>
+      <sheetpath names="/Fractal Coordinate Selector/" tstamps="/5A52FB25/"/>
+      <tstamp>5A7276F5</tstamp>
     </comp>
-    <comp ref="R15">
-      <value>10k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A584417</tstamp>
-    </comp>
-    <comp ref="C18">
-      <value>0.1uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C104JAT4A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-7609-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A584533</tstamp>
-    </comp>
-    <comp ref="R14">
-      <value>100k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-07100KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-100KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A584958</tstamp>
-    </comp>
-    <comp ref="R18">
-      <value>10k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A587982</tstamp>
-    </comp>
-    <comp ref="C20">
-      <value>0.1uF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">AVX Corporation</field>
-        <field name="Manufacturer Part #">08055C104JAT4A</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">478-7609-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A587998</tstamp>
-    </comp>
-    <comp ref="Q4">
+    <comp ref="Q2">
       <value>2N3904</value>
       <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
       <datasheet>http://www.onsemi.com/pub/Collateral/MMBT3904LT1-D.PDF</datasheet>
@@ -914,311 +1074,38 @@
         <field name="Vendor Part #">MMBT3904LT3GOSCT-ND</field>
       </fields>
       <libsource lib="transistors" part="2N3904"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A4400</tstamp>
-    </comp>
-    <comp ref="R25">
-      <value>100k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-07100KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-100KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A4641</tstamp>
+      <sheetpath names="/Fractal Coordinate Selector/" tstamps="/5A52FB25/"/>
+      <tstamp>5A727850</tstamp>
     </comp>
     <comp ref="R20">
-      <value>1k</value>
+      <value>2.2k</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
+        <field name="Manufacturer Part #">RC0805FR-072K2L</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
+        <field name="Vendor Part #">311-2.20KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A4778</tstamp>
-    </comp>
-    <comp ref="R22">
-      <value>10k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A4942</tstamp>
-    </comp>
-    <comp ref="Q3">
-      <value>2N3904</value>
-      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
-      <datasheet>http://www.onsemi.com/pub/Collateral/MMBT3904LT1-D.PDF</datasheet>
-      <fields>
-        <field name="Manufacturer">ON Semiconductor</field>
-        <field name="Manufacturer Part #">MMBT3904LT3G</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">MMBT3904LT3GOSCT-ND</field>
-      </fields>
-      <libsource lib="transistors" part="2N3904"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A5027</tstamp>
-    </comp>
-    <comp ref="R23">
-      <value>100k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-07100KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-100KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A5138</tstamp>
-    </comp>
-    <comp ref="R21">
-      <value>10k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A523C</tstamp>
+      <sheetpath names="/Fractal Coordinate Selector/" tstamps="/5A52FB25/"/>
+      <tstamp>5A7498FB</tstamp>
     </comp>
     <comp ref="R19">
-      <value>1k</value>
+      <value>2.2k</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
+        <field name="Manufacturer Part #">RC0805FR-072K2L</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
+        <field name="Vendor Part #">311-2.20KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5A56E9</tstamp>
+      <sheetpath names="/Fractal Coordinate Selector/" tstamps="/5A52FB25/"/>
+      <tstamp>5A76924C</tstamp>
     </comp>
-    <comp ref="R16">
-      <value>100k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-07100KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-100KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Double Scroll Detector Circuit/" tstamps="/5A4C1F81/"/>
-      <tstamp>5A5BD3C6</tstamp>
-    </comp>
-    <comp ref="R26">
-      <value>10k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A530532</tstamp>
-    </comp>
-    <comp ref="U6">
-      <value>LM393</value>
-      <footprint>SMD_Packages:SOIC-8-N</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/lm193.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Texas Instruments</field>
-        <field name="Manufacturer Part #">LM393DR</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">296-1015-1-ND</field>
-      </fields>
-      <libsource lib="linear" part="LM393"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A54F6BF</tstamp>
-    </comp>
-    <comp ref="C23">
-      <value>330pF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <datasheet>http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM2165C1H331JA01-01.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Murata</field>
-        <field name="Manufacturer Part #">GRM2165C1H331JA01D</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">490-3316-1-ND</field>
-      </fields>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A57F7CD</tstamp>
-    </comp>
-    <comp ref="R33">
-      <value>1k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A580592</tstamp>
-    </comp>
-    <comp ref="R34">
-      <value>1k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A580A1B</tstamp>
-    </comp>
-    <comp ref="R27">
-      <value>33k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0733KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-33.0KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A57F743</tstamp>
-    </comp>
-    <comp ref="R29">
-      <value>1k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-071KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A67B5BE</tstamp>
-    </comp>
-    <comp ref="R31">
-      <value>1M</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RT0805FRE071ML</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">YAG3361CT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A67B61A</tstamp>
-    </comp>
-    <comp ref="R32">
-      <value>1M</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RT0805FRE071ML</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">YAG3361CT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A67B801</tstamp>
-    </comp>
-    <comp ref="R30">
-      <value>100k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-07100KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-100KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A67BAFB</tstamp>
-    </comp>
-    <comp ref="R28">
-      <value>100k</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-07100KL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-100KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A67BDD5</tstamp>
-    </comp>
-    <comp ref="U5">
-      <value>TLV272</value>
-      <footprint>SMD_Packages:SOIC-8-N</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/tlv272.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Texas Instruments</field>
-        <field name="Manufacturer Part #">TLV272CDR</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">296-26806-1-ND</field>
-      </fields>
-      <libsource lib="linear" part="TL082"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A67E535</tstamp>
-    </comp>
-    <comp ref="J10">
-      <value>DIGITAL_OUT</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x02"/>
-      <sheetpath names="/Digitizing Circuit/" tstamps="/5A52FB25/"/>
-      <tstamp>5A6D367A</tstamp>
-    </comp>
-    <comp ref="U7">
-      <value>FT232RL</value>
-      <footprint>Housings_SSOP:SSOP-28_5.3x10.2mm_Pitch0.65mm</footprint>
-      <datasheet>http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">FTDI</field>
-        <field name="Manufacturer Part #">FT232RL-REEL</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">768-1007-1-ND</field>
-      </fields>
-      <libsource lib="ftdi" part="FT232RL"/>
-      <sheetpath names="/USB Interface Circuit/" tstamps="/5A5340E6/"/>
-      <tstamp>5A5342B3</tstamp>
-    </comp>
-    <comp ref="C24">
+    <comp ref="C35">
       <value>0.1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
@@ -1229,36 +1116,106 @@
         <field name="Vendor Part #">478-7609-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
-      <sheetpath names="/USB Interface Circuit/" tstamps="/5A5340E6/"/>
-      <tstamp>5A538EF3</tstamp>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A73047D</tstamp>
     </comp>
-    <comp ref="R35">
-      <value>10k</value>
+    <comp ref="U10">
+      <value>74HC74</value>
+      <footprint>SMD_Packages:SOIC-14_N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74ac74.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">SN74AC74DR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-1063-1-ND</field>
+      </fields>
+      <libsource lib="74xx" part="74HC74"/>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A730D13</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>74HC74</value>
+      <footprint>SMD_Packages:SOIC-14_N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74ac74.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">SN74AC74DR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-1063-1-ND</field>
+      </fields>
+      <libsource lib="74xx" part="74HC74"/>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A73120C</tstamp>
+    </comp>
+    <comp ref="U12">
+      <value>74HC74</value>
+      <footprint>SMD_Packages:SOIC-14_N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74ac74.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">SN74AC74DR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-1063-1-ND</field>
+      </fields>
+      <libsource lib="74xx" part="74HC74"/>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A7313BF</tstamp>
+    </comp>
+    <comp ref="U13">
+      <value>74HC74</value>
+      <footprint>SMD_Packages:SOIC-14_N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74ac74.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Manufacturer Part #">SN74AC74DR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">296-1063-1-ND</field>
+      </fields>
+      <libsource lib="74xx" part="74HC74"/>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A731556</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>10M</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
+        <field name="Manufacturer Part #">RC0805FR-0710ML</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
+        <field name="Vendor Part #">311-10.0MCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/USB Interface Circuit/" tstamps="/5A5340E6/"/>
-      <tstamp>5A53CDC6</tstamp>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A731E69</tstamp>
     </comp>
-    <comp ref="R36">
-      <value>10k</value>
+    <comp ref="R22">
+      <value>56k</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="Manufacturer Part #">RC0805FR-0710KL</field>
+        <field name="Manufacturer Part #">RC0805FR-0756KL</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendor Part #">311-10.0KCRCT-ND</field>
+        <field name="Vendor Part #">311-56.0KCRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/USB Interface Circuit/" tstamps="/5A5340E6/"/>
-      <tstamp>5A53CE1C</tstamp>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A73D0AD</tstamp>
+    </comp>
+    <comp ref="C36">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">AVX Corporation</field>
+        <field name="Manufacturer Part #">08055C104JAT4A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part #">478-7609-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/Fractal Clock/" tstamps="/5A5340E6/"/>
+      <tstamp>5A73D249</tstamp>
     </comp>
   </components>
   <libparts>
@@ -1279,19 +1236,86 @@
         <pin num="3" name="C" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="Audio-Jack-3_2Switches">
-      <description>3-pin audio jack receptable (stereo/TRS connector) with 2 switching contacts</description>
-      <docs>~</docs>
+    <libpart lib="cmos4000" part="4016">
+      <aliases>
+        <alias>4066</alias>
+      </aliases>
+      <description>Quad Analog Switches</description>
+      <docs>http://www.ti.com/lit/ds/symlink/cd4016b.pdf</docs>
       <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Audio-Jack-3_2Switches</field>
+        <field name="Reference">U</field>
+        <field name="Value">4016</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="3" name="~" type="passive"/>
-        <pin num="4" name="~" type="passive"/>
-        <pin num="5" name="~" type="passive"/>
+        <pin num="1" name="I/O" type="passive"/>
+        <pin num="2" name="O/I" type="passive"/>
+        <pin num="3" name="O/I" type="passive"/>
+        <pin num="4" name="I/O" type="passive"/>
+        <pin num="5" name="ON" type="input"/>
+        <pin num="6" name="ON" type="input"/>
+        <pin num="7" name="V-" type="power_in"/>
+        <pin num="8" name="I/O" type="passive"/>
+        <pin num="9" name="O/I" type="passive"/>
+        <pin num="10" name="O/I" type="passive"/>
+        <pin num="11" name="I/O" type="passive"/>
+        <pin num="12" name="ON" type="input"/>
+        <pin num="13" name="ON" type="input"/>
+        <pin num="14" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74HCT04">
+      <aliases>
+        <alias>74HC14</alias>
+        <alias>74HC04</alias>
+        <alias>74LS14</alias>
+      </aliases>
+      <description>Hex Inverseur</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74HCT04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="output"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="output"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="output"/>
+        <pin num="11" name="~" type="input"/>
+        <pin num="12" name="~" type="output"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS74">
+      <aliases>
+        <alias>74HC74</alias>
+      </aliases>
+      <description>Dual D FlipFlop, Set &amp; Reset</description>
+      <docs>74xx/74hc_hct74.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS74</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Cd" type="input"/>
+        <pin num="2" name="D" type="input"/>
+        <pin num="3" name="Cp" type="input"/>
+        <pin num="4" name="Sd" type="input"/>
+        <pin num="5" name="Q" type="output"/>
+        <pin num="6" name="~Q" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~Q" type="output"/>
+        <pin num="9" name="Q" type="output"/>
+        <pin num="10" name="Sd" type="input"/>
+        <pin num="11" name="Cp" type="input"/>
+        <pin num="12" name="D" type="input"/>
+        <pin num="13" name="Cd" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="device" part="C">
@@ -1308,110 +1332,54 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="Conn_01x01">
-      <description>Generic connector, single row, 01x01</description>
-      <docs>~</docs>
+    <libpart lib="conn" part="Conn_Coaxial">
+      <description>coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)</description>
       <footprints>
-        <fp>Connector*:*_??x*mm*</fp>
-        <fp>Connector*:*1x??x*mm*</fp>
-        <fp>Pin?Header?Straight?1X*</fp>
-        <fp>Pin?Header?Angled?1X*</fp>
-        <fp>Socket?Strip?Straight?1X*</fp>
-        <fp>Socket?Strip?Angled?1X*</fp>
+        <fp>*BNC*</fp>
+        <fp>*SMA*</fp>
+        <fp>*SMB*</fp>
+        <fp>*SMC*</fp>
+        <fp>*Cinch*</fp>
       </footprints>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">Conn_01x01</field>
+        <field name="Value">Conn_Coaxial</field>
       </fields>
       <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="1" name="In" type="passive"/>
+        <pin num="2" name="Ext" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="Conn_01x02">
-      <description>Generic connector, single row, 01x02</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Connector*:*_??x*mm*</fp>
-        <fp>Connector*:*1x??x*mm*</fp>
-        <fp>Pin?Header?Straight?1X*</fp>
-        <fp>Pin?Header?Angled?1X*</fp>
-        <fp>Socket?Strip?Straight?1X*</fp>
-        <fp>Socket?Strip?Angled?1X*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x02</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="D_Schottky">
-      <description>Schottky diode</description>
-      <footprints>
-        <fp>TO-???*</fp>
-        <fp>*SingleDiode</fp>
-        <fp>*_Diode_*</fp>
-        <fp>*SingleDiode*</fp>
-        <fp>D_*</fp>
-      </footprints>
+    <libpart lib="device" part="D_Schottky_x2_Serial_AKC">
+      <description>Dual schottky diode</description>
       <fields>
         <field name="Reference">D</field>
-        <field name="Value">D_Schottky</field>
+        <field name="Value">D_Schottky_x2_Serial_AKC</field>
       </fields>
       <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+        <pin num="3" name="common" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="ftdi" part="FT232RL">
+    <libpart lib="ina826" part="INA826">
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*Pitch1.27mm*</fp>
+      </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">FT232RL</field>
-        <field name="Manufacturer">FTDI</field>
-        <field name="MPN">FT232RL-REEL</field>
+        <field name="Value">INA826</field>
       </fields>
       <pins>
-        <pin num="1" name="TXD" type="output"/>
-        <pin num="2" name="DTR#" type="output"/>
-        <pin num="3" name="RTS#" type="output"/>
-        <pin num="4" name="VCCIO" type="power_in"/>
-        <pin num="5" name="RXD" type="input"/>
-        <pin num="6" name="RI#" type="input"/>
-        <pin num="7" name="GND1" type="power_in"/>
-        <pin num="8" name="NC1" type="NotConnected"/>
-        <pin num="9" name="DSR#" type="input"/>
-        <pin num="10" name="DCD#" type="input"/>
-        <pin num="11" name="CTS#" type="input"/>
-        <pin num="12" name="CBUS4" type="BiDi"/>
-        <pin num="13" name="CBUS2" type="BiDi"/>
-        <pin num="14" name="CBUS3" type="BiDi"/>
-        <pin num="15" name="USBDP" type="BiDi"/>
-        <pin num="16" name="USBDM" type="BiDi"/>
-        <pin num="17" name="3V3OUT" type="power_out"/>
-        <pin num="18" name="GND2" type="power_in"/>
-        <pin num="19" name="RESET#" type="input"/>
-        <pin num="20" name="VCC" type="power_in"/>
-        <pin num="21" name="GND3" type="power_in"/>
-        <pin num="22" name="CBUS1" type="BiDi"/>
-        <pin num="23" name="CBUS0" type="BiDi"/>
-        <pin num="24" name="NC2" type="NotConnected"/>
-        <pin num="25" name="AGND" type="power_in"/>
-        <pin num="26" name="TEST" type="input"/>
-        <pin num="27" name="OSCI" type="input"/>
-        <pin num="28" name="OSCO" type="output"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="Jumper">
-      <description>Jumper, generic, normally closed</description>
-      <fields>
-        <field name="Reference">JP</field>
-        <field name="Value">Jumper</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
+        <pin num="1" name="+" type="input"/>
+        <pin num="2" name="Rg" type="passive"/>
+        <pin num="3" name="Rg" type="passive"/>
+        <pin num="4" name="-" type="input"/>
+        <pin num="5" name="V-" type="power_in"/>
+        <pin num="6" name="Ref" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="device" part="L">
@@ -1429,50 +1397,6 @@
       <pins>
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="LED">
-      <description>LED generic</description>
-      <footprints>
-        <fp>LED*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED</field>
-      </fields>
-      <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="linear" part="LM2903">
-      <aliases>
-        <alias>LM393</alias>
-        <alias>LMV393</alias>
-        <alias>MCP6562</alias>
-        <alias>MCP6567</alias>
-      </aliases>
-      <description>Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SSOP-8</description>
-      <docs>http://www.ti.com/lit/ds/symlink/lm393-n.pdf</docs>
-      <footprints>
-        <fp>SOIC*3.9x4.9mm*Pitch1.27mm*</fp>
-        <fp>DIP*W7.62mm*</fp>
-        <fp>MSOP*3x3mm*Pitch0.65mm*</fp>
-        <fp>VSSOP*2.3x2mm*Pitch0.5mm*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">LM2903</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="openCol"/>
-        <pin num="2" name="_" type="input"/>
-        <pin num="3" name="+" type="input"/>
-        <pin num="4" name="V-" type="power_in"/>
-        <pin num="5" name="+" type="input"/>
-        <pin num="6" name="_" type="input"/>
-        <pin num="7" name="~" type="openCol"/>
-        <pin num="8" name="V+" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="linear" part="LM2904">
@@ -1558,19 +1482,30 @@
         <pin num="8" name="V+" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="POT">
-      <description>Potentiometer</description>
+    <libpart lib="linear" part="LM311">
+      <aliases>
+        <alias>LT1011</alias>
+      </aliases>
+      <description>Voltage Comparator, DIP-8/SOIC-8/SSOP-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm311.pdf</docs>
       <footprints>
-        <fp>Potentiometer*</fp>
+        <fp>SOIC*3.9x4.9mm*Pitch1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*4.4x3mm*Pitch0.65mm*</fp>
       </footprints>
       <fields>
-        <field name="Reference">RV</field>
-        <field name="Value">POT</field>
+        <field name="Reference">U</field>
+        <field name="Value">LM311</field>
       </fields>
       <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
+        <pin num="1" name="Gnd" type="openEm"/>
+        <pin num="2" name="+" type="input"/>
+        <pin num="3" name="-" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="openCol"/>
+        <pin num="8" name="V+" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="device" part="R">
@@ -1605,6 +1540,24 @@
         <pin num="8" name="NR" type="input"/>
       </pins>
     </libpart>
+    <libpart lib="tlv271" part="TLV271">
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*Pitch1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*3x3mm*Pitch0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV271</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="V-" type="power_in"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="-" type="input"/>
+        <pin num="5" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="conn" part="USB_OTG">
       <description>USB mini/micro connector</description>
       <footprints>
@@ -1625,397 +1578,440 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="transistors">
-      <uri>/Library/Application Support/kicad/library/transistors.lib</uri>
+    <library logical="device">
+      <uri>/Library/Application Support/kicad/library/device.lib</uri>
     </library>
     <library logical="conn">
       <uri>/Library/Application Support/kicad/library/conn.lib</uri>
     </library>
+    <library logical="74xx">
+      <uri>/Library/Application Support/kicad/library/74xx.lib</uri>
+    </library>
+    <library logical="cmos4000">
+      <uri>/Library/Application Support/kicad/library/cmos4000.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>/Library/Application Support/kicad/library/transistors.lib</uri>
+    </library>
     <library logical="linear">
       <uri>/Library/Application Support/kicad/library/linear.lib</uri>
     </library>
-    <library logical="device">
-      <uri>/Library/Application Support/kicad/library/device.lib</uri>
+    <library logical="tlv271">
+      <uri>/Users/craig/Documents/BusinessCard/tlv271.lib</uri>
     </library>
     <library logical="tle2426">
       <uri>/Users/craig/Documents/BusinessCard/tle2426.lib</uri>
     </library>
-    <library logical="ftdi">
-      <uri>/Users/craig/Documents/BusinessCard/ftdi.lib</uri>
+    <library logical="ina826">
+      <uri>/Users/craig/Documents/BusinessCard/ina826.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="+VDC">
-      <node ref="R33" pin="1"/>
-      <node ref="U4" pin="8"/>
-      <node ref="L1" pin="2"/>
-      <node ref="R24" pin="1"/>
-      <node ref="C8" pin="1"/>
-      <node ref="C10" pin="1"/>
-      <node ref="C12" pin="1"/>
-      <node ref="R34" pin="1"/>
-      <node ref="U5" pin="8"/>
-      <node ref="C6" pin="1"/>
-      <node ref="U3" pin="8"/>
-      <node ref="U6" pin="8"/>
-      <node ref="U1" pin="3"/>
-      <node ref="R15" pin="2"/>
-      <node ref="J4" pin="1"/>
-      <node ref="U2" pin="8"/>
-      <node ref="C4" pin="1"/>
-      <node ref="R20" pin="2"/>
-      <node ref="C15" pin="1"/>
-      <node ref="C14" pin="1"/>
-      <node ref="U7" pin="20"/>
-      <node ref="U7" pin="4"/>
-      <node ref="C2" pin="1"/>
-      <node ref="J4" pin="2"/>
-      <node ref="R19" pin="2"/>
-      <node ref="R16" pin="2"/>
-    </net>
-    <net code="2" name="-VDC">
-      <node ref="C22" pin="2"/>
-      <node ref="R23" pin="2"/>
-      <node ref="C21" pin="2"/>
-      <node ref="U5" pin="4"/>
-      <node ref="Q4" pin="1"/>
-      <node ref="R25" pin="2"/>
-      <node ref="U3" pin="4"/>
-      <node ref="Q3" pin="1"/>
-      <node ref="U2" pin="4"/>
-      <node ref="U4" pin="4"/>
-      <node ref="C2" pin="2"/>
-      <node ref="J5" pin="1"/>
-      <node ref="J5" pin="2"/>
-      <node ref="J1" pin="4"/>
-      <node ref="J1" pin="5"/>
-      <node ref="J1" pin="6"/>
-      <node ref="C9" pin="2"/>
-      <node ref="C11" pin="2"/>
-      <node ref="U7" pin="25"/>
-      <node ref="U7" pin="26"/>
-      <node ref="C5" pin="2"/>
-      <node ref="U7" pin="18"/>
-      <node ref="U7" pin="7"/>
-      <node ref="U7" pin="21"/>
-      <node ref="C14" pin="2"/>
-      <node ref="C15" pin="2"/>
-      <node ref="C24" pin="2"/>
-      <node ref="U6" pin="4"/>
-      <node ref="U1" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="C13" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C1" pin="2"/>
-    </net>
-    <net code="3" name="GND">
-      <node ref="R3" pin="2"/>
-      <node ref="C23" pin="2"/>
-      <node ref="U6" pin="6"/>
-      <node ref="R18" pin="2"/>
-      <node ref="C17" pin="2"/>
-      <node ref="C16" pin="2"/>
-      <node ref="L2" pin="1"/>
-      <node ref="R12" pin="1"/>
-      <node ref="R7" pin="2"/>
-      <node ref="J6" pin="3"/>
-      <node ref="R13" pin="1"/>
-      <node ref="R4" pin="2"/>
-      <node ref="C20" pin="2"/>
-      <node ref="U1" pin="1"/>
-      <node ref="C13" pin="1"/>
-      <node ref="C11" pin="1"/>
-      <node ref="C9" pin="1"/>
-      <node ref="C12" pin="2"/>
-      <node ref="C10" pin="2"/>
-      <node ref="C8" pin="2"/>
-      <node ref="R17" pin="2"/>
-      <node ref="C19" pin="2"/>
-      <node ref="C6" pin="2"/>
-      <node ref="C7" pin="1"/>
-      <node ref="C4" pin="2"/>
-      <node ref="C5" pin="1"/>
-      <node ref="R14" pin="2"/>
-      <node ref="J3" pin="2"/>
-      <node ref="J3" pin="1"/>
-      <node ref="J2" pin="2"/>
-      <node ref="J2" pin="1"/>
-    </net>
-    <net code="4" name="Net-(C3-Pad1)">
-      <node ref="U1" pin="8"/>
-      <node ref="C3" pin="1"/>
-    </net>
-    <net code="5" name="Net-(C1-Pad1)">
-      <node ref="C1" pin="1"/>
-      <node ref="J1" pin="1"/>
-      <node ref="L1" pin="1"/>
-    </net>
-    <net code="6" name="D+">
-      <node ref="U7" pin="15"/>
+    <net code="1" name="Net-(J1-Pad3)">
       <node ref="J1" pin="3"/>
     </net>
-    <net code="7" name="D-">
-      <node ref="U7" pin="16"/>
+    <net code="2" name="Net-(J1-Pad4)">
+      <node ref="J1" pin="4"/>
+    </net>
+    <net code="3" name="Net-(C29-Pad1)">
+      <node ref="U1" pin="8"/>
+      <node ref="C29" pin="1"/>
+    </net>
+    <net code="4" name="Net-(C27-Pad1)">
+      <node ref="C27" pin="1"/>
+      <node ref="L1" pin="1"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="5" name="Net-(J1-Pad2)">
       <node ref="J1" pin="2"/>
     </net>
-    <net code="8" name="Y">
-      <node ref="U4" pin="5"/>
-      <node ref="J8" pin="1"/>
-      <node ref="JP2" pin="1"/>
-      <node ref="L2" pin="2"/>
-      <node ref="U3" pin="3"/>
-      <node ref="JP1" pin="1"/>
-      <node ref="C16" pin="1"/>
-    </net>
-    <net code="9" name="X_ATTRACTOR">
-      <node ref="R36" pin="2"/>
-      <node ref="R34" pin="2"/>
-      <node ref="U6" pin="7"/>
-      <node ref="R32" pin="2"/>
-      <node ref="J10" pin="2"/>
-      <node ref="C18" pin="1"/>
-    </net>
-    <net code="10" name="Net-(C19-Pad1)">
-      <node ref="C19" pin="1"/>
-      <node ref="R15" pin="1"/>
-      <node ref="U4" pin="2"/>
-      <node ref="R17" pin="1"/>
-    </net>
-    <net code="11" name="Net-(D3-Pad1)">
-      <node ref="D3" pin="1"/>
-      <node ref="Q3" pin="3"/>
-    </net>
-    <net code="12" name="Net-(C21-Pad1)">
-      <node ref="C21" pin="1"/>
-      <node ref="Q1" pin="1"/>
-      <node ref="R21" pin="1"/>
-    </net>
-    <net code="13" name="Net-(Q1-Pad2)">
-      <node ref="R19" pin="1"/>
-      <node ref="Q1" pin="3"/>
-      <node ref="Q1" pin="2"/>
-      <node ref="U4" pin="1"/>
-    </net>
-    <net code="14" name="Net-(D3-Pad2)">
-      <node ref="Q4" pin="3"/>
-      <node ref="R24" pin="2"/>
-      <node ref="D3" pin="2"/>
-    </net>
-    <net code="15" name="Net-(C22-Pad1)">
-      <node ref="C22" pin="1"/>
-      <node ref="Q2" pin="1"/>
-      <node ref="R22" pin="1"/>
-    </net>
-    <net code="16" name="Net-(Q2-Pad2)">
-      <node ref="R20" pin="1"/>
-      <node ref="Q2" pin="3"/>
-      <node ref="Q2" pin="2"/>
-      <node ref="U4" pin="7"/>
-    </net>
-    <net code="17" name="Net-(Q3-Pad2)">
-      <node ref="R21" pin="2"/>
-      <node ref="Q3" pin="2"/>
-      <node ref="R23" pin="1"/>
-    </net>
-    <net code="18" name="Net-(C18-Pad2)">
-      <node ref="R14" pin="1"/>
-      <node ref="C18" pin="2"/>
-      <node ref="U4" pin="3"/>
-    </net>
-    <net code="19" name="Net-(C20-Pad1)">
-      <node ref="C20" pin="1"/>
-      <node ref="R16" pin="1"/>
-      <node ref="U4" pin="6"/>
-      <node ref="R18" pin="1"/>
-    </net>
-    <net code="20" name="Net-(Q4-Pad2)">
-      <node ref="Q4" pin="2"/>
-      <node ref="R25" pin="1"/>
-      <node ref="R22" pin="2"/>
-    </net>
-    <net code="21" name="Net-(J6-Pad4)">
-      <node ref="J6" pin="4"/>
-    </net>
-    <net code="22" name="Net-(J6-Pad5)">
-      <node ref="J6" pin="5"/>
-    </net>
-    <net code="23" name="Net-(R5-Pad2)">
-      <node ref="R5" pin="2"/>
-      <node ref="R6" pin="1"/>
-      <node ref="U2" pin="1"/>
-    </net>
-    <net code="24" name="Net-(R6-Pad2)">
-      <node ref="U2" pin="2"/>
-      <node ref="R6" pin="2"/>
-      <node ref="R7" pin="1"/>
-    </net>
-    <net code="25" name="Y_LINE">
-      <node ref="J6" pin="2"/>
-      <node ref="R12" pin="2"/>
-      <node ref="R8" pin="2"/>
-    </net>
-    <net code="26" name="X_LINE">
-      <node ref="R13" pin="2"/>
-      <node ref="J6" pin="1"/>
-      <node ref="R9" pin="2"/>
-    </net>
-    <net code="27" name="Net-(D2-Pad2)">
-      <node ref="D2" pin="2"/>
-      <node ref="R4" pin="1"/>
-    </net>
-    <net code="28" name="Net-(JP1-Pad2)">
-      <node ref="RV1" pin="1"/>
-      <node ref="JP1" pin="2"/>
-    </net>
-    <net code="29" name="Net-(JP2-Pad2)">
-      <node ref="R2" pin="1"/>
-      <node ref="JP2" pin="2"/>
-    </net>
-    <net code="30" name="X_OUT">
-      <node ref="J7" pin="1"/>
-      <node ref="R11" pin="2"/>
-    </net>
-    <net code="31" name="Y_OUT">
-      <node ref="J7" pin="2"/>
-      <node ref="R10" pin="2"/>
-    </net>
-    <net code="32" name="X_BUFFERED">
-      <node ref="U2" pin="6"/>
-      <node ref="U2" pin="7"/>
-      <node ref="R30" pin="1"/>
-      <node ref="U5" pin="3"/>
-      <node ref="R27" pin="1"/>
-      <node ref="R26" pin="1"/>
-    </net>
-    <net code="33" name="Net-(R11-Pad1)">
-      <node ref="R11" pin="1"/>
-      <node ref="R9" pin="1"/>
-      <node ref="U3" pin="6"/>
-      <node ref="U3" pin="7"/>
-    </net>
-    <net code="34" name="Net-(D1-Pad1)">
-      <node ref="D1" pin="1"/>
-      <node ref="R3" pin="1"/>
-    </net>
-    <net code="35" name="Net-(R10-Pad1)">
-      <node ref="R10" pin="1"/>
-      <node ref="U3" pin="1"/>
-      <node ref="R8" pin="1"/>
-      <node ref="U3" pin="2"/>
-    </net>
-    <net code="36" name="Net-(R1-Pad1)">
-      <node ref="RV1" pin="3"/>
-      <node ref="RV1" pin="2"/>
-      <node ref="R1" pin="1"/>
-    </net>
-    <net code="37" name="X">
-      <node ref="J9" pin="1"/>
+    <net code="6" name="-VDC">
       <node ref="R2" pin="2"/>
-      <node ref="U2" pin="5"/>
-      <node ref="U2" pin="3"/>
-      <node ref="U3" pin="5"/>
-      <node ref="D1" pin="2"/>
-      <node ref="R5" pin="1"/>
-      <node ref="D2" pin="1"/>
-      <node ref="C17" pin="1"/>
-      <node ref="R1" pin="2"/>
-    </net>
-    <net code="38" name="Net-(R28-Pad2)">
-      <node ref="R28" pin="2"/>
-      <node ref="U5" pin="7"/>
-      <node ref="U6" pin="2"/>
-    </net>
-    <net code="39" name="Net-(R29-Pad1)">
-      <node ref="U5" pin="1"/>
-      <node ref="U5" pin="2"/>
-      <node ref="R29" pin="1"/>
-    </net>
-    <net code="40" name="Net-(R26-Pad2)">
-      <node ref="R28" pin="1"/>
-      <node ref="U5" pin="5"/>
-      <node ref="R26" pin="2"/>
-    </net>
-    <net code="41" name="X_OSCILLATION">
-      <node ref="R35" pin="2"/>
-      <node ref="R33" pin="2"/>
-      <node ref="R31" pin="2"/>
-      <node ref="U6" pin="1"/>
-      <node ref="J10" pin="1"/>
-    </net>
-    <net code="42" name="Net-(C23-Pad1)">
-      <node ref="C23" pin="1"/>
-      <node ref="R27" pin="2"/>
+      <node ref="U6" pin="4"/>
+      <node ref="L2" pin="1"/>
+      <node ref="C30" pin="2"/>
+      <node ref="C31" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="C34" pin="2"/>
+      <node ref="C32" pin="2"/>
+      <node ref="J3" pin="2"/>
+      <node ref="R15" pin="2"/>
       <node ref="U5" pin="6"/>
-    </net>
-    <net code="43" name="Net-(R30-Pad2)">
-      <node ref="U6" pin="5"/>
-      <node ref="R30" pin="2"/>
-      <node ref="R32" pin="1"/>
-    </net>
-    <net code="44" name="Net-(R29-Pad2)">
-      <node ref="U6" pin="3"/>
-      <node ref="R29" pin="2"/>
-      <node ref="R31" pin="1"/>
-    </net>
-    <net code="45" name="Net-(C24-Pad1)">
-      <node ref="U7" pin="17"/>
+      <node ref="U5" pin="5"/>
+      <node ref="J4" pin="2"/>
+      <node ref="U7" pin="7"/>
+      <node ref="U8" pin="4"/>
+      <node ref="C33" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="U13" pin="7"/>
+      <node ref="U10" pin="7"/>
+      <node ref="C35" pin="2"/>
+      <node ref="U11" pin="7"/>
+      <node ref="U4" pin="13"/>
+      <node ref="U4" pin="12"/>
+      <node ref="U4" pin="11"/>
+      <node ref="U9" pin="7"/>
+      <node ref="U12" pin="7"/>
+      <node ref="R20" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U3" pin="1"/>
+      <node ref="U2" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="R3" pin="2"/>
+      <node ref="C36" pin="2"/>
+      <node ref="U4" pin="7"/>
+      <node ref="J1" pin="6"/>
+      <node ref="J1" pin="5"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C6" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="C12" pin="2"/>
+      <node ref="C12" pin="1"/>
+      <node ref="C28" pin="2"/>
+      <node ref="C27" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C18" pin="1"/>
+      <node ref="C20" pin="2"/>
+      <node ref="C20" pin="1"/>
+      <node ref="C22" pin="2"/>
+      <node ref="C22" pin="1"/>
+      <node ref="C24" pin="2"/>
       <node ref="C24" pin="1"/>
+      <node ref="C23" pin="2"/>
+      <node ref="C21" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C14" pin="1"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C26" pin="2"/>
+      <node ref="C26" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C16" pin="1"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C29" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C25" pin="2"/>
     </net>
-    <net code="46" name="Net-(U7-Pad22)">
-      <node ref="U7" pin="22"/>
-    </net>
-    <net code="47" name="Net-(U7-Pad23)">
-      <node ref="U7" pin="23"/>
-    </net>
-    <net code="48" name="Net-(R36-Pad1)">
-      <node ref="R36" pin="1"/>
-      <node ref="U7" pin="5"/>
-    </net>
-    <net code="49" name="Net-(R35-Pad1)">
+    <net code="7" name="Net-(U6-Pad1)">
+      <node ref="U6" pin="2"/>
+      <node ref="U6" pin="1"/>
       <node ref="U7" pin="1"/>
-      <node ref="R35" pin="1"/>
-    </net>
-    <net code="50" name="Net-(U7-Pad28)">
-      <node ref="U7" pin="28"/>
-    </net>
-    <net code="51" name="Net-(U7-Pad27)">
-      <node ref="U7" pin="27"/>
-    </net>
-    <net code="52" name="Net-(U7-Pad19)">
-      <node ref="U7" pin="19"/>
-    </net>
-    <net code="53" name="Net-(U7-Pad24)">
-      <node ref="U7" pin="24"/>
-    </net>
-    <net code="54" name="Net-(U7-Pad14)">
-      <node ref="U7" pin="14"/>
-    </net>
-    <net code="55" name="Net-(U7-Pad13)">
-      <node ref="U7" pin="13"/>
-    </net>
-    <net code="56" name="Net-(U7-Pad12)">
-      <node ref="U7" pin="12"/>
-    </net>
-    <net code="57" name="Net-(U7-Pad11)">
       <node ref="U7" pin="11"/>
     </net>
-    <net code="58" name="Net-(U7-Pad10)">
+    <net code="8" name="CLOCK_CYCLE_2">
+      <node ref="U7" pin="6"/>
+      <node ref="U12" pin="12"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="U12" pin="5"/>
+    </net>
+    <net code="9" name="CLOCK_CYCLE_0">
+      <node ref="U7" pin="5"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="U10" pin="5"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="U10" pin="12"/>
+    </net>
+    <net code="10" name="Net-(C34-Pad1)">
+      <node ref="C34" pin="1"/>
       <node ref="U7" pin="10"/>
+      <node ref="U8" pin="5"/>
     </net>
-    <net code="59" name="Net-(U7-Pad9)">
+    <net code="11" name="Net-(R14-Pad2)">
+      <node ref="R15" pin="1"/>
+      <node ref="R14" pin="2"/>
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="12" name="Net-(R12-Pad1)">
+      <node ref="U5" pin="4"/>
+      <node ref="R13" pin="1"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="13" name="Net-(U5-Pad3)">
+      <node ref="U5" pin="3"/>
+    </net>
+    <net code="14" name="Net-(U5-Pad2)">
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="17" name="CLOCK_CYCLE_3">
+      <node ref="U13" pin="12"/>
+      <node ref="U13" pin="5"/>
+      <node ref="U7" pin="12"/>
+    </net>
+    <net code="20" name="Net-(R14-Pad1)">
+      <node ref="R14" pin="1"/>
+      <node ref="U5" pin="7"/>
+    </net>
+    <net code="21" name="CLOCK_CYCLE_1">
+      <node ref="U7" pin="13"/>
+      <node ref="U11" pin="5"/>
+      <node ref="U11" pin="12"/>
+    </net>
+    <net code="22" name="Net-(C32-Pad1)">
+      <node ref="U7" pin="3"/>
+      <node ref="C32" pin="1"/>
       <node ref="U7" pin="9"/>
+      <node ref="U6" pin="5"/>
     </net>
-    <net code="60" name="Net-(U7-Pad8)">
+    <net code="23" name="Net-(C33-Pad1)">
+      <node ref="U8" pin="3"/>
+      <node ref="C33" pin="1"/>
+      <node ref="U7" pin="2"/>
+    </net>
+    <net code="26" name="Net-(J4-Pad1)">
+      <node ref="J4" pin="1"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="27" name="FRACTAL_TRIGGER">
+      <node ref="R18" pin="1"/>
+      <node ref="U13" pin="9"/>
+      <node ref="U10" pin="2"/>
+    </net>
+    <net code="28" name="Net-(J3-Pad1)">
+      <node ref="J3" pin="1"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="29" name="FRACTAL_Y">
+      <node ref="R17" pin="1"/>
+      <node ref="U8" pin="7"/>
+      <node ref="U8" pin="6"/>
       <node ref="U7" pin="8"/>
     </net>
-    <net code="61" name="Net-(U7-Pad6)">
-      <node ref="U7" pin="6"/>
+    <net code="34" name="Net-(R13-Pad2)">
+      <node ref="U6" pin="6"/>
+      <node ref="U6" pin="7"/>
+      <node ref="R13" pin="2"/>
     </net>
-    <net code="62" name="Net-(U7-Pad3)">
-      <node ref="U7" pin="3"/>
+    <net code="35" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
+      <node ref="R16" pin="2"/>
     </net>
-    <net code="63" name="Net-(U7-Pad2)">
-      <node ref="U7" pin="2"/>
+    <net code="36" name="FRACTAL_X">
+      <node ref="U8" pin="2"/>
+      <node ref="R16" pin="1"/>
+      <node ref="U7" pin="4"/>
+      <node ref="U8" pin="1"/>
+    </net>
+    <net code="37" name="COORDINATE">
+      <node ref="U4" pin="5"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="38" name="Net-(R10-Pad2)">
+      <node ref="U5" pin="1"/>
+      <node ref="R10" pin="2"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="39" name="Net-(R5-Pad2)">
+      <node ref="U2" pin="1"/>
+      <node ref="R7" pin="1"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="40" name="Net-(R7-Pad2)">
+      <node ref="R7" pin="2"/>
+      <node ref="R8" pin="1"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="41" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="42" name="Net-(D1-Pad1)">
+      <node ref="R3" pin="1"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="43" name="Net-(C30-Pad1)">
+      <node ref="C30" pin="1"/>
+      <node ref="L2" pin="2"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="44" name="Net-(U3-Pad5)">
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="45" name="Net-(U3-Pad6)">
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="46" name="+VDC">
+      <node ref="U11" pin="14"/>
+      <node ref="U11" pin="4"/>
+      <node ref="U6" pin="8"/>
+      <node ref="U7" pin="14"/>
+      <node ref="C23" pin="1"/>
+      <node ref="U10" pin="14"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U10" pin="1"/>
+      <node ref="U2" pin="5"/>
+      <node ref="C25" pin="1"/>
+      <node ref="U9" pin="14"/>
+      <node ref="U12" pin="4"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="U3" pin="8"/>
+      <node ref="U9" pin="11"/>
+      <node ref="U9" pin="9"/>
+      <node ref="U4" pin="10"/>
+      <node ref="C15" pin="1"/>
+      <node ref="C21" pin="1"/>
+      <node ref="U10" pin="10"/>
+      <node ref="U12" pin="10"/>
+      <node ref="C28" pin="1"/>
+      <node ref="C13" pin="1"/>
+      <node ref="U13" pin="14"/>
+      <node ref="U13" pin="4"/>
+      <node ref="L1" pin="2"/>
+      <node ref="U11" pin="10"/>
+      <node ref="C11" pin="1"/>
+      <node ref="U12" pin="14"/>
+      <node ref="C9" pin="1"/>
+      <node ref="U8" pin="8"/>
+      <node ref="C17" pin="1"/>
+      <node ref="R21" pin="1"/>
+      <node ref="U13" pin="10"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U5" pin="8"/>
+      <node ref="U4" pin="4"/>
+      <node ref="U4" pin="1"/>
+      <node ref="U4" pin="14"/>
+      <node ref="R9" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="47" name="CHUA_ATTRACTOR">
+      <node ref="R19" pin="1"/>
+      <node ref="U9" pin="12"/>
+    </net>
+    <net code="48" name="Net-(C31-Pad1)">
+      <node ref="R5" pin="1"/>
+      <node ref="D1" pin="3"/>
+      <node ref="U2" pin="3"/>
+      <node ref="C31" pin="1"/>
+      <node ref="U3" pin="3"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="49" name="Net-(R4-Pad1)">
+      <node ref="U3" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="50" name="Net-(R6-Pad1)">
+      <node ref="U9" pin="13"/>
+      <node ref="U3" pin="7"/>
+      <node ref="R9" pin="2"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="51" name="Net-(R19-Pad2)">
+      <node ref="R19" pin="2"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="52" name="Net-(Q1-Pad1)">
+      <node ref="U4" pin="3"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="R20" pin="1"/>
+    </net>
+    <net code="53" name="Net-(U4-Pad6)">
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="54" name="Net-(U13-Pad8)">
+      <node ref="U13" pin="8"/>
+    </net>
+    <net code="55" name="CLOCK">
+      <node ref="U10" pin="3"/>
+      <node ref="R22" pin="2"/>
+      <node ref="U11" pin="11"/>
+      <node ref="U10" pin="11"/>
+      <node ref="U11" pin="3"/>
+      <node ref="U12" pin="11"/>
+      <node ref="U12" pin="3"/>
+      <node ref="U9" pin="2"/>
+      <node ref="U13" pin="3"/>
+      <node ref="U13" pin="11"/>
+    </net>
+    <net code="56" name="RESET">
+      <node ref="U11" pin="1"/>
+      <node ref="U12" pin="1"/>
+      <node ref="U10" pin="4"/>
+      <node ref="U10" pin="13"/>
+      <node ref="U11" pin="13"/>
+      <node ref="U12" pin="13"/>
+      <node ref="U9" pin="6"/>
+      <node ref="U13" pin="13"/>
+      <node ref="U13" pin="1"/>
+    </net>
+    <net code="57" name="Net-(C35-Pad1)">
+      <node ref="C35" pin="1"/>
+      <node ref="U9" pin="3"/>
+      <node ref="R21" pin="2"/>
+    </net>
+    <net code="58" name="Net-(U10-Pad9)">
+      <node ref="U11" pin="2"/>
+      <node ref="U10" pin="9"/>
+    </net>
+    <net code="59" name="Net-(U11-Pad9)">
+      <node ref="U11" pin="9"/>
+      <node ref="U12" pin="2"/>
+    </net>
+    <net code="60" name="Net-(U12-Pad9)">
+      <node ref="U13" pin="2"/>
+      <node ref="U12" pin="9"/>
+    </net>
+    <net code="61" name="Net-(U9-Pad4)">
+      <node ref="U9" pin="5"/>
+      <node ref="U9" pin="4"/>
+    </net>
+    <net code="62" name="Net-(C36-Pad1)">
+      <node ref="R22" pin="1"/>
+      <node ref="C36" pin="1"/>
+      <node ref="U9" pin="1"/>
+    </net>
+    <net code="63" name="Net-(U10-Pad8)">
+      <node ref="U10" pin="8"/>
+    </net>
+    <net code="64" name="Net-(U11-Pad6)">
+      <node ref="U11" pin="6"/>
+    </net>
+    <net code="65" name="Net-(U11-Pad8)">
+      <node ref="U11" pin="8"/>
+    </net>
+    <net code="66" name="Net-(U10-Pad6)">
+      <node ref="U10" pin="6"/>
+    </net>
+    <net code="67" name="Net-(U12-Pad8)">
+      <node ref="U12" pin="8"/>
+    </net>
+    <net code="68" name="Net-(U13-Pad6)">
+      <node ref="U13" pin="6"/>
+    </net>
+    <net code="69" name="Net-(U12-Pad6)">
+      <node ref="U12" pin="6"/>
+    </net>
+    <net code="70" name="Net-(U4-Pad9)">
+      <node ref="U4" pin="9"/>
+    </net>
+    <net code="71" name="Net-(U4-Pad8)">
+      <node ref="U4" pin="8"/>
+    </net>
+    <net code="72" name="Net-(U9-Pad8)">
+      <node ref="U9" pin="8"/>
+    </net>
+    <net code="73" name="Net-(U9-Pad10)">
+      <node ref="U9" pin="10"/>
     </net>
   </nets>
 </export>
