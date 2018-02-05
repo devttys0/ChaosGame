@@ -1,4 +1,4 @@
-update=Sunday, February 04, 2018 'PMt' 08:51:08 PM
+update=Monday, February 05, 2018 'AMt' 11:42:01 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,4 +62,3 @@ LibName30=valves
 LibName31=tle2426
 LibName32=ina826
 LibName33=tlv271
-LibName34=7400
