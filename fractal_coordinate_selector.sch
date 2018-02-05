@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -47,7 +48,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 800  7550 0    60   ~ 0
-This circuit uses the Chua oscillator's unpredictable switching between its two "strange attractors" to randomly select\nthe next XY coordinate for the fractal generator.\n\nThere are two possible voltage outputs for either the X or Y coordinates:\n\n   o X = 2.5v or -2.5v\n   o Y = 2.5v or -2.5v\n\nThis results in a square fractal pattern with four XY points at 2.5:2.5, 2.5:-2.5, -2.5:-2.5, and -2.5:2.5.
+The D-type flip flop U4A samples and holds the high/low digital input from the CHUA_ATTRACTOR on the rising edge of both\nCLOCK_CYLE_0 and CLOCK_CYCLE_2.\n\nThe Chua oscillator's unpredictable switching between its two "strange attractors" (as indicated by the CHUA_ATTRACTOR's\nhigh/low state is used to randomly select the next XY coordinate for the fractal generator.\n\nThere are two possible voltage outputs for either the X or Y coordinates:\n\n   o X = 2.5v or -2.5v\n   o Y = 2.5v or -2.5v\n\nThis results in a square fractal pattern with four XY coordinates at 2.5:2.5, 2.5:-2.5, -2.5:-2.5, and -2.5:2.5.
 $Comp
 L 74HC74 U4
 U 1 1 5A723337
@@ -67,10 +68,10 @@ Text GLabel 4200 3000 0    60   Input ~ 0
 CHUA_ATTRACTOR
 NoConn ~ 6650 3400
 $Comp
-L +VDC #PWR42
+L +VDC #PWR042
 U 1 1 5A725340
 P 6050 2650
-F 0 "#PWR42" H 6050 2550 50  0001 C CNN
+F 0 "#PWR042" H 6050 2550 50  0001 C CNN
 F 1 "+VDC" H 6050 2900 50  0000 C CNN
 F 2 "" H 6050 2650 50  0001 C CNN
 F 3 "" H 6050 2650 50  0001 C CNN
@@ -78,10 +79,10 @@ F 3 "" H 6050 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR43
+L +VDC #PWR043
 U 1 1 5A72534A
 P 6050 3750
-F 0 "#PWR43" H 6050 3650 50  0001 C CNN
+F 0 "#PWR043" H 6050 3650 50  0001 C CNN
 F 1 "+VDC" H 6050 4000 50  0000 C CNN
 F 2 "" H 6050 3750 50  0001 C CNN
 F 3 "" H 6050 3750 50  0001 C CNN
@@ -125,10 +126,10 @@ F 7 "MMBT3904LT3GOSCT-ND" H 4600 4000 60  0001 C CNN "Vendor Part #"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L -VDC #PWR39
+L -VDC #PWR044
 U 1 1 5A7429A0
 P 5100 4400
-F 0 "#PWR39" H 5100 4300 50  0001 C CNN
+F 0 "#PWR044" H 5100 4300 50  0001 C CNN
 F 1 "-VDC" H 5100 4650 50  0000 C CNN
 F 2 "" H 5100 4400 50  0001 C CNN
 F 3 "" H 5100 4400 50  0001 C CNN
@@ -195,24 +196,13 @@ Wire Wire Line
 	4700 3000 4200 3000
 Wire Wire Line
 	5000 3000 5450 3000
-$Comp
-L -VDC #PWR41
-U 1 1 5A7780F2
-P 5850 3550
-F 0 "#PWR41" H 5850 3450 50  0001 C CNN
-F 1 "-VDC" H 5850 3800 50  0000 C CNN
-F 2 "" H 5850 3550 50  0001 C CNN
-F 3 "" H 5850 3550 50  0001 C CNN
-	1    5850 3550
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5850 3550 5850 3450
 $Comp
-L +VDC #PWR40
+L +VDC #PWR045
 U 1 1 5A77812B
 P 5850 2850
-F 0 "#PWR40" H 5850 2750 50  0001 C CNN
+F 0 "#PWR045" H 5850 2750 50  0001 C CNN
 F 1 "+VDC" H 5850 3100 50  0000 C CNN
 F 2 "" H 5850 2850 50  0001 C CNN
 F 3 "" H 5850 2850 50  0001 C CNN
@@ -221,4 +211,15 @@ F 3 "" H 5850 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5850 2850 5850 2950
+$Comp
+L -VDC #PWR046
+U 1 1 5A77FB0C
+P 5850 3550
+F 0 "#PWR046" H 5850 3450 50  0001 C CNN
+F 1 "-VDC" H 5850 3800 50  0000 C CNN
+F 2 "" H 5850 3550 50  0001 C CNN
+F 3 "" H 5850 3550 50  0001 C CNN
+	1    5850 3550
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

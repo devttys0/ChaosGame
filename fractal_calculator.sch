@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -47,12 +48,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 700  7600 0    60   ~ 0
-This circuit calculates the next output point for the fractal pattern.\n\nResistors R10 and R11 drop the +-2.5v from the COORDINATE output to +-1v to ensure the output of U5 remains within\nits output voltage limits. R11 also provides a discharge path for U6's input bias current per the INA826 datasheet.\n\nThe instrumentation amplifier U5 takes the difference between the randomly selected X/Y coordinate and the previously\ngenerated X/Y voltage. This difference voltage is divided by two by resistors R14 and R15, and buffered by U6A.\n\nCapacitors C33 and C34 store the current X/Y coordinate voltages.\n\nCapacitor C32 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U6B, U8A, and U8B act as buffers for the storage capacitors.
+This circuit calculates the next output point for the fractal pattern.\n\nResistors R10 and R11 drop the +-2.5v from the COORDINATE output to +-1v to ensure the output of U5 remains within\nits output voltage limits. R11 also provides a discharge path for U6's input bias current per the INA826 datasheet.\n\nThe instrumentation amplifier U5 takes the difference between the randomly selected X/Y coordinate and the previously\ngenerated X/Y voltage. Resistors R14 and R15 divide this difference voltage by two, and the result is buffered by U6A.\n\nCapacitors C33 and C34 store the current X/Y coordinate voltages.\n\nCapacitor C32 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U6B, U8A, and U8B act as buffers for the storage capacitors.
 $Comp
-L -VDC #PWR28
+L -VDC #PWR024
 U 1 1 5A728B26
 P 4900 3200
-F 0 "#PWR28" H 4900 3100 50  0001 C CNN
+F 0 "#PWR024" H 4900 3100 50  0001 C CNN
 F 1 "-VDC" H 4900 3450 50  0000 C CNN
 F 2 "" H 4900 3200 50  0001 C CNN
 F 3 "" H 4900 3200 50  0001 C CNN
@@ -60,10 +61,10 @@ F 3 "" H 4900 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +VDC #PWR27
+L +VDC #PWR025
 U 1 1 5A728B2C
 P 4900 2600
-F 0 "#PWR27" H 4900 2500 50  0001 C CNN
+F 0 "#PWR025" H 4900 2500 50  0001 C CNN
 F 1 "+VDC" H 4900 2850 50  0000 C CNN
 F 2 "" H 4900 2600 50  0001 C CNN
 F 3 "" H 4900 2600 50  0001 C CNN
@@ -88,10 +89,10 @@ F 7 "296-26806-1-ND" H 5000 2900 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR30
+L +VDC #PWR026
 U 1 1 5A72B4B6
 P 6800 950
-F 0 "#PWR30" H 6800 850 50  0001 C CNN
+F 0 "#PWR026" H 6800 850 50  0001 C CNN
 F 1 "+VDC" H 6800 1200 50  0000 C CNN
 F 2 "" H 6800 950 50  0001 C CNN
 F 3 "" H 6800 950 50  0001 C CNN
@@ -99,10 +100,10 @@ F 3 "" H 6800 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR31
+L -VDC #PWR027
 U 1 1 5A72B575
 P 6800 1450
-F 0 "#PWR31" H 6800 1350 50  0001 C CNN
+F 0 "#PWR027" H 6800 1350 50  0001 C CNN
 F 1 "-VDC" H 6800 1700 50  0000 C CNN
 F 2 "" H 6800 1450 50  0001 C CNN
 F 3 "" H 6800 1450 50  0001 C CNN
@@ -110,10 +111,10 @@ F 3 "" H 6800 1450 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L -VDC #PWR35
+L -VDC #PWR028
 U 1 1 5A72B7C0
 P 8550 1600
-F 0 "#PWR35" H 8550 1500 50  0001 C CNN
+F 0 "#PWR028" H 8550 1500 50  0001 C CNN
 F 1 "-VDC" H 8550 1850 50  0000 C CNN
 F 2 "" H 8550 1600 50  0001 C CNN
 F 3 "" H 8550 1600 50  0001 C CNN
@@ -121,10 +122,10 @@ F 3 "" H 8550 1600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +VDC #PWR34
+L +VDC #PWR029
 U 1 1 5A72B7C6
 P 8550 1000
-F 0 "#PWR34" H 8550 900 50  0001 C CNN
+F 0 "#PWR029" H 8550 900 50  0001 C CNN
 F 1 "+VDC" H 8550 1250 50  0000 C CNN
 F 2 "" H 8550 1000 50  0001 C CNN
 F 3 "" H 8550 1000 50  0001 C CNN
@@ -146,17 +147,6 @@ F 7 "296-26806-1-ND" H 8650 1300 60  0001 C CNN "Vendor Part #"
 	1    8650 1300
 	1    0    0    -1  
 $EndComp
-$Comp
-L GND #PWR32
-U 1 1 5A72BBA0
-P 7550 1750
-F 0 "#PWR32" H 7550 1500 50  0001 C CNN
-F 1 "GND" H 7550 1600 50  0000 C CNN
-F 2 "" H 7550 1750 50  0001 C CNN
-F 3 "" H 7550 1750 50  0001 C CNN
-	1    7550 1750
-	1    0    0    -1  
-$EndComp
 Text GLabel 9750 1300 2    60   Input ~ 0
 FRACTAL_X
 Text GLabel 6500 1350 0    60   Input ~ 0
@@ -174,17 +164,6 @@ F 5 "TLV272CDR" H 8650 3000 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" H 8650 3000 60  0001 C CNN "Vendor"
 F 7 "296-26806-1-ND" H 8650 3000 60  0001 C CNN "Vendor Part #"
 	2    8650 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR33
-U 1 1 5A72C327
-P 7550 3450
-F 0 "#PWR33" H 7550 3200 50  0001 C CNN
-F 1 "GND" H 7550 3300 50  0000 C CNN
-F 2 "" H 7550 3450 50  0001 C CNN
-F 3 "" H 7550 3450 50  0001 C CNN
-	1    7550 3450
 	1    0    0    -1  
 $EndComp
 Text GLabel 9750 3000 2    60   Input ~ 0
@@ -213,17 +192,6 @@ F 6 "Digikey" H 4050 4500 60  0001 C CNN "Vendor"
 F 7 "296-26806-1-ND" H 4050 4500 60  0001 C CNN "Vendor Part #"
 	2    4050 4500
 	-1   0    0    -1  
-$EndComp
-$Comp
-L GND #PWR29
-U 1 1 5A72DAE1
-P 5350 4950
-F 0 "#PWR29" H 5350 4700 50  0001 C CNN
-F 1 "GND" H 5350 4800 50  0000 C CNN
-F 2 "" H 5350 4950 50  0001 C CNN
-F 3 "" H 5350 4950 50  0001 C CNN
-	1    5350 4950
-	1    0    0    -1  
 $EndComp
 $Comp
 L 4066 U7
@@ -399,17 +367,6 @@ F 7 "YAG1763CT-ND" V 4200 3100 60  0001 C CNN "Vendor Part #"
 	1    4200 3100
 	1    0    0    -1  
 $EndComp
-$Comp
-L GND #PWR26
-U 1 1 5A75016E
-P 4200 3350
-F 0 "#PWR26" H 4200 3100 50  0001 C CNN
-F 1 "GND" H 4200 3200 50  0000 C CNN
-F 2 "" H 4200 3350 50  0001 C CNN
-F 3 "" H 4200 3350 50  0001 C CNN
-	1    4200 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4050 2800 4700 2800
 Wire Wire Line
@@ -426,34 +383,23 @@ Wire Wire Line
 Wire Wire Line
 	3500 2800 3750 2800
 $Comp
-L -VDC #PWR24
+L -VDC #PWR030
 U 1 1 5A750500
 P 3100 3300
-F 0 "#PWR24" H 3100 3200 50  0001 C CNN
+F 0 "#PWR030" H 3100 3200 50  0001 C CNN
 F 1 "-VDC" H 3100 3550 50  0000 C CNN
 F 2 "" H 3100 3300 50  0001 C CNN
 F 3 "" H 3100 3300 50  0001 C CNN
 	1    3100 3300
 	-1   0    0    1   
 $EndComp
-$Comp
-L GND #PWR25
-U 1 1 5A750541
-P 3200 3100
-F 0 "#PWR25" H 3200 2850 50  0001 C CNN
-F 1 "GND" H 3200 2950 50  0000 C CNN
-F 2 "" H 3200 3100 50  0001 C CNN
-F 3 "" H 3200 3100 50  0001 C CNN
-	1    3200 3100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3100 3300 3100 3100
 $Comp
-L +VDC #PWR23
+L +VDC #PWR031
 U 1 1 5A7505D1
 P 3100 2250
-F 0 "#PWR23" H 3100 2150 50  0001 C CNN
+F 0 "#PWR031" H 3100 2150 50  0001 C CNN
 F 1 "+VDC" H 3100 2500 50  0000 C CNN
 F 2 "" H 3100 2250 50  0001 C CNN
 F 3 "" H 3100 2250 50  0001 C CNN
@@ -482,17 +428,6 @@ F 5 "RC0805FR-0710KL" V 2300 2850 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" V 2300 2850 60  0001 C CNN "Vendor"
 F 7 "311-10.0KCRCT-ND" V 2300 2850 60  0001 C CNN "Vendor Part #"
 	1    2300 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR21
-U 1 1 5A75D5A3
-P 2300 3150
-F 0 "#PWR21" H 2300 2900 50  0001 C CNN
-F 1 "GND" H 2300 3000 50  0000 C CNN
-F 2 "" H 2300 3150 50  0001 C CNN
-F 3 "" H 2300 3150 50  0001 C CNN
-	1    2300 3150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -575,17 +510,6 @@ Wire Wire Line
 Wire Wire Line
 	10100 4350 10450 4350
 $Comp
-L GND #PWR36
-U 1 1 5A7750EA
-P 10600 4550
-F 0 "#PWR36" H 10600 4300 50  0001 C CNN
-F 1 "GND" H 10600 4400 50  0000 C CNN
-F 2 "" H 10600 4550 50  0001 C CNN
-F 3 "" H 10600 4550 50  0001 C CNN
-	1    10600 4550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Conn_Coaxial J3
 U 1 1 5A7750F4
 P 10600 5000
@@ -621,17 +545,6 @@ Wire Wire Line
 	9350 5000 9800 5000
 Wire Wire Line
 	10100 5000 10450 5000
-$Comp
-L GND #PWR37
-U 1 1 5A775109
-P 10600 5200
-F 0 "#PWR37" H 10600 4950 50  0001 C CNN
-F 1 "GND" H 10600 5050 50  0000 C CNN
-F 2 "" H 10600 5200 50  0001 C CNN
-F 3 "" H 10600 5200 50  0001 C CNN
-	1    10600 5200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Conn_Coaxial J4
 U 1 1 5A775989
@@ -669,17 +582,6 @@ Wire Wire Line
 Wire Wire Line
 	10100 5650 10450 5650
 $Comp
-L GND #PWR38
-U 1 1 5A77599C
-P 10600 5850
-F 0 "#PWR38" H 10600 5600 50  0001 C CNN
-F 1 "GND" H 10600 5700 50  0000 C CNN
-F 2 "" H 10600 5850 50  0001 C CNN
-F 3 "" H 10600 5850 50  0001 C CNN
-	1    10600 5850
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R13
 U 1 1 5A7766FB
 P 3050 4500
@@ -707,17 +609,6 @@ F 5 "RT0805BRD0710KL" V 2600 4800 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" V 2600 4800 60  0001 C CNN "Vendor"
 F 7 "YAG1763CT-ND" V 2600 4800 60  0001 C CNN "Vendor Part #"
 	1    2600 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR22
-U 1 1 5A776789
-P 2600 5000
-F 0 "#PWR22" H 2600 4750 50  0001 C CNN
-F 1 "GND" H 2600 4850 50  0000 C CNN
-F 2 "" H 2600 5000 50  0001 C CNN
-F 3 "" H 2600 5000 50  0001 C CNN
-	1    2600 5000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -763,6 +654,116 @@ F 5 "08055A152FAT2A" H 5350 4700 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" H 5350 4700 60  0001 C CNN "Vendor"
 F 7 "478-7953-1-ND" H 5350 4700 60  0001 C CNN "Vendor Part #"
 	1    5350 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR032
+U 1 1 5A77FD31
+P 2300 3150
+F 0 "#PWR032" H 2300 2900 50  0001 C CNN
+F 1 "GNDREF" H 2300 3000 50  0000 C CNN
+F 2 "" H 2300 3150 50  0001 C CNN
+F 3 "" H 2300 3150 50  0001 C CNN
+	1    2300 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR033
+U 1 1 5A77FD8B
+P 3200 3100
+F 0 "#PWR033" H 3200 2850 50  0001 C CNN
+F 1 "GNDREF" H 3300 2950 50  0000 C CNN
+F 2 "" H 3200 3100 50  0001 C CNN
+F 3 "" H 3200 3100 50  0001 C CNN
+	1    3200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR034
+U 1 1 5A77FEF0
+P 4200 3350
+F 0 "#PWR034" H 4200 3100 50  0001 C CNN
+F 1 "GNDREF" H 4200 3200 50  0000 C CNN
+F 2 "" H 4200 3350 50  0001 C CNN
+F 3 "" H 4200 3350 50  0001 C CNN
+	1    4200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR035
+U 1 1 5A7801D6
+P 2600 5000
+F 0 "#PWR035" H 2600 4750 50  0001 C CNN
+F 1 "GNDREF" H 2600 4850 50  0000 C CNN
+F 2 "" H 2600 5000 50  0001 C CNN
+F 3 "" H 2600 5000 50  0001 C CNN
+	1    2600 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR036
+U 1 1 5A780229
+P 5350 4950
+F 0 "#PWR036" H 5350 4700 50  0001 C CNN
+F 1 "GNDREF" H 5350 4800 50  0000 C CNN
+F 2 "" H 5350 4950 50  0001 C CNN
+F 3 "" H 5350 4950 50  0001 C CNN
+	1    5350 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR037
+U 1 1 5A78027C
+P 7550 3450
+F 0 "#PWR037" H 7550 3200 50  0001 C CNN
+F 1 "GNDREF" H 7550 3300 50  0000 C CNN
+F 2 "" H 7550 3450 50  0001 C CNN
+F 3 "" H 7550 3450 50  0001 C CNN
+	1    7550 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR038
+U 1 1 5A7802FF
+P 7550 1750
+F 0 "#PWR038" H 7550 1500 50  0001 C CNN
+F 1 "GNDREF" H 7550 1600 50  0000 C CNN
+F 2 "" H 7550 1750 50  0001 C CNN
+F 3 "" H 7550 1750 50  0001 C CNN
+	1    7550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR039
+U 1 1 5A780433
+P 10600 4550
+F 0 "#PWR039" H 10600 4300 50  0001 C CNN
+F 1 "GNDREF" H 10600 4400 50  0000 C CNN
+F 2 "" H 10600 4550 50  0001 C CNN
+F 3 "" H 10600 4550 50  0001 C CNN
+	1    10600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR040
+U 1 1 5A780486
+P 10600 5200
+F 0 "#PWR040" H 10600 4950 50  0001 C CNN
+F 1 "GNDREF" H 10600 5050 50  0000 C CNN
+F 2 "" H 10600 5200 50  0001 C CNN
+F 3 "" H 10600 5200 50  0001 C CNN
+	1    10600 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR041
+U 1 1 5A7804D9
+P 10600 5850
+F 0 "#PWR041" H 10600 5600 50  0001 C CNN
+F 1 "GNDREF" H 10600 5700 50  0000 C CNN
+F 2 "" H 10600 5850 50  0001 C CNN
+F 3 "" H 10600 5850 50  0001 C CNN
+	1    10600 5850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

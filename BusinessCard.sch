@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -47,7 +48,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 1000 1000 2500 1500
+S 1000 1000 2500 1550
 U 5A4C1AA1
 F0 "Power Circuit" 79
 F1 "power_circuit.sch" 79
