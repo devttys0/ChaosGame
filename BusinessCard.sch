@@ -30,8 +30,10 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:tle2426
-LIBS:ina826
 LIBS:tlv271
+LIBS:SN74LVC1G175
+LIBS:SN74LVC2G14DBVR
+LIBS:SN74LVC1G66
 LIBS:BusinessCard-cache
 EELAYER 25 0
 EELAYER END
@@ -54,33 +56,33 @@ F0 "Power Circuit" 79
 F1 "power_circuit.sch" 79
 $EndSheet
 $Sheet
-S 4600 1000 2500 1550
+S 8100 1000 2500 1550
 U 5A4C28B9
 F0 "Chua Oscillator" 79
 F1 "chua_oscillator.sch" 79
 $EndSheet
 $Sheet
-S 1000 3250 2500 1500
-U 5A4C1F81
-F0 "Fractal Calculator" 79
-F1 "fractal_calculator.sch" 79
-$EndSheet
-$Sheet
-S 8100 1000 2500 1550
+S 1000 3200 2500 1550
 U 5A52FB25
 F0 "Fractal Coordinate Selector" 79
 F1 "fractal_coordinate_selector.sch" 79
 $EndSheet
 $Sheet
-S 4600 3250 2500 1500
+S 4600 1000 2500 1550
 U 5A5340E6
 F0 "Fractal Clock" 79
 F1 "fractal_clock.sch" 79
 $EndSheet
 $Sheet
-S 8100 3250 2500 1500
+S 8100 3200 2500 1550
 U 5A76A5A9
-F0 "Unused" 79
-F1 "unused.sch" 79
+F0 "Output Circuit" 79
+F1 "output_circuit.sch" 79
+$EndSheet
+$Sheet
+S 4600 3200 2500 1550
+U 5A4C1F81
+F0 "Fractal Calculator" 79
+F1 "fractal_calculator.sch" 79
 $EndSheet
 $EndSCHEMATC

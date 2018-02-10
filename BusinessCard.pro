@@ -1,4 +1,4 @@
-update=Monday, February 05, 2018 'AMt' 11:42:01 AM
+update=Thursday, February 08, 2018 'PMt' 03:09:56 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,5 +60,7 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=tle2426
-LibName32=ina826
-LibName33=tlv271
+LibName32=tlv271
+LibName33=SN74LVC1G175
+LibName34=SN74LVC2G14DBVR
+LibName35=SN74LVC1G66

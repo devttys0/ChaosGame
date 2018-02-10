@@ -30,8 +30,10 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:tle2426
-LIBS:ina826
 LIBS:tlv271
+LIBS:SN74LVC1G175
+LIBS:SN74LVC2G14DBVR
+LIBS:SN74LVC1G66
 LIBS:BusinessCard-cache
 EELAYER 25 0
 EELAYER END
@@ -48,10 +50,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L C C27
+L C C1
 U 1 1 5A4873BF
 P 5550 1950
-F 0 "C27" H 5575 2050 50  0000 L CNN
+F 0 "C1" H 5575 2050 50  0000 L CNN
 F 1 "0.1uF" H 5575 1850 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5588 1800 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5550 1950 50  0001 C CNN
@@ -63,10 +65,10 @@ F 7 "478-7609-1-ND" H 5550 1950 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C28
+L C C2
 U 1 1 5A4878CA
 P 6150 1950
-F 0 "C28" H 6175 2050 50  0000 L CNN
+F 0 "C2" H 6175 2050 50  0000 L CNN
 F 1 "10uF" H 6175 1850 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6188 1800 50  0001 C CNN
 F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf" H 6150 1950 50  0001 C CNN
@@ -94,10 +96,10 @@ F 7 "732-1629-1-ND" V 5850 1400 60  0001 C CNN "Vendor Part #"
 $EndComp
 Connection ~ 5550 1400
 $Comp
-L -VDC #PWR4
+L -VDC #PWR3
 U 1 1 5A487BD7
 P 6150 2700
-F 0 "#PWR4" H 6150 2600 50  0001 C CNN
+F 0 "#PWR3" H 6150 2600 50  0001 C CNN
 F 1 "-VDC" H 6150 2950 50  0000 C CNN
 F 2 "" H 6150 2700 50  0001 C CNN
 F 3 "" H 6150 2700 50  0001 C CNN
@@ -153,12 +155,12 @@ Wire Wire Line
 Connection ~ 6800 4700
 Connection ~ 6350 4300
 Text Notes 650  7500 0    60   ~ 0
-This circuit provides power to the rest of the board.\n\n+5v is provided via the USB connector, and U1 serves to split it into +-2.5v for split rail operation.\n\nCapacitors C1-C24 are bypass caps which should be placed as close as possible to U2-U13.
+This circuit provides power to the rest of the board.\n\n+5v is provided via the USB connector, and U1 serves to split it into +-2.5v for split rail operation.\n\nCapacitors C4-C33 are bypass caps which should be placed as close as possible to U2-U15.
 $Comp
-L +VDC #PWR3
+L +VDC #PWR1
 U 1 1 5A4D6D3A
 P 6150 1200
-F 0 "#PWR3" H 6150 1100 50  0001 C CNN
+F 0 "#PWR1" H 6150 1100 50  0001 C CNN
 F 1 "+VDC" H 6150 1450 50  0000 C CNN
 F 2 "" H 6150 1200 50  0001 C CNN
 F 3 "" H 6150 1200 50  0001 C CNN
@@ -175,10 +177,10 @@ Wire Wire Line
 Wire Wire Line
 	7350 1500 7550 1500
 $Comp
-L C C25
+L C C18
 U 1 1 5A5397A7
 P 8950 4100
-F 0 "C25" H 8975 4200 50  0000 L CNN
+F 0 "C18" H 8975 4200 50  0000 L CNN
 F 1 "10uF" H 8975 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8988 3950 50  0001 C CNN
 F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf" H 8950 4100 50  0001 C CNN
@@ -190,25 +192,25 @@ F 7 "490-10516-1-ND" H 8950 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR7
+L +VDC #PWR4
 U 1 1 5A5398D3
-P 8950 3950
-F 0 "#PWR7" H 8950 3850 50  0001 C CNN
-F 1 "+VDC" H 8950 4200 50  0000 C CNN
-F 2 "" H 8950 3950 50  0001 C CNN
-F 3 "" H 8950 3950 50  0001 C CNN
-	1    8950 3950
+P 8950 3850
+F 0 "#PWR4" H 8950 3750 50  0001 C CNN
+F 1 "+VDC" H 8950 4100 50  0000 C CNN
+F 2 "" H 8950 3850 50  0001 C CNN
+F 3 "" H 8950 3850 50  0001 C CNN
+	1    8950 3850
 	1    0    0    -1  
 $EndComp
 $Comp
 L -VDC #PWR8
 U 1 1 5A53990B
-P 8950 4650
-F 0 "#PWR8" H 8950 4550 50  0001 C CNN
-F 1 "-VDC" H 8950 4900 50  0000 C CNN
-F 2 "" H 8950 4650 50  0001 C CNN
-F 3 "" H 8950 4650 50  0001 C CNN
-	1    8950 4650
+P 8950 4750
+F 0 "#PWR8" H 8950 4650 50  0001 C CNN
+F 1 "-VDC" H 8950 5000 50  0000 C CNN
+F 2 "" H 8950 4750 50  0001 C CNN
+F 3 "" H 8950 4750 50  0001 C CNN
+	1    8950 4750
 	-1   0    0    1   
 $EndComp
 Connection ~ 6350 3900
@@ -241,9 +243,9 @@ Wire Wire Line
 Wire Wire Line
 	7700 4700 7700 4650
 Wire Wire Line
-	2750 4700 7700 4700
+	1800 4700 7700 4700
 Wire Wire Line
-	2750 3900 7700 3900
+	1800 3900 7700 3900
 Wire Wire Line
 	7700 3900 7700 3950
 Wire Wire Line
@@ -253,17 +255,17 @@ Wire Wire Line
 	7250 4650 7250 4700
 Connection ~ 7250 4700
 Wire Wire Line
-	2750 4300 8950 4300
+	1800 4300 8950 4300
 Connection ~ 7700 4300
 Connection ~ 7250 4300
 NoConn ~ 4850 1600
 NoConn ~ 4850 1700
 NoConn ~ 4850 1800
 $Comp
-L C C29
+L C C3
 U 1 1 5A779FF6
 P 6950 2050
-F 0 "C29" H 6975 2150 50  0000 L CNN
+F 0 "C3" H 6975 2150 50  0000 L CNN
 F 1 "0.1uF" H 6975 1950 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6988 1900 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6950 2050 50  0001 C CNN
@@ -275,10 +277,10 @@ F 7 "478-7609-1-ND" H 6950 2050 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C15
+L C C13
 U 1 1 5A77A2F8
 P 5900 4100
-F 0 "C15" H 5925 4200 50  0000 L CNN
+F 0 "C13" H 5925 4200 50  0000 L CNN
 F 1 "0.1uF" H 5925 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5938 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5900 4100 50  0001 C CNN
@@ -290,10 +292,10 @@ F 7 "478-7609-1-ND" H 5900 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C17
+L C C14
 U 1 1 5A77A338
 P 6350 4100
-F 0 "C17" H 6375 4200 50  0000 L CNN
+F 0 "C14" H 6375 4200 50  0000 L CNN
 F 1 "0.1uF" H 6375 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6388 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6350 4100 50  0001 C CNN
@@ -305,10 +307,10 @@ F 7 "478-7609-1-ND" H 6350 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C19
+L C C15
 U 1 1 5A77A373
 P 6800 4100
-F 0 "C19" H 6825 4200 50  0000 L CNN
+F 0 "C15" H 6825 4200 50  0000 L CNN
 F 1 "0.1uF" H 6825 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6838 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6800 4100 50  0001 C CNN
@@ -320,10 +322,10 @@ F 7 "478-7609-1-ND" H 6800 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C21
+L C C16
 U 1 1 5A77A3B1
 P 7250 4100
-F 0 "C21" H 7275 4200 50  0000 L CNN
+F 0 "C16" H 7275 4200 50  0000 L CNN
 F 1 "0.1uF" H 7275 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7288 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 7250 4100 50  0001 C CNN
@@ -335,10 +337,10 @@ F 7 "478-7609-1-ND" H 7250 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C23
+L C C17
 U 1 1 5A77A3F1
 P 7700 4100
-F 0 "C23" H 7725 4200 50  0000 L CNN
+F 0 "C17" H 7725 4200 50  0000 L CNN
 F 1 "0.1uF" H 7725 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7738 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 7700 4100 50  0001 C CNN
@@ -350,10 +352,10 @@ F 7 "478-7609-1-ND" H 7700 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C24
+L C C33
 U 1 1 5A77A437
 P 7700 4500
-F 0 "C24" H 7725 4600 50  0000 L CNN
+F 0 "C33" H 7725 4600 50  0000 L CNN
 F 1 "0.1uF" H 7725 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7738 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 7700 4500 50  0001 C CNN
@@ -365,10 +367,10 @@ F 7 "478-7609-1-ND" H 7700 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C22
+L C C32
 U 1 1 5A77A47F
 P 7250 4500
-F 0 "C22" H 7275 4600 50  0000 L CNN
+F 0 "C32" H 7275 4600 50  0000 L CNN
 F 1 "0.1uF" H 7275 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7288 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 7250 4500 50  0001 C CNN
@@ -380,10 +382,10 @@ F 7 "478-7609-1-ND" H 7250 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C20
+L C C31
 U 1 1 5A77A4CA
 P 6800 4500
-F 0 "C20" H 6825 4600 50  0000 L CNN
+F 0 "C31" H 6825 4600 50  0000 L CNN
 F 1 "0.1uF" H 6825 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6838 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6800 4500 50  0001 C CNN
@@ -395,10 +397,10 @@ F 7 "478-7609-1-ND" H 6800 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C18
+L C C30
 U 1 1 5A77A517
 P 6350 4500
-F 0 "C18" H 6375 4600 50  0000 L CNN
+F 0 "C30" H 6375 4600 50  0000 L CNN
 F 1 "0.1uF" H 6375 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6388 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6350 4500 50  0001 C CNN
@@ -410,10 +412,10 @@ F 7 "478-7609-1-ND" H 6350 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C16
+L C C29
 U 1 1 5A77A567
 P 5900 4500
-F 0 "C16" H 5925 4600 50  0000 L CNN
+F 0 "C29" H 5925 4600 50  0000 L CNN
 F 1 "0.1uF" H 5925 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5938 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5900 4500 50  0001 C CNN
@@ -462,10 +464,10 @@ Connection ~ 5000 4700
 Connection ~ 5450 4300
 Connection ~ 5000 4300
 $Comp
-L C C5
+L C C8
 U 1 1 5A77A729
 P 3650 4100
-F 0 "C5" H 3675 4200 50  0000 L CNN
+F 0 "C8" H 3675 4200 50  0000 L CNN
 F 1 "0.1uF" H 3675 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3688 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 3650 4100 50  0001 C CNN
@@ -477,10 +479,10 @@ F 7 "478-7609-1-ND" H 3650 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C7
+L C C9
 U 1 1 5A77A733
 P 4100 4100
-F 0 "C7" H 4125 4200 50  0000 L CNN
+F 0 "C9" H 4125 4200 50  0000 L CNN
 F 1 "0.1uF" H 4125 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4138 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4100 4100 50  0001 C CNN
@@ -492,10 +494,10 @@ F 7 "478-7609-1-ND" H 4100 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L C C10
 U 1 1 5A77A73D
 P 4550 4100
-F 0 "C9" H 4575 4200 50  0000 L CNN
+F 0 "C10" H 4575 4200 50  0000 L CNN
 F 1 "0.1uF" H 4575 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4588 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4550 4100 50  0001 C CNN
@@ -522,10 +524,10 @@ F 7 "478-7609-1-ND" H 5000 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C13
+L C C12
 U 1 1 5A77A751
 P 5450 4100
-F 0 "C13" H 5475 4200 50  0000 L CNN
+F 0 "C12" H 5475 4200 50  0000 L CNN
 F 1 "0.1uF" H 5475 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5488 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5450 4100 50  0001 C CNN
@@ -537,10 +539,10 @@ F 7 "478-7609-1-ND" H 5450 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C14
+L C C28
 U 1 1 5A77A75B
 P 5450 4500
-F 0 "C14" H 5475 4600 50  0000 L CNN
+F 0 "C28" H 5475 4600 50  0000 L CNN
 F 1 "0.1uF" H 5475 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5488 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5450 4500 50  0001 C CNN
@@ -552,10 +554,10 @@ F 7 "478-7609-1-ND" H 5450 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C12
+L C C27
 U 1 1 5A77A765
 P 5000 4500
-F 0 "C12" H 5025 4600 50  0000 L CNN
+F 0 "C27" H 5025 4600 50  0000 L CNN
 F 1 "0.1uF" H 5025 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5038 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5000 4500 50  0001 C CNN
@@ -567,10 +569,10 @@ F 7 "478-7609-1-ND" H 5000 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C10
+L C C26
 U 1 1 5A77A76F
 P 4550 4500
-F 0 "C10" H 4575 4600 50  0000 L CNN
+F 0 "C26" H 4575 4600 50  0000 L CNN
 F 1 "0.1uF" H 4575 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4588 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4550 4500 50  0001 C CNN
@@ -582,10 +584,10 @@ F 7 "478-7609-1-ND" H 4550 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L C C25
 U 1 1 5A77A779
 P 4100 4500
-F 0 "C8" H 4125 4600 50  0000 L CNN
+F 0 "C25" H 4125 4600 50  0000 L CNN
 F 1 "0.1uF" H 4125 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4138 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 4100 4500 50  0001 C CNN
@@ -597,10 +599,10 @@ F 7 "478-7609-1-ND" H 4100 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L C C24
 U 1 1 5A77A783
 P 3650 4500
-F 0 "C6" H 3675 4600 50  0000 L CNN
+F 0 "C24" H 3675 4600 50  0000 L CNN
 F 1 "0.1uF" H 3675 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3688 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 3650 4500 50  0001 C CNN
@@ -622,10 +624,10 @@ Wire Wire Line
 	2750 4250 2750 4350
 Connection ~ 2750 4300
 $Comp
-L C C1
+L C C6
 U 1 1 5A77AD72
 P 2750 4100
-F 0 "C1" H 2775 4200 50  0000 L CNN
+F 0 "C6" H 2775 4200 50  0000 L CNN
 F 1 "0.1uF" H 2775 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2788 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 2750 4100 50  0001 C CNN
@@ -637,10 +639,10 @@ F 7 "478-7609-1-ND" H 2750 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L C C7
 U 1 1 5A77AD7C
 P 3200 4100
-F 0 "C3" H 3225 4200 50  0000 L CNN
+F 0 "C7" H 3225 4200 50  0000 L CNN
 F 1 "0.1uF" H 3225 4000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3238 3950 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 3200 4100 50  0001 C CNN
@@ -652,10 +654,10 @@ F 7 "478-7609-1-ND" H 3200 4100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L C C23
 U 1 1 5A77AD86
 P 3200 4500
-F 0 "C4" H 3225 4600 50  0000 L CNN
+F 0 "C23" H 3225 4600 50  0000 L CNN
 F 1 "0.1uF" H 3225 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3238 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 3200 4500 50  0001 C CNN
@@ -667,10 +669,10 @@ F 7 "478-7609-1-ND" H 3200 4500 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L C C22
 U 1 1 5A77AD90
 P 2750 4500
-F 0 "C2" H 2775 4600 50  0000 L CNN
+F 0 "C22" H 2775 4600 50  0000 L CNN
 F 1 "0.1uF" H 2775 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2788 4350 50  0001 C CNN
 F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 2750 4500 50  0001 C CNN
@@ -694,25 +696,25 @@ Wire Wire Line
 	3200 3950 3200 3900
 Connection ~ 3200 3900
 $Comp
-L +VDC #PWR1
+L +VDC #PWR5
 U 1 1 5A77B094
-P 5000 3900
-F 0 "#PWR1" H 5000 3800 50  0001 C CNN
-F 1 "+VDC" H 5000 4150 50  0000 C CNN
-F 2 "" H 5000 3900 50  0001 C CNN
-F 3 "" H 5000 3900 50  0001 C CNN
-	1    5000 3900
+P 4550 3900
+F 0 "#PWR5" H 4550 3800 50  0001 C CNN
+F 1 "+VDC" H 4550 4150 50  0000 C CNN
+F 2 "" H 4550 3900 50  0001 C CNN
+F 3 "" H 4550 3900 50  0001 C CNN
+	1    4550 3900
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR2
+L -VDC #PWR7
 U 1 1 5A77B0FF
-P 5000 4700
-F 0 "#PWR2" H 5000 4600 50  0001 C CNN
-F 1 "-VDC" H 5000 4950 50  0000 C CNN
-F 2 "" H 5000 4700 50  0001 C CNN
-F 3 "" H 5000 4700 50  0001 C CNN
-	1    5000 4700
+P 4550 4700
+F 0 "#PWR7" H 4550 4600 50  0001 C CNN
+F 1 "-VDC" H 4550 4950 50  0000 C CNN
+F 2 "" H 4550 4700 50  0001 C CNN
+F 3 "" H 4550 4700 50  0001 C CNN
+	1    4550 4700
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -724,10 +726,10 @@ Wire Wire Line
 Wire Wire Line
 	6800 4650 6800 4700
 $Comp
-L C C26
+L C C34
 U 1 1 5A77C18A
 P 8950 4500
-F 0 "C26" H 8975 4600 50  0000 L CNN
+F 0 "C34" H 8975 4600 50  0000 L CNN
 F 1 "10uF" H 8975 4400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8988 4350 50  0001 C CNN
 F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf" H 8950 4500 50  0001 C CNN
@@ -764,10 +766,10 @@ Wire Wire Line
 	4550 2050 4450 2050
 Connection ~ 4450 2050
 $Comp
-L GNDREF #PWR5
+L GNDREF #PWR2
 U 1 1 5A77F215
 P 7550 1700
-F 0 "#PWR5" H 7550 1450 50  0001 C CNN
+F 0 "#PWR2" H 7550 1450 50  0001 C CNN
 F 1 "GNDREF" H 7550 1550 50  0000 C CNN
 F 2 "" H 7550 1700 50  0001 C CNN
 F 3 "" H 7550 1700 50  0001 C CNN
@@ -813,4 +815,111 @@ F 3 "" H 6450 2600 50  0001 C CNN
 	1    6450 2600
 	-1   0    0    1   
 $EndComp
+$Comp
+L C C19
+U 1 1 5A7E0B4D
+P 9500 4300
+F 0 "C19" H 9525 4400 50  0000 L CNN
+F 1 "10uF" H 9525 4200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9538 4150 50  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf" H 9500 4300 50  0001 C CNN
+F 4 "Murata" H 9500 4300 60  0001 C CNN "Manufacturer"
+F 5 "GRM21BR71A106KA73L" H 9500 4300 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 9500 4300 60  0001 C CNN "Vendor"
+F 7 "490-10516-1-ND" H 9500 4300 60  0001 C CNN "Vendor Part #"
+	1    9500 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 4750 8950 4650
+Wire Wire Line
+	8950 3950 8950 3850
+Wire Wire Line
+	8950 3900 9500 3900
+Wire Wire Line
+	9500 3900 9500 4150
+Connection ~ 8950 3900
+Wire Wire Line
+	8950 4700 9500 4700
+Wire Wire Line
+	9500 4700 9500 4450
+Connection ~ 8950 4700
+Wire Wire Line
+	2250 4250 2250 4350
+Connection ~ 2250 4300
+Wire Wire Line
+	1800 4250 1800 4350
+Connection ~ 1800 4300
+$Comp
+L C C4
+U 1 1 5A7F4063
+P 1800 4100
+F 0 "C4" H 1825 4200 50  0000 L CNN
+F 1 "0.1uF" H 1825 4000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1838 3950 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 1800 4100 50  0001 C CNN
+F 4 "AVX Corporation" H 1800 4100 60  0001 C CNN "Manufacturer"
+F 5 "08055C104JAT4A" H 1800 4100 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1800 4100 60  0001 C CNN "Vendor"
+F 7 "478-7609-1-ND" H 1800 4100 60  0001 C CNN "Vendor Part #"
+	1    1800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 5A7F406D
+P 2250 4100
+F 0 "C5" H 2275 4200 50  0000 L CNN
+F 1 "0.1uF" H 2275 4000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2288 3950 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 2250 4100 50  0001 C CNN
+F 4 "AVX Corporation" H 2250 4100 60  0001 C CNN "Manufacturer"
+F 5 "08055C104JAT4A" H 2250 4100 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 2250 4100 60  0001 C CNN "Vendor"
+F 7 "478-7609-1-ND" H 2250 4100 60  0001 C CNN "Vendor Part #"
+	1    2250 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C21
+U 1 1 5A7F4077
+P 2250 4500
+F 0 "C21" H 2275 4600 50  0000 L CNN
+F 1 "0.1uF" H 2275 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2288 4350 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 2250 4500 50  0001 C CNN
+F 4 "AVX Corporation" H 2250 4500 60  0001 C CNN "Manufacturer"
+F 5 "08055C104JAT4A" H 2250 4500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 2250 4500 60  0001 C CNN "Vendor"
+F 7 "478-7609-1-ND" H 2250 4500 60  0001 C CNN "Vendor Part #"
+	1    2250 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C20
+U 1 1 5A7F4081
+P 1800 4500
+F 0 "C20" H 1825 4600 50  0000 L CNN
+F 1 "0.1uF" H 1825 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1838 4350 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 1800 4500 50  0001 C CNN
+F 4 "AVX Corporation" H 1800 4500 60  0001 C CNN "Manufacturer"
+F 5 "08055C104JAT4A" H 1800 4500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1800 4500 60  0001 C CNN "Vendor"
+F 7 "478-7609-1-ND" H 1800 4500 60  0001 C CNN "Vendor Part #"
+	1    1800 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3900 1800 3950
+Wire Wire Line
+	1800 4700 1800 4650
+Wire Wire Line
+	2250 4650 2250 4700
+Connection ~ 2250 4700
+Wire Wire Line
+	2250 3950 2250 3900
+Connection ~ 2250 3900
+Connection ~ 2750 3900
+Connection ~ 2750 4700
 $EndSCHEMATC

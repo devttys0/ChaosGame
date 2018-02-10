@@ -30,14 +30,16 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:tle2426
-LIBS:ina826
 LIBS:tlv271
+LIBS:SN74LVC1G175
+LIBS:SN74LVC2G14DBVR
+LIBS:SN74LVC1G66
 LIBS:BusinessCard-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -48,722 +50,619 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 700  7600 0    60   ~ 0
-This circuit calculates the next output point for the fractal pattern.\n\nResistors R10 and R11 drop the +-2.5v from the COORDINATE output to +-1v to ensure the output of U5 remains within\nits output voltage limits. R11 also provides a discharge path for U6's input bias current per the INA826 datasheet.\n\nThe instrumentation amplifier U5 takes the difference between the randomly selected X/Y coordinate and the previously\ngenerated X/Y voltage. Resistors R14 and R15 divide this difference voltage by two, and the result is buffered by U6A.\n\nCapacitors C33 and C34 store the current X/Y coordinate voltages.\n\nCapacitor C32 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U6B, U8A, and U8B act as buffers for the storage capacitors.
-$Comp
-L -VDC #PWR28
-U 1 1 5A728B26
-P 4900 3200
-F 0 "#PWR28" H 4900 3100 50  0001 C CNN
-F 1 "-VDC" H 4900 3450 50  0000 C CNN
-F 2 "" H 4900 3200 50  0001 C CNN
-F 3 "" H 4900 3200 50  0001 C CNN
-	1    4900 3200
-	-1   0    0    1   
-$EndComp
-$Comp
-L +VDC #PWR27
-U 1 1 5A728B2C
-P 4900 2600
-F 0 "#PWR27" H 4900 2500 50  0001 C CNN
-F 1 "+VDC" H 4900 2850 50  0000 C CNN
-F 2 "" H 4900 2600 50  0001 C CNN
-F 3 "" H 4900 2600 50  0001 C CNN
-	1    4900 2600
-	1    0    0    -1  
-$EndComp
-Text GLabel 1450 2600 0    60   Input ~ 0
+This circuit calculates the next output point for the fractal pattern.\n\nU5A is configured as a differential amplifier which multiplies the difference between the randomly selected X/Y coordinate\nand the previously generated X/Y voltage by 0.4.\n\nCapacitors C39 and C41 store the current X/Y coordinate voltages.\n\nCapacitor C43 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U5B, U5C, and U5D act as buffers for the storage capacitors.\n\nResistors R17 and R21 isolate the op amp's outputs from their capacitive loads to ensure stable operation.
+Text GLabel 1300 2800 0    60   Input ~ 0
 COORDINATE
 $Comp
-L TL082 U6
-U 1 1 5A728B37
-P 5000 2900
-F 0 "U6" H 5000 3100 50  0000 L CNN
-F 1 "TLV272" H 5000 2700 50  0000 L CNN
-F 2 "SMD_Packages:SOIC-8-N" H 5000 2900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlv272.pdf" H 5000 2900 50  0001 C CNN
-F 4 "Texas Instruments" H 5000 2900 60  0001 C CNN "Manufacturer"
-F 5 "TLV272CDR" H 5000 2900 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 5000 2900 60  0001 C CNN "Vendor"
-F 7 "296-26806-1-ND" H 5000 2900 60  0001 C CNN "Vendor Part #"
-	1    5000 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L +VDC #PWR30
+L +VDC #PWR48
 U 1 1 5A72B4B6
-P 6800 950
-F 0 "#PWR30" H 6800 850 50  0001 C CNN
-F 1 "+VDC" H 6800 1200 50  0000 C CNN
-F 2 "" H 6800 950 50  0001 C CNN
-F 3 "" H 6800 950 50  0001 C CNN
-	1    6800 950 
+P 7150 950
+F 0 "#PWR48" H 7150 850 50  0001 C CNN
+F 1 "+VDC" H 7150 1200 50  0000 C CNN
+F 2 "" H 7150 950 50  0001 C CNN
+F 3 "" H 7150 950 50  0001 C CNN
+	1    7150 950 
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR31
+L -VDC #PWR49
 U 1 1 5A72B575
-P 6800 1450
-F 0 "#PWR31" H 6800 1350 50  0001 C CNN
-F 1 "-VDC" H 6800 1700 50  0000 C CNN
-F 2 "" H 6800 1450 50  0001 C CNN
-F 3 "" H 6800 1450 50  0001 C CNN
-	1    6800 1450
+P 7150 1450
+F 0 "#PWR49" H 7150 1350 50  0001 C CNN
+F 1 "-VDC" H 7150 1700 50  0000 C CNN
+F 2 "" H 7150 1450 50  0001 C CNN
+F 3 "" H 7150 1450 50  0001 C CNN
+	1    7150 1450
 	-1   0    0    1   
 $EndComp
-$Comp
-L -VDC #PWR35
-U 1 1 5A72B7C0
-P 8550 1600
-F 0 "#PWR35" H 8550 1500 50  0001 C CNN
-F 1 "-VDC" H 8550 1850 50  0000 C CNN
-F 2 "" H 8550 1600 50  0001 C CNN
-F 3 "" H 8550 1600 50  0001 C CNN
-	1    8550 1600
-	-1   0    0    1   
-$EndComp
-$Comp
-L +VDC #PWR34
-U 1 1 5A72B7C6
-P 8550 1000
-F 0 "#PWR34" H 8550 900 50  0001 C CNN
-F 1 "+VDC" H 8550 1250 50  0000 C CNN
-F 2 "" H 8550 1000 50  0001 C CNN
-F 3 "" H 8550 1000 50  0001 C CNN
-	1    8550 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L TL082 U8
-U 1 1 5A72B7D0
-P 8650 1300
-F 0 "U8" H 8650 1500 50  0000 L CNN
-F 1 "TLV272" H 8650 1100 50  0000 L CNN
-F 2 "SMD_Packages:SOIC-8-N" H 8650 1300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlv272.pdf" H 8650 1300 50  0001 C CNN
-F 4 "Texas Instruments" H 8650 1300 60  0001 C CNN "Manufacturer"
-F 5 "TLV272CDR" H 8650 1300 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 8650 1300 60  0001 C CNN "Vendor"
-F 7 "296-26806-1-ND" H 8650 1300 60  0001 C CNN "Vendor Part #"
-	1    8650 1300
-	1    0    0    -1  
-$EndComp
-Text GLabel 9750 1300 2    60   Input ~ 0
+Text GLabel 10100 1300 2    60   Input ~ 0
 FRACTAL_X
-Text GLabel 6500 1350 0    60   Input ~ 0
+Text GLabel 6850 1350 0    60   Input ~ 0
 CLOCK_CYCLE_1
-$Comp
-L TL082 U8
-U 2 1 5A72C310
-P 8650 3000
-F 0 "U8" H 8650 3200 50  0000 L CNN
-F 1 "TLV272" H 8650 2800 50  0000 L CNN
-F 2 "SMD_Packages:SOIC-8-N" H 8650 3000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlv272.pdf" H 8650 3000 50  0001 C CNN
-F 4 "Texas Instruments" H 8650 3000 60  0001 C CNN "Manufacturer"
-F 5 "TLV272CDR" H 8650 3000 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 8650 3000 60  0001 C CNN "Vendor"
-F 7 "296-26806-1-ND" H 8650 3000 60  0001 C CNN "Vendor Part #"
-	2    8650 3000
-	1    0    0    -1  
-$EndComp
-Text GLabel 9750 3000 2    60   Input ~ 0
+Text GLabel 10100 3000 2    60   Input ~ 0
 FRACTAL_Y
-Text GLabel 6500 3050 0    60   Input ~ 0
+Text GLabel 6850 3050 0    60   Input ~ 0
 CLOCK_CYCLE_3
-Text GLabel 7250 4400 2    60   Input ~ 0
+Text GLabel 7600 4400 2    60   Input ~ 0
 FRACTAL_X
-Text GLabel 7250 4550 2    60   Input ~ 0
+Text GLabel 7600 4550 2    60   Input ~ 0
 CLOCK_CYCLE_0
-Text GLabel 7250 5650 2    60   Input ~ 0
+Text GLabel 7600 5650 2    60   Input ~ 0
 FRACTAL_Y
-Text GLabel 7250 5800 2    60   Input ~ 0
+Text GLabel 7600 5800 2    60   Input ~ 0
 CLOCK_CYCLE_2
-$Comp
-L TL082 U6
-U 2 1 5A72DA60
-P 4050 4500
-F 0 "U6" H 4050 4700 50  0000 L CNN
-F 1 "TLV272" H 4050 4300 50  0000 L CNN
-F 2 "SMD_Packages:SOIC-8-N" H 4050 4500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlv272.pdf" H 4050 4500 50  0001 C CNN
-F 4 "Texas Instruments" H 4050 4500 60  0001 C CNN "Manufacturer"
-F 5 "TLV272CDR" H 4050 4500 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 4050 4500 60  0001 C CNN "Vendor"
-F 7 "296-26806-1-ND" H 4050 4500 60  0001 C CNN "Vendor Part #"
-	2    4050 4500
-	-1   0    0    -1  
-$EndComp
-$Comp
-L 4066 U7
-U 1 1 5A72B361
-P 6800 1200
-F 0 "U7" H 7000 1051 50  0000 C CNN
-F 1 "4066" H 7000 1350 50  0000 C CNN
-F 2 "SMD_Packages:SOIC-14_N" H 6800 1200 60  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 6800 1200 60  0001 C CNN
-F 4 "Texas Instruments" H 6800 1200 60  0001 C CNN "Manufacturer"
-F 5 "CD4066BM96" H 6800 1200 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 6800 1200 60  0001 C CNN "Vendor"
-F 7 "296-14475-1-ND" H 6800 1200 60  0001 C CNN "Vendor Part #"
-	1    6800 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R14
-U 1 1 5A734977
-P 3900 2800
-F 0 "R14" V 3980 2800 50  0000 C CNN
-F 1 "10k" V 3900 2800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 3830 2800 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf" H 3900 2800 50  0001 C CNN
-F 4 "Yageo" V 3900 2800 60  0001 C CNN "Manufacturer"
-F 5 "RT0805BRD0710KL" V 3900 2800 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 3900 2800 60  0001 C CNN "Vendor"
-F 7 "YAG1763CT-ND" V 3900 2800 60  0001 C CNN "Vendor Part #"
-	1    3900 2800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L 4066 U7
-U 4 1 5A7378B3
-P 6800 2900
-F 0 "U7" H 7000 2751 50  0000 C CNN
-F 1 "4066" H 7000 3050 50  0000 C CNN
-F 2 "SMD_Packages:SOIC-14_N" H 6800 2900 60  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 6800 2900 60  0001 C CNN
-F 4 "Texas Instruments" H 6800 2900 60  0001 C CNN "Manufacturer"
-F 5 "CD4066BM96" H 6800 2900 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 6800 2900 60  0001 C CNN "Vendor"
-F 7 "296-14475-1-ND" H 6800 2900 60  0001 C CNN "Vendor Part #"
-	4    6800 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L 4066 U7
-U 2 1 5A7379FF
-P 6800 4400
-F 0 "U7" H 7000 4251 50  0000 C CNN
-F 1 "4066" H 7000 4550 50  0000 C CNN
-F 2 "SMD_Packages:SOIC-14_N" H 6800 4400 60  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 6800 4400 60  0001 C CNN
-F 4 "Texas Instruments" H 6800 4400 60  0001 C CNN "Manufacturer"
-F 5 "CD4066BM96" H 6800 4400 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 6800 4400 60  0001 C CNN "Vendor"
-F 7 "296-14475-1-ND" H 6800 4400 60  0001 C CNN "Vendor Part #"
-	2    6800 4400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L 4066 U7
-U 3 1 5A737BEB
-P 6800 5650
-F 0 "U7" H 7000 5501 50  0000 C CNN
-F 1 "4066" H 7000 5800 50  0000 C CNN
-F 2 "SMD_Packages:SOIC-14_N" H 6800 5650 60  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 6800 5650 60  0001 C CNN
-F 4 "Texas Instruments" H 6800 5650 60  0001 C CNN "Manufacturer"
-F 5 "CD4066BM96" H 6800 5650 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 6800 5650 60  0001 C CNN "Vendor"
-F 7 "296-14475-1-ND" H 6800 5650 60  0001 C CNN "Vendor Part #"
-	3    6800 5650
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	8350 1400 8000 1400
-Connection ~ 9150 1300
+	8700 1400 8350 1400
+Connection ~ 9500 1300
 Wire Wire Line
-	8000 1400 8000 1950
+	8350 1400 8350 1950
 Wire Wire Line
-	8000 1950 9150 1950
+	8350 1950 9500 1950
 Wire Wire Line
-	9150 1950 9150 1300
+	9500 1950 9500 1300
 Wire Wire Line
-	8950 1300 9750 1300
+	7450 1200 7900 1200
 Wire Wire Line
-	7100 1200 8350 1200
+	7900 1200 8700 1200
 Wire Wire Line
-	7550 1350 7550 1200
-Connection ~ 7550 1200
+	7900 1350 7900 1200
+Connection ~ 7900 1200
 Wire Wire Line
-	7550 1650 7550 1750
+	7900 1650 7900 1750
 Wire Wire Line
-	4350 4400 6500 4400
+	8700 3100 8350 3100
+Connection ~ 9500 3000
 Wire Wire Line
-	8350 3100 8000 3100
-Connection ~ 9150 3000
+	8350 3100 8350 3650
 Wire Wire Line
-	8000 3100 8000 3650
+	8350 3650 9500 3650
 Wire Wire Line
-	8000 3650 9150 3650
+	9500 3650 9500 3000
 Wire Wire Line
-	9150 3650 9150 3000
+	7450 2900 7900 2900
 Wire Wire Line
-	7100 2900 8350 2900
+	7900 2900 8700 2900
 Wire Wire Line
-	7550 3050 7550 2900
-Connection ~ 7550 2900
+	7900 3050 7900 2900
+Connection ~ 7900 2900
 Wire Wire Line
-	7550 3350 7550 3450
+	7900 3350 7900 3450
 Wire Wire Line
-	7250 4400 7100 4400
+	7600 4400 7450 4400
 Wire Wire Line
-	7250 4550 7100 4550
+	7600 4550 7450 4550
 Wire Wire Line
-	7250 5650 7100 5650
+	7600 5650 7450 5650
 Wire Wire Line
-	7250 5800 7100 5800
+	7600 5800 7450 5800
 Wire Wire Line
-	6500 5650 6100 5650
+	6850 5650 6450 5650
 Wire Wire Line
-	6100 5650 6100 4400
-Connection ~ 6100 4400
+	6450 5650 6450 4400
+Connection ~ 6450 4400
 Wire Wire Line
-	4350 4600 4700 4600
+	3850 4600 4200 4600
 Wire Wire Line
-	4700 4600 4700 5150
+	4200 4600 4200 5150
 Wire Wire Line
-	4700 5150 3550 5150
+	4200 5150 3050 5150
 Wire Wire Line
-	5350 4550 5350 4400
+	4650 4550 4650 4400
 Wire Wire Line
-	5350 4850 5350 4950
-Connection ~ 5350 4400
-Connection ~ 5550 2900
+	4650 4850 4650 4950
+Connection ~ 4650 4400
+Connection ~ 5050 2900
 Wire Wire Line
-	6500 1200 5550 1200
+	6850 1200 5900 1200
 Wire Wire Line
-	8950 3000 9750 3000
-$Comp
-L INA826 U5
-U 1 1 5A74FC9A
-P 3100 2800
-F 0 "U5" H 3250 2925 50  0000 L CNN
-F 1 "INA826" H 3250 2675 50  0000 L CNN
-F 2 "SMD_Packages:SOIC-8-N" H 3200 2800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ina826.pdf" H 3200 2800 50  0001 C CNN
-F 4 "Texas Instruments" H 3100 2800 60  0001 C CNN "Manufacturer"
-F 5 "INA826AIDR" H 3100 2800 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 3100 2800 60  0001 C CNN "Vendor"
-F 7 "296-30238-1-ND" H 3100 2800 60  0001 C CNN "Vendor Part #"
-	1    3100 2800
-	1    0    0    -1  
-$EndComp
+	3050 5150 3050 4500
 Wire Wire Line
-	5300 2900 6500 2900
+	3050 4500 3050 3000
+Connection ~ 3050 4500
 Wire Wire Line
-	5550 1200 5550 3600
-$Comp
-L R R15
-U 1 1 5A750118
-P 4200 3100
-F 0 "R15" V 4280 3100 50  0000 C CNN
-F 1 "10k" V 4200 3100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4130 3100 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf" H 4200 3100 50  0001 C CNN
-F 4 "Yageo" V 4200 3100 60  0001 C CNN "Manufacturer"
-F 5 "RT0805BRD0710KL" V 4200 3100 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 4200 3100 60  0001 C CNN "Vendor"
-F 7 "YAG1763CT-ND" V 4200 3100 60  0001 C CNN "Vendor Part #"
-	1    4200 3100
-	1    0    0    -1  
-$EndComp
+	2150 2800 2150 2950
 Wire Wire Line
-	4050 2800 4700 2800
-Wire Wire Line
-	4200 2950 4200 2800
-Connection ~ 4200 2800
-Wire Wire Line
-	4200 3250 4200 3350
-Wire Wire Line
-	4700 3000 4600 3000
-Wire Wire Line
-	4600 3000 4600 3600
-Wire Wire Line
-	4600 3600 5550 3600
-Wire Wire Line
-	3500 2800 3750 2800
-$Comp
-L -VDC #PWR24
-U 1 1 5A750500
-P 3100 3300
-F 0 "#PWR24" H 3100 3200 50  0001 C CNN
-F 1 "-VDC" H 3100 3550 50  0000 C CNN
-F 2 "" H 3100 3300 50  0001 C CNN
-F 3 "" H 3100 3300 50  0001 C CNN
-	1    3100 3300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3100 3300 3100 3100
-$Comp
-L +VDC #PWR23
-U 1 1 5A7505D1
-P 3100 2250
-F 0 "#PWR23" H 3100 2150 50  0001 C CNN
-F 1 "+VDC" H 3100 2500 50  0000 C CNN
-F 2 "" H 3100 2250 50  0001 C CNN
-F 3 "" H 3100 2250 50  0001 C CNN
-	1    3100 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3100 2500 3100 2250
-NoConn ~ 2800 2700
-NoConn ~ 2800 2900
-Wire Wire Line
-	2600 3000 2800 3000
-Wire Wire Line
-	3550 5150 3550 4500
-Connection ~ 3550 4500
-$Comp
-L R R11
-U 1 1 5A75D59C
-P 2300 2850
-F 0 "R11" V 2380 2850 50  0000 C CNN
-F 1 "10k" V 2300 2850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2230 2850 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 2300 2850 50  0001 C CNN
-F 4 "Yageo" V 2300 2850 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-0710KL" V 2300 2850 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 2300 2850 60  0001 C CNN "Vendor"
-F 7 "311-10.0KCRCT-ND" V 2300 2850 60  0001 C CNN "Vendor Part #"
-	1    2300 2850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2300 2600 2300 2700
-Wire Wire Line
-	2300 3000 2300 3150
-$Comp
-L R R10
-U 1 1 5A75D5B0
-P 1850 2600
-F 0 "R10" V 1930 2600 50  0000 C CNN
-F 1 "15k" V 1850 2600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1780 2600 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 1850 2600 50  0001 C CNN
-F 4 "Yageo" V 1850 2600 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-0715KL" V 1850 2600 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 1850 2600 60  0001 C CNN "Vendor"
-F 7 "311-15.0KCRCT-ND" V 1850 2600 60  0001 C CNN "Vendor Part #"
-	1    1850 2600
-	0    -1   -1   0   
-$EndComp
-Connection ~ 2300 2600
-Wire Wire Line
-	2000 2600 2800 2600
-Wire Wire Line
-	1450 2600 1700 2600
-Wire Wire Line
-	2600 3000 2600 4650
-Wire Wire Line
-	3200 4500 3750 4500
-$Comp
-L C C33
-U 1 1 5A762D4F
-P 7550 1500
-F 0 "C33" H 7575 1600 50  0000 L CNN
-F 1 "1500pF" H 7575 1400 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7588 1350 50  0001 C CNN
-F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 7550 1500 50  0001 C CNN
-F 4 "AVX Corporation" H 7550 1500 60  0001 C CNN "Manufacturer"
-F 5 "08055A152FAT2A" H 7550 1500 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 7550 1500 60  0001 C CNN "Vendor"
-F 7 "478-7953-1-ND" H 7550 1500 60  0001 C CNN "Vendor Part #"
-	1    7550 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_Coaxial J2
-U 1 1 5A7750D5
-P 10600 4350
-F 0 "J2" H 10610 4470 50  0000 C CNN
-F 1 "X" H 10715 4350 50  0000 C CNN
-F 2 "CON-SMA-EDGE:CON-SMA-EDGE" H 10600 4350 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/RF%20Solutions%20PDFs/CON-SMA-EDGE.pdf" H 10600 4350 50  0001 C CNN
-F 4 "RF Solutions" H 10600 4350 60  0001 C CNN "Manufacturer"
-F 5 "CON-SMA-EDGE-S" H 10600 4350 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 10600 4350 60  0001 C CNN "Vendor"
-F 7 "CON-SMA-EDGE-S-ND" H 10600 4350 60  0001 C CNN "Vendor Part #"
-	1    10600 4350
-	1    0    0    -1  
-$EndComp
-Text GLabel 9350 4350 0    60   Input ~ 0
-FRACTAL_X
+	2150 3250 2150 3350
 $Comp
 L R R16
-U 1 1 5A7750E1
-P 9950 4350
-F 0 "R16" V 10030 4350 50  0000 C CNN
-F 1 "2.2k" V 9950 4350 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9880 4350 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 9950 4350 50  0001 C CNN
-F 4 "Yageo" V 9950 4350 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-072K2L" V 9950 4350 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 9950 4350 60  0001 C CNN "Vendor"
-F 7 "311-2.20KCRCT-ND" V 9950 4350 60  0001 C CNN "Vendor Part #"
-	1    9950 4350
+U 1 1 5A75D5B0
+P 1700 2800
+F 0 "R16" V 1780 2800 50  0000 C CNN
+F 1 "1.5k" V 1700 2800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1630 2800 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/28758/tnpw_e3.pdf" H 1700 2800 50  0001 C CNN
+F 4 "Vishay Dale" V 1700 2800 60  0001 C CNN "Manufacturer"
+F 5 "TNPW08051K50BEEA" V 1700 2800 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 1700 2800 60  0001 C CNN "Vendor"
+F 7 "541-2058-1-ND" V 1700 2800 60  0001 C CNN "Vendor Part #"
+	1    1700 2800
 	0    -1   -1   0   
 $EndComp
+Connection ~ 2150 2800
 Wire Wire Line
-	9350 4350 9800 4350
+	1850 2800 2150 2800
 Wire Wire Line
-	10100 4350 10450 4350
+	2150 2800 2500 2800
+Wire Wire Line
+	2500 2800 3900 2800
+Wire Wire Line
+	1300 2800 1550 2800
 $Comp
-L Conn_Coaxial J3
-U 1 1 5A7750F4
-P 10600 5000
-F 0 "J3" H 10610 5120 50  0000 C CNN
-F 1 "Y" H 10715 5000 50  0000 C CNN
-F 2 "CON-SMA-EDGE:CON-SMA-EDGE" H 10600 5000 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/RF%20Solutions%20PDFs/CON-SMA-EDGE.pdf" H 10600 5000 50  0001 C CNN
-F 4 "RF Solutions" H 10600 5000 60  0001 C CNN "Manufacturer"
-F 5 "CON-SMA-EDGE-S" H 10600 5000 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 10600 5000 60  0001 C CNN "Vendor"
-F 7 "CON-SMA-EDGE-S-ND" H 10600 5000 60  0001 C CNN "Vendor Part #"
-	1    10600 5000
+L C C39
+U 1 1 5A762D4F
+P 7900 1500
+F 0 "C39" H 7925 1600 50  0000 L CNN
+F 1 "1500pF" H 7925 1400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7938 1350 50  0001 C CNN
+F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 7900 1500 50  0001 C CNN
+F 4 "AVX Corporation" H 7900 1500 60  0001 C CNN "Manufacturer"
+F 5 "08055A152FAT2A" H 7900 1500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7900 1500 60  0001 C CNN "Vendor"
+F 7 "478-7953-1-ND" H 7900 1500 60  0001 C CNN "Vendor Part #"
+	1    7900 1500
 	1    0    0    -1  
 $EndComp
-Text GLabel 9350 5000 0    60   Input ~ 0
-FRACTAL_Y
+NoConn ~ 3650 4200
+NoConn ~ 3650 4800
+NoConn ~ 8900 2700
+NoConn ~ 8900 3300
 $Comp
-L R R17
-U 1 1 5A775100
-P 9950 5000
-F 0 "R17" V 10030 5000 50  0000 C CNN
-F 1 "2.2k" V 9950 5000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9880 5000 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 9950 5000 50  0001 C CNN
-F 4 "Yageo" V 9950 5000 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-072K2L" V 9950 5000 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 9950 5000 60  0001 C CNN "Vendor"
-F 7 "311-2.20KCRCT-ND" V 9950 5000 60  0001 C CNN "Vendor Part #"
-	1    9950 5000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	9350 5000 9800 5000
-Wire Wire Line
-	10100 5000 10450 5000
-$Comp
-L Conn_Coaxial J4
-U 1 1 5A775989
-P 10600 5650
-F 0 "J4" H 10610 5770 50  0000 C CNN
-F 1 "Trigger" H 10850 5650 50  0000 C CNN
-F 2 "CON-SMA-EDGE:CON-SMA-EDGE" H 10600 5650 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/RF%20Solutions%20PDFs/CON-SMA-EDGE.pdf" H 10600 5650 50  0001 C CNN
-F 4 "RF Solutions" H 10600 5650 60  0001 C CNN "Manufacturer"
-F 5 "CON-SMA-EDGE-S" H 10600 5650 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 10600 5650 60  0001 C CNN "Vendor"
-F 7 "CON-SMA-EDGE-S-ND" H 10600 5650 60  0001 C CNN "Vendor Part #"
-	1    10600 5650
+L C C41
+U 1 1 5A778A0E
+P 7900 3200
+F 0 "C41" H 7925 3300 50  0000 L CNN
+F 1 "1500pF" H 7925 3100 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7938 3050 50  0001 C CNN
+F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 7900 3200 50  0001 C CNN
+F 4 "AVX Corporation" H 7900 3200 60  0001 C CNN "Manufacturer"
+F 5 "08055A152FAT2A" H 7900 3200 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7900 3200 60  0001 C CNN "Vendor"
+F 7 "478-7953-1-ND" H 7900 3200 60  0001 C CNN "Vendor Part #"
+	1    7900 3200
 	1    0    0    -1  
 $EndComp
-Text GLabel 9350 5650 0    60   Input ~ 0
-FRACTAL_TRIGGER
+$Comp
+L C C43
+U 1 1 5A778A78
+P 4650 4700
+F 0 "C43" H 4675 4800 50  0000 L CNN
+F 1 "1500pF" H 4675 4600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4688 4550 50  0001 C CNN
+F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 4650 4700 50  0001 C CNN
+F 4 "AVX Corporation" H 4650 4700 60  0001 C CNN "Manufacturer"
+F 5 "08055A152FAT2A" H 4650 4700 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 4650 4700 60  0001 C CNN "Vendor"
+F 7 "478-7953-1-ND" H 4650 4700 60  0001 C CNN "Vendor Part #"
+	1    4650 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR55
+U 1 1 5A77FD31
+P 2150 3350
+F 0 "#PWR55" H 2150 3100 50  0001 C CNN
+F 1 "GNDREF" H 2150 3200 50  0000 C CNN
+F 2 "" H 2150 3350 50  0001 C CNN
+F 3 "" H 2150 3350 50  0001 C CNN
+	1    2150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR60
+U 1 1 5A780229
+P 4650 4950
+F 0 "#PWR60" H 4650 4700 50  0001 C CNN
+F 1 "GNDREF" H 4650 4800 50  0000 C CNN
+F 2 "" H 4650 4950 50  0001 C CNN
+F 3 "" H 4650 4950 50  0001 C CNN
+	1    4650 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR57
+U 1 1 5A78027C
+P 7900 3450
+F 0 "#PWR57" H 7900 3200 50  0001 C CNN
+F 1 "GNDREF" H 7900 3300 50  0000 C CNN
+F 2 "" H 7900 3450 50  0001 C CNN
+F 3 "" H 7900 3450 50  0001 C CNN
+	1    7900 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR50
+U 1 1 5A7802FF
+P 7900 1750
+F 0 "#PWR50" H 7900 1500 50  0001 C CNN
+F 1 "GNDREF" H 7900 1600 50  0000 C CNN
+F 2 "" H 7900 1750 50  0001 C CNN
+F 3 "" H 7900 1750 50  0001 C CNN
+	1    7900 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPA4340EA U5
+U 1 1 5A7B68F0
+P 4200 2900
+F 0 "U5" H 4250 3100 50  0000 C CNN
+F 1 "LTC6242" H 4350 2700 50  0000 C CNN
+F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 4200 2900 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 4200 2900 50  0001 C CNN
+F 4 "Linear Technologies" H 4200 2900 60  0001 C CNN "Manufacturer"
+F 5 "LTC6242IGN#PBF" H 4200 2900 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 4200 2900 60  0001 C CNN "Vendor"
+F 7 "LTC6242IGN#PBF-ND" H 4200 2900 60  0001 C CNN "Vendor Part #"
+	1    4200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R19
+U 1 1 5A7B6C74
+P 2150 3100
+F 0 "R19" V 2230 3100 50  0000 C CNN
+F 1 "1k" V 2150 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2080 3100 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/28758/tnpw_e3.pdf" H 2150 3100 50  0001 C CNN
+F 4 "Vishay Dale" V 2150 3100 60  0001 C CNN "Manufacturer"
+F 5 "TNPW08051K00BEEA" V 2150 3100 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 2150 3100 60  0001 C CNN "Vendor"
+F 7 "TNP1.00KABCT-ND" V 2150 3100 60  0001 C CNN "Vendor Part #"
+	1    2150 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +VDC #PWR51
+U 1 1 5A7B6D58
+P 4100 2600
+F 0 "#PWR51" H 4100 2500 50  0001 C CNN
+F 1 "+VDC" H 4100 2850 50  0000 C CNN
+F 2 "" H 4100 2600 50  0001 C CNN
+F 3 "" H 4100 2600 50  0001 C CNN
+	1    4100 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L -VDC #PWR54
+U 1 1 5A7B6DA2
+P 4100 3200
+F 0 "#PWR54" H 4100 3100 50  0001 C CNN
+F 1 "-VDC" H 4100 3450 50  0000 C CNN
+F 2 "" H 4100 3200 50  0001 C CNN
+F 3 "" H 4100 3200 50  0001 C CNN
+	1    4100 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R20
+U 1 1 5A7B6E41
+P 4400 3650
+F 0 "R20" V 4480 3650 50  0000 C CNN
+F 1 "1k" V 4400 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4330 3650 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/28758/tnpw_e3.pdf" H 4400 3650 50  0001 C CNN
+F 4 "Vishay Dale" V 4400 3650 60  0001 C CNN "Manufacturer"
+F 5 "TNPW08051K00BEEA" V 4400 3650 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 4400 3650 60  0001 C CNN "Vendor"
+F 7 "TNP1.00KABCT-ND" V 4400 3650 60  0001 C CNN "Vendor Part #"
+	1    4400 3650
+	0    1    1    0   
+$EndComp
 $Comp
 L R R18
-U 1 1 5A775994
-P 9950 5650
-F 0 "R18" V 10030 5650 50  0000 C CNN
-F 1 "2.2k" V 9950 5650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9880 5650 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 9950 5650 50  0001 C CNN
-F 4 "Yageo" V 9950 5650 60  0001 C CNN "Manufacturer"
-F 5 "RC0805FR-072K2L" V 9950 5650 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 9950 5650 60  0001 C CNN "Vendor"
-F 7 "311-2.20KCRCT-ND" V 9950 5650 60  0001 C CNN "Vendor Part #"
-	1    9950 5650
+U 1 1 5A7B6EB9
+P 3400 3000
+F 0 "R18" V 3480 3000 50  0000 C CNN
+F 1 "1.5k" V 3400 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3330 3000 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/28758/tnpw_e3.pdf" H 3400 3000 50  0001 C CNN
+F 4 "Vishay Dale" V 3400 3000 60  0001 C CNN "Manufacturer"
+F 5 "TNPW08051K50BEEA" V 3400 3000 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 3400 3000 60  0001 C CNN "Vendor"
+F 7 "541-2058-1-ND" V 3400 3000 60  0001 C CNN "Vendor Part #"
+	1    3400 3000
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9350 5650 9800 5650
+	3050 4500 3250 4500
 Wire Wire Line
-	10100 5650 10450 5650
+	3050 3000 3250 3000
+Wire Wire Line
+	3550 3000 3750 3000
+Wire Wire Line
+	3750 3000 3900 3000
+Wire Wire Line
+	3750 3000 3750 3650
+Wire Wire Line
+	3750 3650 3750 3900
+Wire Wire Line
+	3750 3650 4250 3650
+Connection ~ 3750 3000
+Wire Wire Line
+	5050 3650 4550 3650
 $Comp
-L R R13
-U 1 1 5A7766FB
-P 3050 4500
-F 0 "R13" V 3130 4500 50  0000 C CNN
-F 1 "10k" V 3050 4500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2980 4500 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf" H 3050 4500 50  0001 C CNN
-F 4 "Yageo" V 3050 4500 60  0001 C CNN "Manufacturer"
-F 5 "RT0805BRD0710KL" V 3050 4500 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 3050 4500 60  0001 C CNN "Vendor"
-F 7 "YAG1763CT-ND" V 3050 4500 60  0001 C CNN "Vendor Part #"
-	1    3050 4500
-	0    -1   -1   0   
+L OPA4340EA U5
+U 2 1 5A7B7611
+P 3550 4500
+F 0 "U5" H 3600 4700 50  0000 C CNN
+F 1 "LTC6242" H 3700 4300 50  0000 C CNN
+F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 3550 4500 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 3550 4500 50  0001 C CNN
+F 4 "Linear Technologies" H 3550 4500 60  0001 C CNN "Manufacturer"
+F 5 "LTC6242IGN#PBF" H 3550 4500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 3550 4500 60  0001 C CNN "Vendor"
+F 7 "LTC6242IGN#PBF-ND" H 3550 4500 60  0001 C CNN "Vendor Part #"
+	2    3550 4500
+	-1   0    0    -1  
 $EndComp
 $Comp
-L R R12
-U 1 1 5A776783
-P 2600 4800
-F 0 "R12" V 2680 4800 50  0000 C CNN
-F 1 "10k" V 2600 4800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2530 4800 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf" H 2600 4800 50  0001 C CNN
-F 4 "Yageo" V 2600 4800 60  0001 C CNN "Manufacturer"
-F 5 "RT0805BRD0710KL" V 2600 4800 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 2600 4800 60  0001 C CNN "Vendor"
-F 7 "YAG1763CT-ND" V 2600 4800 60  0001 C CNN "Vendor Part #"
-	1    2600 4800
+L OPA4340EA U5
+U 4 1 5A7B76F6
+P 9000 3000
+F 0 "U5" H 9050 3200 50  0000 C CNN
+F 1 "LTC6242" H 9150 2800 50  0000 C CNN
+F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 9000 3000 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 9000 3000 50  0001 C CNN
+F 4 "Linear Technologies" H 9000 3000 60  0001 C CNN "Manufacturer"
+F 5 "LTC6242IGN#PBF" H 9000 3000 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 9000 3000 60  0001 C CNN "Vendor"
+F 7 "LTC6242IGN#PBF-ND" H 9000 3000 60  0001 C CNN "Vendor Part #"
+	4    9000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPA4340EA U5
+U 3 1 5A7B779B
+P 9000 1300
+F 0 "U5" H 9050 1500 50  0000 C CNN
+F 1 "LTC6242" H 9150 1100 50  0000 C CNN
+F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 9000 1300 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 9000 1300 50  0001 C CNN
+F 4 "Linear Technologies" H 9000 1300 60  0001 C CNN "Manufacturer"
+F 5 "LTC6242IGN#PBF" H 9000 1300 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 9000 1300 60  0001 C CNN "Vendor"
+F 7 "LTC6242IGN#PBF-ND" H 9000 1300 60  0001 C CNN "Vendor Part #"
+	3    9000 1300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8900 1600
+NoConn ~ 8900 1000
+$Comp
+L C C42
+U 1 1 5A7B7DD0
+P 4400 3900
+F 0 "C42" V 4550 3850 50  0000 L CNN
+F 1 "1500pF" V 4650 3800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4438 3750 50  0001 C CNN
+F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 4400 3900 50  0001 C CNN
+F 4 "AVX Corporation" H 4400 3900 60  0001 C CNN "Manufacturer"
+F 5 "08055A152FAT2A" H 4400 3900 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 4400 3900 60  0001 C CNN "Vendor"
+F 7 "478-7953-1-ND" H 4400 3900 60  0001 C CNN "Vendor Part #"
+	1    4400 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3900 4250 3900
+Connection ~ 3750 3650
+Wire Wire Line
+	5050 3900 4550 3900
+$Comp
+L C C40
+U 1 1 5A7B7F09
+P 2500 3100
+F 0 "C40" H 2525 3200 50  0000 L CNN
+F 1 "1500pF" H 2525 3000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2538 2950 50  0001 C CNN
+F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 2500 3100 50  0001 C CNN
+F 4 "AVX Corporation" H 2500 3100 60  0001 C CNN "Manufacturer"
+F 5 "08055A152FAT2A" H 2500 3100 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 2500 3100 60  0001 C CNN "Vendor"
+F 7 "478-7953-1-ND" H 2500 3100 60  0001 C CNN "Vendor Part #"
+	1    2500 3100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 4950 2600 5000
+	2500 2950 2500 2800
+Connection ~ 2500 2800
+$Comp
+L GNDREF #PWR56
+U 1 1 5A7B7FC6
+P 2500 3350
+F 0 "#PWR56" H 2500 3100 50  0001 C CNN
+F 1 "GNDREF" H 2500 3200 50  0000 C CNN
+F 2 "" H 2500 3350 50  0001 C CNN
+F 3 "" H 2500 3350 50  0001 C CNN
+	1    2500 3350
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2600 4500 2900 4500
-Connection ~ 2600 4500
-NoConn ~ 6800 2650
-NoConn ~ 6800 3150
-NoConn ~ 6800 4150
-NoConn ~ 6800 4650
-NoConn ~ 6800 5400
-NoConn ~ 6800 5900
-NoConn ~ 4150 4200
-NoConn ~ 4150 4800
-NoConn ~ 8550 2700
-NoConn ~ 8550 3300
+	2500 3350 2500 3250
+Connection ~ 5050 3650
 $Comp
-L C C34
-U 1 1 5A778A0E
-P 7550 3200
-F 0 "C34" H 7575 3300 50  0000 L CNN
-F 1 "1500pF" H 7575 3100 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7588 3050 50  0001 C CNN
-F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 7550 3200 50  0001 C CNN
-F 4 "AVX Corporation" H 7550 3200 60  0001 C CNN "Manufacturer"
-F 5 "08055A152FAT2A" H 7550 3200 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 7550 3200 60  0001 C CNN "Vendor"
-F 7 "478-7953-1-ND" H 7550 3200 60  0001 C CNN "Vendor Part #"
-	1    7550 3200
+L SN74LVC1G66 U6
+U 1 1 5A7CC595
+P 7150 1200
+F 0 "U6" H 7350 1051 50  0000 C CNN
+F 1 "SN74LVC1G66" H 7500 1350 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SC-70-5" H 7150 1200 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf" H 7150 1200 60  0001 C CNN
+F 4 "Texas Instruments" H 7150 1200 60  0001 C CNN "Manufacturer"
+F 5 "SN74LVC1G66DCKR" H 7150 1200 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7150 1200 60  0001 C CNN "Vendor"
+F 7 "296-13254-1-ND" H 7150 1200 60  0001 C CNN "Vendor Part #"
+	1    7150 1200
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C32
-U 1 1 5A778A78
-P 5350 4700
-F 0 "C32" H 5375 4800 50  0000 L CNN
-F 1 "1500pF" H 5375 4600 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5388 4550 50  0001 C CNN
-F 3 "http://datasheets.avx.com/C0GNP0-Dielectric.pdf" H 5350 4700 50  0001 C CNN
-F 4 "AVX Corporation" H 5350 4700 60  0001 C CNN "Manufacturer"
-F 5 "08055A152FAT2A" H 5350 4700 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 5350 4700 60  0001 C CNN "Vendor"
-F 7 "478-7953-1-ND" H 5350 4700 60  0001 C CNN "Vendor Part #"
-	1    5350 4700
+L SN74LVC1G66 U7
+U 1 1 5A7CC5C8
+P 7150 2900
+F 0 "U7" H 7350 2751 50  0000 C CNN
+F 1 "SN74LVC1G66" H 7500 3050 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SC-70-5" H 7150 2900 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf" H 7150 2900 60  0001 C CNN
+F 4 "Texas Instruments" H 7150 2900 60  0001 C CNN "Manufacturer"
+F 5 "SN74LVC1G66DCKR" H 7150 2900 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7150 2900 60  0001 C CNN "Vendor"
+F 7 "296-13254-1-ND" H 7150 2900 60  0001 C CNN "Vendor Part #"
+	1    7150 2900
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR21
-U 1 1 5A77FD31
-P 2300 3150
-F 0 "#PWR21" H 2300 2900 50  0001 C CNN
-F 1 "GNDREF" H 2300 3000 50  0000 C CNN
-F 2 "" H 2300 3150 50  0001 C CNN
-F 3 "" H 2300 3150 50  0001 C CNN
-	1    2300 3150
+L +VDC #PWR52
+U 1 1 5A7CC657
+P 7150 2650
+F 0 "#PWR52" H 7150 2550 50  0001 C CNN
+F 1 "+VDC" H 7150 2900 50  0000 C CNN
+F 2 "" H 7150 2650 50  0001 C CNN
+F 3 "" H 7150 2650 50  0001 C CNN
+	1    7150 2650
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR25
-U 1 1 5A77FD8B
-P 3200 3100
-F 0 "#PWR25" H 3200 2850 50  0001 C CNN
-F 1 "GNDREF" H 3300 2950 50  0000 C CNN
-F 2 "" H 3200 3100 50  0001 C CNN
-F 3 "" H 3200 3100 50  0001 C CNN
-	1    3200 3100
+L -VDC #PWR53
+U 1 1 5A7CC6A1
+P 7150 3150
+F 0 "#PWR53" H 7150 3050 50  0001 C CNN
+F 1 "-VDC" H 7150 3400 50  0000 C CNN
+F 2 "" H 7150 3150 50  0001 C CNN
+F 3 "" H 7150 3150 50  0001 C CNN
+	1    7150 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L SN74LVC1G66 U8
+U 1 1 5A7CC704
+P 7150 4400
+F 0 "U8" H 7350 4251 50  0000 C CNN
+F 1 "SN74LVC1G66" H 7500 4550 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SC-70-5" H 7150 4400 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf" H 7150 4400 60  0001 C CNN
+F 4 "Texas Instruments" H 7150 4400 60  0001 C CNN "Manufacturer"
+F 5 "SN74LVC1G66DCKR" H 7150 4400 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7150 4400 60  0001 C CNN "Vendor"
+F 7 "296-13254-1-ND" H 7150 4400 60  0001 C CNN "Vendor Part #"
+	1    7150 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SN74LVC1G66 U9
+U 1 1 5A7CC77A
+P 7150 5650
+F 0 "U9" H 7350 5501 50  0000 C CNN
+F 1 "SN74LVC1G66" H 7500 5800 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SC-70-5" H 7150 5650 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf" H 7150 5650 60  0001 C CNN
+F 4 "Texas Instruments" H 7150 5650 60  0001 C CNN "Manufacturer"
+F 5 "SN74LVC1G66DCKR" H 7150 5650 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7150 5650 60  0001 C CNN "Vendor"
+F 7 "296-13254-1-ND" H 7150 5650 60  0001 C CNN "Vendor Part #"
+	1    7150 5650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +VDC #PWR58
+U 1 1 5A7CC7DC
+P 7150 4150
+F 0 "#PWR58" H 7150 4050 50  0001 C CNN
+F 1 "+VDC" H 7150 4400 50  0000 C CNN
+F 2 "" H 7150 4150 50  0001 C CNN
+F 3 "" H 7150 4150 50  0001 C CNN
+	1    7150 4150
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR26
-U 1 1 5A77FEF0
-P 4200 3350
-F 0 "#PWR26" H 4200 3100 50  0001 C CNN
-F 1 "GNDREF" H 4200 3200 50  0000 C CNN
-F 2 "" H 4200 3350 50  0001 C CNN
-F 3 "" H 4200 3350 50  0001 C CNN
-	1    4200 3350
+L -VDC #PWR59
+U 1 1 5A7CC82C
+P 7150 4650
+F 0 "#PWR59" H 7150 4550 50  0001 C CNN
+F 1 "-VDC" H 7150 4900 50  0000 C CNN
+F 2 "" H 7150 4650 50  0001 C CNN
+F 3 "" H 7150 4650 50  0001 C CNN
+	1    7150 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L +VDC #PWR61
+U 1 1 5A7CC87C
+P 7150 5400
+F 0 "#PWR61" H 7150 5300 50  0001 C CNN
+F 1 "+VDC" H 7150 5650 50  0000 C CNN
+F 2 "" H 7150 5400 50  0001 C CNN
+F 3 "" H 7150 5400 50  0001 C CNN
+	1    7150 5400
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR22
-U 1 1 5A7801D6
-P 2600 5000
-F 0 "#PWR22" H 2600 4750 50  0001 C CNN
-F 1 "GNDREF" H 2600 4850 50  0000 C CNN
-F 2 "" H 2600 5000 50  0001 C CNN
-F 3 "" H 2600 5000 50  0001 C CNN
-	1    2600 5000
-	1    0    0    -1  
+L -VDC #PWR62
+U 1 1 5A7CC8CC
+P 7150 5900
+F 0 "#PWR62" H 7150 5800 50  0001 C CNN
+F 1 "-VDC" H 7150 6150 50  0000 C CNN
+F 2 "" H 7150 5900 50  0001 C CNN
+F 3 "" H 7150 5900 50  0001 C CNN
+	1    7150 5900
+	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	5050 2900 5050 3650
+Wire Wire Line
+	5050 3650 5050 3900
+Wire Wire Line
+	4500 2900 5050 2900
+Wire Wire Line
+	5050 2900 5250 2900
 $Comp
-L GNDREF #PWR29
-U 1 1 5A780229
-P 5350 4950
-F 0 "#PWR29" H 5350 4700 50  0001 C CNN
-F 1 "GNDREF" H 5350 4800 50  0000 C CNN
-F 2 "" H 5350 4950 50  0001 C CNN
-F 3 "" H 5350 4950 50  0001 C CNN
-	1    5350 4950
-	1    0    0    -1  
+L R R17
+U 1 1 5A7E033F
+P 5400 2900
+F 0 "R17" V 5480 2900 50  0000 C CNN
+F 1 "100" V 5400 2900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 2900 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 5400 2900 50  0001 C CNN
+F 4 "Yageo" V 5400 2900 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-07100RL" V 5400 2900 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 5400 2900 60  0001 C CNN "Vendor"
+F 7 "311-100CRCT-ND" V 5400 2900 60  0001 C CNN "Vendor Part #"
+	1    5400 2900
+	0    1    1    0   
 $EndComp
+Wire Wire Line
+	5550 2900 5900 2900
+Wire Wire Line
+	5900 2900 6850 2900
+Wire Wire Line
+	5900 1200 5900 2900
+Connection ~ 5900 2900
+Wire Wire Line
+	9300 3000 9500 3000
+Wire Wire Line
+	9500 3000 10100 3000
+Wire Wire Line
+	9300 1300 9500 1300
+Wire Wire Line
+	9500 1300 10100 1300
 $Comp
-L GNDREF #PWR33
-U 1 1 5A78027C
-P 7550 3450
-F 0 "#PWR33" H 7550 3200 50  0001 C CNN
-F 1 "GNDREF" H 7550 3300 50  0000 C CNN
-F 2 "" H 7550 3450 50  0001 C CNN
-F 3 "" H 7550 3450 50  0001 C CNN
-	1    7550 3450
-	1    0    0    -1  
+L R R21
+U 1 1 5A7E1D32
+P 5400 4400
+F 0 "R21" V 5480 4400 50  0000 C CNN
+F 1 "100" V 5400 4400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 4400 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 5400 4400 50  0001 C CNN
+F 4 "Yageo" V 5400 4400 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-07100RL" V 5400 4400 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 5400 4400 60  0001 C CNN "Vendor"
+F 7 "311-100CRCT-ND" V 5400 4400 60  0001 C CNN "Vendor Part #"
+	1    5400 4400
+	0    1    1    0   
 $EndComp
-$Comp
-L GNDREF #PWR32
-U 1 1 5A7802FF
-P 7550 1750
-F 0 "#PWR32" H 7550 1500 50  0001 C CNN
-F 1 "GNDREF" H 7550 1600 50  0000 C CNN
-F 2 "" H 7550 1750 50  0001 C CNN
-F 3 "" H 7550 1750 50  0001 C CNN
-	1    7550 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDREF #PWR36
-U 1 1 5A780433
-P 10600 4550
-F 0 "#PWR36" H 10600 4300 50  0001 C CNN
-F 1 "GNDREF" H 10600 4400 50  0000 C CNN
-F 2 "" H 10600 4550 50  0001 C CNN
-F 3 "" H 10600 4550 50  0001 C CNN
-	1    10600 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDREF #PWR37
-U 1 1 5A780486
-P 10600 5200
-F 0 "#PWR37" H 10600 4950 50  0001 C CNN
-F 1 "GNDREF" H 10600 5050 50  0000 C CNN
-F 2 "" H 10600 5200 50  0001 C CNN
-F 3 "" H 10600 5200 50  0001 C CNN
-	1    10600 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDREF #PWR38
-U 1 1 5A7804D9
-P 10600 5850
-F 0 "#PWR38" H 10600 5600 50  0001 C CNN
-F 1 "GNDREF" H 10600 5700 50  0000 C CNN
-F 2 "" H 10600 5850 50  0001 C CNN
-F 3 "" H 10600 5850 50  0001 C CNN
-	1    10600 5850
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	3850 4400 4650 4400
+Wire Wire Line
+	4650 4400 5250 4400
+Wire Wire Line
+	5550 4400 6450 4400
+Wire Wire Line
+	6450 4400 6850 4400
 $EndSCHEMATC
