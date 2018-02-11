@@ -101,9 +101,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 1950 9500 1300
 Wire Wire Line
-	7450 1200 7900 1200
-Wire Wire Line
-	7900 1200 8700 1200
+	7450 1200 8700 1200
 Wire Wire Line
 	7900 1350 7900 1200
 Connection ~ 7900 1200
@@ -119,9 +117,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 3650 9500 3000
 Wire Wire Line
-	7450 2900 7900 2900
-Wire Wire Line
-	7900 2900 8700 2900
+	7450 2900 8700 2900
 Wire Wire Line
 	7900 3050 7900 2900
 Connection ~ 7900 2900
@@ -145,7 +141,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 4600 4200 5150
 Wire Wire Line
-	4200 5150 3050 5150
+	3050 5150 4200 5150
 Wire Wire Line
 	4650 4550 4650 4400
 Wire Wire Line
@@ -155,9 +151,7 @@ Connection ~ 5050 2900
 Wire Wire Line
 	6850 1200 5900 1200
 Wire Wire Line
-	3050 5150 3050 4500
-Wire Wire Line
-	3050 4500 3050 3000
+	3050 3000 3050 5150
 Connection ~ 3050 4500
 Wire Wire Line
 	2150 2800 2150 2950
@@ -180,11 +174,7 @@ F 7 "541-2058-1-ND" V 1700 2800 60  0001 C CNN "Vendor Part #"
 $EndComp
 Connection ~ 2150 2800
 Wire Wire Line
-	1850 2800 2150 2800
-Wire Wire Line
-	2150 2800 2500 2800
-Wire Wire Line
-	2500 2800 3900 2800
+	1850 2800 3900 2800
 Wire Wire Line
 	1300 2800 1550 2800
 $Comp
@@ -367,13 +357,9 @@ Wire Wire Line
 Wire Wire Line
 	3050 3000 3250 3000
 Wire Wire Line
-	3550 3000 3750 3000
+	3550 3000 3900 3000
 Wire Wire Line
-	3750 3000 3900 3000
-Wire Wire Line
-	3750 3000 3750 3650
-Wire Wire Line
-	3750 3650 3750 3900
+	3750 3000 3750 3900
 Wire Wire Line
 	3750 3650 4250 3650
 Connection ~ 3750 3000
@@ -605,13 +591,9 @@ F 3 "" H 7150 5900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5050 2900 5050 3650
+	5050 2900 5050 3900
 Wire Wire Line
-	5050 3650 5050 3900
-Wire Wire Line
-	4500 2900 5050 2900
-Wire Wire Line
-	5050 2900 5250 2900
+	4500 2900 5250 2900
 $Comp
 L R R17
 U 1 1 5A7E033F
@@ -628,20 +610,14 @@ F 7 "311-100CRCT-ND" V 5400 2900 60  0001 C CNN "Vendor Part #"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5550 2900 5900 2900
-Wire Wire Line
-	5900 2900 6850 2900
+	5550 2900 6850 2900
 Wire Wire Line
 	5900 1200 5900 2900
 Connection ~ 5900 2900
 Wire Wire Line
-	9300 3000 9500 3000
+	9300 3000 10100 3000
 Wire Wire Line
-	9500 3000 10100 3000
-Wire Wire Line
-	9300 1300 9500 1300
-Wire Wire Line
-	9500 1300 10100 1300
+	9300 1300 10100 1300
 $Comp
 L R R21
 U 1 1 5A7E1D32
@@ -658,11 +634,7 @@ F 7 "311-100CRCT-ND" V 5400 4400 60  0001 C CNN "Vendor Part #"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3850 4400 4650 4400
+	3850 4400 5250 4400
 Wire Wire Line
-	4650 4400 5250 4400
-Wire Wire Line
-	5550 4400 6450 4400
-Wire Wire Line
-	6450 4400 6850 4400
+	5550 4400 6850 4400
 $EndSCHEMATC
