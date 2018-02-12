@@ -141,7 +141,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 4600 4200 5150
 Wire Wire Line
-	3050 5150 4200 5150
+	4200 5150 3050 5150
 Wire Wire Line
 	4650 4550 4650 4400
 Wire Wire Line
@@ -151,7 +151,7 @@ Connection ~ 5050 2900
 Wire Wire Line
 	6850 1200 5900 1200
 Wire Wire Line
-	3050 3000 3050 5150
+	3050 5150 3050 3000
 Connection ~ 3050 4500
 Wire Wire Line
 	2150 2800 2150 2950
@@ -382,7 +382,7 @@ F 7 "LTC6242IGN#PBF-ND" H 3550 4500 60  0001 C CNN "Vendor Part #"
 $EndComp
 $Comp
 L OPA4340EA U5
-U 4 1 5A7B76F6
+U 3 1 5A7B76F6
 P 9000 3000
 F 0 "U5" H 9050 3200 50  0000 C CNN
 F 1 "LTC6242" H 9150 2800 50  0000 C CNN
@@ -392,12 +392,12 @@ F 4 "Linear Technologies" H 9000 3000 60  0001 C CNN "Manufacturer"
 F 5 "LTC6242IGN#PBF" H 9000 3000 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" H 9000 3000 60  0001 C CNN "Vendor"
 F 7 "LTC6242IGN#PBF-ND" H 9000 3000 60  0001 C CNN "Vendor Part #"
-	4    9000 3000
+	3    9000 3000
 	1    0    0    -1  
 $EndComp
 $Comp
 L OPA4340EA U5
-U 3 1 5A7B779B
+U 4 1 5A7B779B
 P 9000 1300
 F 0 "U5" H 9050 1500 50  0000 C CNN
 F 1 "LTC6242" H 9150 1100 50  0000 C CNN
@@ -407,7 +407,7 @@ F 4 "Linear Technologies" H 9000 1300 60  0001 C CNN "Manufacturer"
 F 5 "LTC6242IGN#PBF" H 9000 1300 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" H 9000 1300 60  0001 C CNN "Vendor"
 F 7 "LTC6242IGN#PBF-ND" H 9000 1300 60  0001 C CNN "Vendor Part #"
-	3    9000 1300
+	4    9000 1300
 	1    0    0    -1  
 $EndComp
 NoConn ~ 8900 1600

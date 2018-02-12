@@ -835,12 +835,12 @@ Wire Wire Line
 Wire Wire Line
 	8950 3950 8950 3850
 Wire Wire Line
-	8950 3900 9500 3900
+	8650 3900 9500 3900
 Wire Wire Line
 	9500 3900 9500 4150
 Connection ~ 8950 3900
 Wire Wire Line
-	8950 4700 9500 4700
+	8650 4700 9500 4700
 Wire Wire Line
 	9500 4700 9500 4450
 Connection ~ 8950 4700
@@ -922,4 +922,41 @@ Wire Wire Line
 Connection ~ 2250 3900
 Connection ~ 2750 3900
 Connection ~ 2750 4700
+$Comp
+L C C44
+U 1 1 5A812EFF
+P 8650 4100
+F 0 "C44" H 8675 4200 50  0000 L CNN
+F 1 "10uF" H 8675 4000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8688 3950 50  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf" H 8650 4100 50  0001 C CNN
+F 4 "Murata" H 8650 4100 60  0001 C CNN "Manufacturer"
+F 5 "GRM21BR71A106KA73L" H 8650 4100 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 8650 4100 60  0001 C CNN "Vendor"
+F 7 "490-10516-1-ND" H 8650 4100 60  0001 C CNN "Vendor Part #"
+	1    8650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C45
+U 1 1 5A812F8B
+P 8650 4500
+F 0 "C45" H 8675 4600 50  0000 L CNN
+F 1 "10uF" H 8675 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8688 4350 50  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf" H 8650 4500 50  0001 C CNN
+F 4 "Murata" H 8650 4500 60  0001 C CNN "Manufacturer"
+F 5 "GRM21BR71A106KA73L" H 8650 4500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 8650 4500 60  0001 C CNN "Vendor"
+F 7 "490-10516-1-ND" H 8650 4500 60  0001 C CNN "Vendor Part #"
+	1    8650 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 4250 8650 4350
+Connection ~ 8650 4300
+Wire Wire Line
+	8650 3950 8650 3900
+Wire Wire Line
+	8650 4650 8650 4700
 $EndSCHEMATC
