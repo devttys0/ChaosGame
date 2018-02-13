@@ -243,9 +243,9 @@ Wire Wire Line
 Wire Wire Line
 	7700 4700 7700 4650
 Wire Wire Line
-	1800 4700 7700 4700
+	1350 4700 7700 4700
 Wire Wire Line
-	1800 3900 7700 3900
+	1350 3900 7700 3900
 Wire Wire Line
 	7700 3900 7700 3950
 Wire Wire Line
@@ -255,7 +255,7 @@ Wire Wire Line
 	7250 4650 7250 4700
 Connection ~ 7250 4700
 Wire Wire Line
-	1800 4300 8950 4300
+	1350 4300 8950 4300
 Connection ~ 7700 4300
 Connection ~ 7250 4300
 NoConn ~ 4850 1600
@@ -959,4 +959,43 @@ Wire Wire Line
 	8650 3950 8650 3900
 Wire Wire Line
 	8650 4650 8650 4700
+Wire Wire Line
+	1350 4250 1350 4350
+Connection ~ 1350 4300
+$Comp
+L C C46
+U 1 1 5A831DE6
+P 1350 4100
+F 0 "C46" H 1375 4200 50  0000 L CNN
+F 1 "0.1uF" H 1375 4000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1388 3950 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 1350 4100 50  0001 C CNN
+F 4 "AVX Corporation" H 1350 4100 60  0001 C CNN "Manufacturer"
+F 5 "08055C104JAT4A" H 1350 4100 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1350 4100 60  0001 C CNN "Vendor"
+F 7 "478-7609-1-ND" H 1350 4100 60  0001 C CNN "Vendor Part #"
+	1    1350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C47
+U 1 1 5A831DF0
+P 1350 4500
+F 0 "C47" H 1375 4600 50  0000 L CNN
+F 1 "0.1uF" H 1375 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1388 4350 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 1350 4500 50  0001 C CNN
+F 4 "AVX Corporation" H 1350 4500 60  0001 C CNN "Manufacturer"
+F 5 "08055C104JAT4A" H 1350 4500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1350 4500 60  0001 C CNN "Vendor"
+F 7 "478-7609-1-ND" H 1350 4500 60  0001 C CNN "Vendor Part #"
+	1    1350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3900 1350 3950
+Wire Wire Line
+	1350 4700 1350 4650
+Connection ~ 1800 3900
+Connection ~ 1800 4700
 $EndSCHEMATC

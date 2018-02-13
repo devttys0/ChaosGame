@@ -50,7 +50,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 700  7600 0    60   ~ 0
-This circuit calculates the next output point for the fractal pattern.\n\nU5A is configured as a differential amplifier which multiplies the difference between the randomly selected X/Y coordinate\nand the previously generated X/Y voltage by 0.4.\n\nCapacitors C39 and C41 store the current X/Y coordinate voltages.\n\nCapacitor C43 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U5B, U5C, and U5D act as buffers for the storage capacitors.\n\nResistors R17 and R21 isolate the op amp's outputs from their capacitive loads to ensure stable operation.
+This circuit calculates the next output point for the fractal pattern.\n\nU5A is configured as a differential amplifier which multiplies the difference between the randomly selected X/Y coordinate\nand the previously generated X/Y voltage by 0.4.\n\nCapacitors C39 and C41 store the current X/Y coordinate voltages.\n\nCapacitor C43 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U5B, and U16A/B act as buffers for the storage capacitors.\n\nResistors R17 and R21 isolate the op amp's outputs from their capacitive loads to ensure stable operation.
 Text GLabel 1300 2800 0    60   Input ~ 0
 COORDINATE
 $Comp
@@ -65,10 +65,10 @@ F 3 "" H 7150 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR49
+L -VDC #PWR50
 U 1 1 5A72B575
 P 7150 1450
-F 0 "#PWR49" H 7150 1350 50  0001 C CNN
+F 0 "#PWR50" H 7150 1350 50  0001 C CNN
 F 1 "-VDC" H 7150 1700 50  0000 C CNN
 F 2 "" H 7150 1450 50  0001 C CNN
 F 3 "" H 7150 1450 50  0001 C CNN
@@ -227,10 +227,10 @@ F 7 "478-7953-1-ND" H 4650 4700 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR55
+L GNDREF #PWR57
 U 1 1 5A77FD31
 P 2150 3350
-F 0 "#PWR55" H 2150 3100 50  0001 C CNN
+F 0 "#PWR57" H 2150 3100 50  0001 C CNN
 F 1 "GNDREF" H 2150 3200 50  0000 C CNN
 F 2 "" H 2150 3350 50  0001 C CNN
 F 3 "" H 2150 3350 50  0001 C CNN
@@ -238,10 +238,10 @@ F 3 "" H 2150 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR60
+L GNDREF #PWR62
 U 1 1 5A780229
 P 4650 4950
-F 0 "#PWR60" H 4650 4700 50  0001 C CNN
+F 0 "#PWR62" H 4650 4700 50  0001 C CNN
 F 1 "GNDREF" H 4650 4800 50  0000 C CNN
 F 2 "" H 4650 4950 50  0001 C CNN
 F 3 "" H 4650 4950 50  0001 C CNN
@@ -249,10 +249,10 @@ F 3 "" H 4650 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR57
+L GNDREF #PWR59
 U 1 1 5A78027C
 P 7900 3450
-F 0 "#PWR57" H 7900 3200 50  0001 C CNN
+F 0 "#PWR59" H 7900 3200 50  0001 C CNN
 F 1 "GNDREF" H 7900 3300 50  0000 C CNN
 F 2 "" H 7900 3450 50  0001 C CNN
 F 3 "" H 7900 3450 50  0001 C CNN
@@ -260,29 +260,14 @@ F 3 "" H 7900 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR50
+L GNDREF #PWR52
 U 1 1 5A7802FF
 P 7900 1750
-F 0 "#PWR50" H 7900 1500 50  0001 C CNN
+F 0 "#PWR52" H 7900 1500 50  0001 C CNN
 F 1 "GNDREF" H 7900 1600 50  0000 C CNN
 F 2 "" H 7900 1750 50  0001 C CNN
 F 3 "" H 7900 1750 50  0001 C CNN
 	1    7900 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L OPA4340EA U5
-U 1 1 5A7B68F0
-P 4200 2900
-F 0 "U5" H 4250 3100 50  0000 C CNN
-F 1 "LTC6242" H 4350 2700 50  0000 C CNN
-F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 4200 2900 50  0001 C CNN
-F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 4200 2900 50  0001 C CNN
-F 4 "Linear Technologies" H 4200 2900 60  0001 C CNN "Manufacturer"
-F 5 "LTC6242IGN#PBF" H 4200 2900 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 4200 2900 60  0001 C CNN "Vendor"
-F 7 "LTC6242IGN#PBF-ND" H 4200 2900 60  0001 C CNN "Vendor Part #"
-	1    4200 2900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -301,10 +286,10 @@ F 7 "TNP1.00KABCT-ND" V 2150 3100 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR51
+L +VDC #PWR53
 U 1 1 5A7B6D58
 P 4100 2600
-F 0 "#PWR51" H 4100 2500 50  0001 C CNN
+F 0 "#PWR53" H 4100 2500 50  0001 C CNN
 F 1 "+VDC" H 4100 2850 50  0000 C CNN
 F 2 "" H 4100 2600 50  0001 C CNN
 F 3 "" H 4100 2600 50  0001 C CNN
@@ -312,10 +297,10 @@ F 3 "" H 4100 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR54
+L -VDC #PWR56
 U 1 1 5A7B6DA2
 P 4100 3200
-F 0 "#PWR54" H 4100 3100 50  0001 C CNN
+F 0 "#PWR56" H 4100 3100 50  0001 C CNN
 F 1 "-VDC" H 4100 3450 50  0000 C CNN
 F 2 "" H 4100 3200 50  0001 C CNN
 F 3 "" H 4100 3200 50  0001 C CNN
@@ -366,53 +351,6 @@ Connection ~ 3750 3000
 Wire Wire Line
 	5050 3650 4550 3650
 $Comp
-L OPA4340EA U5
-U 2 1 5A7B7611
-P 3550 4500
-F 0 "U5" H 3600 4700 50  0000 C CNN
-F 1 "LTC6242" H 3700 4300 50  0000 C CNN
-F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 3550 4500 50  0001 C CNN
-F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 3550 4500 50  0001 C CNN
-F 4 "Linear Technologies" H 3550 4500 60  0001 C CNN "Manufacturer"
-F 5 "LTC6242IGN#PBF" H 3550 4500 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 3550 4500 60  0001 C CNN "Vendor"
-F 7 "LTC6242IGN#PBF-ND" H 3550 4500 60  0001 C CNN "Vendor Part #"
-	2    3550 4500
-	-1   0    0    -1  
-$EndComp
-$Comp
-L OPA4340EA U5
-U 3 1 5A7B76F6
-P 9000 3000
-F 0 "U5" H 9050 3200 50  0000 C CNN
-F 1 "LTC6242" H 9150 2800 50  0000 C CNN
-F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 9000 3000 50  0001 C CNN
-F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 9000 3000 50  0001 C CNN
-F 4 "Linear Technologies" H 9000 3000 60  0001 C CNN "Manufacturer"
-F 5 "LTC6242IGN#PBF" H 9000 3000 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 9000 3000 60  0001 C CNN "Vendor"
-F 7 "LTC6242IGN#PBF-ND" H 9000 3000 60  0001 C CNN "Vendor Part #"
-	3    9000 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L OPA4340EA U5
-U 4 1 5A7B779B
-P 9000 1300
-F 0 "U5" H 9050 1500 50  0000 C CNN
-F 1 "LTC6242" H 9150 1100 50  0000 C CNN
-F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 9000 1300 50  0001 C CNN
-F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 9000 1300 50  0001 C CNN
-F 4 "Linear Technologies" H 9000 1300 60  0001 C CNN "Manufacturer"
-F 5 "LTC6242IGN#PBF" H 9000 1300 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" H 9000 1300 60  0001 C CNN "Vendor"
-F 7 "LTC6242IGN#PBF-ND" H 9000 1300 60  0001 C CNN "Vendor Part #"
-	4    9000 1300
-	1    0    0    -1  
-$EndComp
-NoConn ~ 8900 1600
-NoConn ~ 8900 1000
-$Comp
 L C C42
 U 1 1 5A7B7DD0
 P 4400 3900
@@ -451,10 +389,10 @@ Wire Wire Line
 	2500 2950 2500 2800
 Connection ~ 2500 2800
 $Comp
-L GNDREF #PWR56
+L GNDREF #PWR58
 U 1 1 5A7B7FC6
 P 2500 3350
-F 0 "#PWR56" H 2500 3100 50  0001 C CNN
+F 0 "#PWR58" H 2500 3100 50  0001 C CNN
 F 1 "GNDREF" H 2500 3200 50  0000 C CNN
 F 2 "" H 2500 3350 50  0001 C CNN
 F 3 "" H 2500 3350 50  0001 C CNN
@@ -495,10 +433,10 @@ F 7 "296-13254-1-ND" H 7150 2900 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR52
+L +VDC #PWR54
 U 1 1 5A7CC657
 P 7150 2650
-F 0 "#PWR52" H 7150 2550 50  0001 C CNN
+F 0 "#PWR54" H 7150 2550 50  0001 C CNN
 F 1 "+VDC" H 7150 2900 50  0000 C CNN
 F 2 "" H 7150 2650 50  0001 C CNN
 F 3 "" H 7150 2650 50  0001 C CNN
@@ -506,10 +444,10 @@ F 3 "" H 7150 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR53
+L -VDC #PWR55
 U 1 1 5A7CC6A1
 P 7150 3150
-F 0 "#PWR53" H 7150 3050 50  0001 C CNN
+F 0 "#PWR55" H 7150 3050 50  0001 C CNN
 F 1 "-VDC" H 7150 3400 50  0000 C CNN
 F 2 "" H 7150 3150 50  0001 C CNN
 F 3 "" H 7150 3150 50  0001 C CNN
@@ -547,10 +485,10 @@ F 7 "296-13254-1-ND" H 7150 5650 60  0001 C CNN "Vendor Part #"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR58
+L +VDC #PWR60
 U 1 1 5A7CC7DC
 P 7150 4150
-F 0 "#PWR58" H 7150 4050 50  0001 C CNN
+F 0 "#PWR60" H 7150 4050 50  0001 C CNN
 F 1 "+VDC" H 7150 4400 50  0000 C CNN
 F 2 "" H 7150 4150 50  0001 C CNN
 F 3 "" H 7150 4150 50  0001 C CNN
@@ -558,10 +496,10 @@ F 3 "" H 7150 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR59
+L -VDC #PWR61
 U 1 1 5A7CC82C
 P 7150 4650
-F 0 "#PWR59" H 7150 4550 50  0001 C CNN
+F 0 "#PWR61" H 7150 4550 50  0001 C CNN
 F 1 "-VDC" H 7150 4900 50  0000 C CNN
 F 2 "" H 7150 4650 50  0001 C CNN
 F 3 "" H 7150 4650 50  0001 C CNN
@@ -569,10 +507,10 @@ F 3 "" H 7150 4650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +VDC #PWR61
+L +VDC #PWR63
 U 1 1 5A7CC87C
 P 7150 5400
-F 0 "#PWR61" H 7150 5300 50  0001 C CNN
+F 0 "#PWR63" H 7150 5300 50  0001 C CNN
 F 1 "+VDC" H 7150 5650 50  0000 C CNN
 F 2 "" H 7150 5400 50  0001 C CNN
 F 3 "" H 7150 5400 50  0001 C CNN
@@ -580,10 +518,10 @@ F 3 "" H 7150 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR62
+L -VDC #PWR64
 U 1 1 5A7CC8CC
 P 7150 5900
-F 0 "#PWR62" H 7150 5800 50  0001 C CNN
+F 0 "#PWR64" H 7150 5800 50  0001 C CNN
 F 1 "-VDC" H 7150 6150 50  0000 C CNN
 F 2 "" H 7150 5900 50  0001 C CNN
 F 3 "" H 7150 5900 50  0001 C CNN
@@ -637,4 +575,86 @@ Wire Wire Line
 	3850 4400 5250 4400
 Wire Wire Line
 	5550 4400 6850 4400
+$Comp
+L TL082 U16
+U 1 1 5A831958
+P 9000 1300
+F 0 "U16" H 9000 1500 50  0000 L CNN
+F 1 "LTC6241" H 9000 1100 50  0000 L CNN
+F 2 "SMD_Packages:SOIC-8-N" H 9000 1300 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 9000 1300 50  0001 C CNN
+F 4 "Linear Technologies" H 9000 1300 60  0001 C CNN "Manufacturer"
+F 5 "LTC6241CS8#PBF" H 9000 1300 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 9000 1300 60  0001 C CNN "Vendor"
+F 7 "LTC6241CS8#PBF-ND" H 9000 1300 60  0001 C CNN "Vendor Part #"
+	1    9000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +VDC #PWR49
+U 1 1 5A831A95
+P 8900 1000
+F 0 "#PWR49" H 8900 900 50  0001 C CNN
+F 1 "+VDC" H 8900 1250 50  0000 C CNN
+F 2 "" H 8900 1000 50  0001 C CNN
+F 3 "" H 8900 1000 50  0001 C CNN
+	1    8900 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L -VDC #PWR51
+U 1 1 5A831AD9
+P 8900 1600
+F 0 "#PWR51" H 8900 1500 50  0001 C CNN
+F 1 "-VDC" H 8900 1850 50  0000 C CNN
+F 2 "" H 8900 1600 50  0001 C CNN
+F 3 "" H 8900 1600 50  0001 C CNN
+	1    8900 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L TL082 U16
+U 2 1 5A831B33
+P 9000 3000
+F 0 "U16" H 9000 3200 50  0000 L CNN
+F 1 "LTC6241" H 9000 2800 50  0000 L CNN
+F 2 "SMD_Packages:SOIC-8-N" H 9000 3000 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 9000 3000 50  0001 C CNN
+F 4 "Linear Technologies" H 9000 3000 60  0001 C CNN "Manufacturer"
+F 5 "LTC6241CS8#PBF" H 9000 3000 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 9000 3000 60  0001 C CNN "Vendor"
+F 7 "LTC6241CS8#PBF-ND" H 9000 3000 60  0001 C CNN "Vendor Part #"
+	2    9000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L TL082 U5
+U 1 1 5A831BF4
+P 4200 2900
+F 0 "U5" H 4200 3100 50  0000 L CNN
+F 1 "LTC6241" H 4200 2700 50  0000 L CNN
+F 2 "SMD_Packages:SOIC-8-N" H 4200 2900 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 4200 2900 50  0001 C CNN
+F 4 "Linear Technologies" H 4200 2900 60  0001 C CNN "Manufacturer"
+F 5 "LTC6241CS8#PBF" H 4200 2900 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 4200 2900 60  0001 C CNN "Vendor"
+F 7 "LTC6241CS8#PBF-ND" H 4200 2900 60  0001 C CNN "Vendor Part #"
+	1    4200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L TL082 U5
+U 2 1 5A831C52
+P 3550 4500
+F 0 "U5" H 3550 4700 50  0000 L CNN
+F 1 "LTC6241" H 3550 4300 50  0000 L CNN
+F 2 "SMD_Packages:SOIC-8-N" H 3550 4500 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/624012fe.pdf" H 3550 4500 50  0001 C CNN
+F 4 "Linear Technologies" H 3550 4500 60  0001 C CNN "Manufacturer"
+F 5 "LTC6241CS8#PBF" H 3550 4500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 3550 4500 60  0001 C CNN "Vendor"
+F 7 "LTC6241CS8#PBF-ND" H 3550 4500 60  0001 C CNN "Vendor Part #"
+	2    3550 4500
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
