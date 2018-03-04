@@ -216,10 +216,10 @@ F 0 "D1" H 5350 4350 50  0000 C CNN
 F 1 "BAT54S" H 5450 4600 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:TSOT-23" H 5450 4500 50  0001 C CNN
 F 3 "https://www.fairchildsemi.com/datasheets/BA/BAT54.pdf" H 5450 4500 50  0001 C CNN
-F 4 "ON Semiconductor" H 5450 4500 60  0001 C CNN "Manufacturer"
-F 5 "BAT54S" H 5450 4500 60  0001 C CNN "Manufacturer Part #"
+F 4 "Central Semiconductor Corp" H 5450 4500 60  0001 C CNN "Manufacturer"
+F 5 "CBAT54S TR" H 5450 4500 60  0001 C CNN "Manufacturer Part #"
 F 6 "Digikey" H 5450 4500 60  0001 C CNN "Vendor"
-F 7 "BAT54SFSCT-ND" H 5450 4500 60  0001 C CNN "Vendor Part #"
+F 7 "CBAT54SCT-ND" H 5450 4500 60  0001 C CNN "Vendor Part #"
 	1    5450 4500
 	-1   0    0    1   
 $EndComp
