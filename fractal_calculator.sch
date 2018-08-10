@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -48,12 +47,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 700  7600 0    60   ~ 0
-This circuit calculates the next output point for the fractal pattern.\n\nResistors R10 and R11 drop the +-2.5v from the COORDINATE output to +-1v to ensure the output of U5 remains within\nits output voltage limits. R11 also provides a discharge path for U6's input bias current per the INA826 datasheet.\n\nThe instrumentation amplifier U5 takes the difference between the randomly selected X/Y coordinate and the previously\ngenerated X/Y voltage. Resistors R14 and R15 divide this difference voltage by two, and the result is buffered by U6A.\n\nCapacitors C33 and C34 store the current X/Y coordinate voltages.\n\nCapacitor C32 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U6B, U8A, and U8B act as buffers for the storage capacitors.
+This circuit calculates the next output point for the fractal pattern.\n\nResistors R11 and R12 provide a discharge path for U6's input bias current per the INA826 datasheet.\nSee note below for information on the voltage division resistors R10, R13, and R14.\n\nThe instrumentation amplifier U5 takes the difference between the randomly selected X/Y coordinate and the previously\ngenerated X/Y voltage.\n\nCapacitors C33 and C34 store the newly calculated X/Y coordinate voltages.\n\nCapacitor C32 stores the previous voltage for the  X or Y coordinate.\n\nOp amps U6B, U8A, and U8B act as buffers for the storage capacitors.\n\n* NOTE: The calculated X-Y coordinates are multiplied by three-fifths. This can be done pre-subtraction using resistors\n         R10/R11 and R13/R12, OR post subtraction by resistors R14/R15. If you choose to perform pre-subtraction,\n         replace R14 with a 0-ohm jumper; if you choose to perform post-subtraction, replace resistors R10 and R13 with\n         0-ohm jumpers.
 $Comp
-L -VDC #PWR28
+L -VDC #PWR024
 U 1 1 5A728B26
 P 4900 3200
-F 0 "#PWR28" H 4900 3100 50  0001 C CNN
+F 0 "#PWR024" H 4900 3100 50  0001 C CNN
 F 1 "-VDC" H 4900 3450 50  0000 C CNN
 F 2 "" H 4900 3200 50  0001 C CNN
 F 3 "" H 4900 3200 50  0001 C CNN
@@ -61,10 +60,10 @@ F 3 "" H 4900 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +VDC #PWR27
+L +VDC #PWR025
 U 1 1 5A728B2C
 P 4900 2600
-F 0 "#PWR27" H 4900 2500 50  0001 C CNN
+F 0 "#PWR025" H 4900 2500 50  0001 C CNN
 F 1 "+VDC" H 4900 2850 50  0000 C CNN
 F 2 "" H 4900 2600 50  0001 C CNN
 F 3 "" H 4900 2600 50  0001 C CNN
@@ -89,10 +88,10 @@ F 7 "296-26806-1-ND" H 5000 2900 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +VDC #PWR30
+L +VDC #PWR026
 U 1 1 5A72B4B6
 P 6800 950
-F 0 "#PWR30" H 6800 850 50  0001 C CNN
+F 0 "#PWR026" H 6800 850 50  0001 C CNN
 F 1 "+VDC" H 6800 1200 50  0000 C CNN
 F 2 "" H 6800 950 50  0001 C CNN
 F 3 "" H 6800 950 50  0001 C CNN
@@ -100,10 +99,10 @@ F 3 "" H 6800 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -VDC #PWR31
+L -VDC #PWR027
 U 1 1 5A72B575
 P 6800 1450
-F 0 "#PWR31" H 6800 1350 50  0001 C CNN
+F 0 "#PWR027" H 6800 1350 50  0001 C CNN
 F 1 "-VDC" H 6800 1700 50  0000 C CNN
 F 2 "" H 6800 1450 50  0001 C CNN
 F 3 "" H 6800 1450 50  0001 C CNN
@@ -111,10 +110,10 @@ F 3 "" H 6800 1450 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L -VDC #PWR35
+L -VDC #PWR028
 U 1 1 5A72B7C0
 P 8550 1600
-F 0 "#PWR35" H 8550 1500 50  0001 C CNN
+F 0 "#PWR028" H 8550 1500 50  0001 C CNN
 F 1 "-VDC" H 8550 1850 50  0000 C CNN
 F 2 "" H 8550 1600 50  0001 C CNN
 F 3 "" H 8550 1600 50  0001 C CNN
@@ -122,10 +121,10 @@ F 3 "" H 8550 1600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +VDC #PWR34
+L +VDC #PWR029
 U 1 1 5A72B7C6
 P 8550 1000
-F 0 "#PWR34" H 8550 900 50  0001 C CNN
+F 0 "#PWR029" H 8550 900 50  0001 C CNN
 F 1 "+VDC" H 8550 1250 50  0000 C CNN
 F 2 "" H 8550 1000 50  0001 C CNN
 F 3 "" H 8550 1000 50  0001 C CNN
@@ -207,21 +206,6 @@ F 6 "Digikey" H 6800 1200 60  0001 C CNN "Vendor"
 F 7 "296-14475-1-ND" H 6800 1200 60  0001 C CNN "Vendor Part #"
 	1    6800 1200
 	1    0    0    -1  
-$EndComp
-$Comp
-L R R14
-U 1 1 5A734977
-P 3900 2800
-F 0 "R14" V 3980 2800 50  0000 C CNN
-F 1 "10k" V 3900 2800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 3830 2800 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf" H 3900 2800 50  0001 C CNN
-F 4 "Yageo" V 3900 2800 60  0001 C CNN "Manufacturer"
-F 5 "RT0805BRD0710KL" V 3900 2800 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 3900 2800 60  0001 C CNN "Vendor"
-F 7 "YAG1763CT-ND" V 3900 2800 60  0001 C CNN "Vendor Part #"
-	1    3900 2800
-	0    -1   -1   0   
 $EndComp
 $Comp
 L 4066 U7
@@ -383,10 +367,10 @@ Wire Wire Line
 Wire Wire Line
 	3500 2800 3750 2800
 $Comp
-L -VDC #PWR24
+L -VDC #PWR030
 U 1 1 5A750500
 P 3100 3300
-F 0 "#PWR24" H 3100 3200 50  0001 C CNN
+F 0 "#PWR030" H 3100 3200 50  0001 C CNN
 F 1 "-VDC" H 3100 3550 50  0000 C CNN
 F 2 "" H 3100 3300 50  0001 C CNN
 F 3 "" H 3100 3300 50  0001 C CNN
@@ -396,10 +380,10 @@ $EndComp
 Wire Wire Line
 	3100 3300 3100 3100
 $Comp
-L +VDC #PWR23
+L +VDC #PWR031
 U 1 1 5A7505D1
 P 3100 2250
-F 0 "#PWR23" H 3100 2150 50  0001 C CNN
+F 0 "#PWR031" H 3100 2150 50  0001 C CNN
 F 1 "+VDC" H 3100 2500 50  0000 C CNN
 F 2 "" H 3100 2250 50  0001 C CNN
 F 3 "" H 3100 2250 50  0001 C CNN
@@ -582,21 +566,6 @@ Wire Wire Line
 Wire Wire Line
 	10100 5650 10450 5650
 $Comp
-L R R13
-U 1 1 5A7766FB
-P 3050 4500
-F 0 "R13" V 3130 4500 50  0000 C CNN
-F 1 "10k" V 3050 4500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2980 4500 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RT_1-to-0.01_RoHS_L_9.pdf" H 3050 4500 50  0001 C CNN
-F 4 "Yageo" V 3050 4500 60  0001 C CNN "Manufacturer"
-F 5 "RT0805BRD0710KL" V 3050 4500 60  0001 C CNN "Manufacturer Part #"
-F 6 "Digikey" V 3050 4500 60  0001 C CNN "Vendor"
-F 7 "YAG1763CT-ND" V 3050 4500 60  0001 C CNN "Vendor Part #"
-	1    3050 4500
-	0    -1   -1   0   
-$EndComp
-$Comp
 L R R12
 U 1 1 5A776783
 P 2600 4800
@@ -657,10 +626,10 @@ F 7 "478-7953-1-ND" H 5350 4700 60  0001 C CNN "Vendor Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR21
+L GNDREF #PWR032
 U 1 1 5A77FD31
 P 2300 3150
-F 0 "#PWR21" H 2300 2900 50  0001 C CNN
+F 0 "#PWR032" H 2300 2900 50  0001 C CNN
 F 1 "GNDREF" H 2300 3000 50  0000 C CNN
 F 2 "" H 2300 3150 50  0001 C CNN
 F 3 "" H 2300 3150 50  0001 C CNN
@@ -668,10 +637,10 @@ F 3 "" H 2300 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR25
+L GNDREF #PWR033
 U 1 1 5A77FD8B
 P 3200 3100
-F 0 "#PWR25" H 3200 2850 50  0001 C CNN
+F 0 "#PWR033" H 3200 2850 50  0001 C CNN
 F 1 "GNDREF" H 3300 2950 50  0000 C CNN
 F 2 "" H 3200 3100 50  0001 C CNN
 F 3 "" H 3200 3100 50  0001 C CNN
@@ -679,10 +648,10 @@ F 3 "" H 3200 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR26
+L GNDREF #PWR034
 U 1 1 5A77FEF0
 P 4200 3350
-F 0 "#PWR26" H 4200 3100 50  0001 C CNN
+F 0 "#PWR034" H 4200 3100 50  0001 C CNN
 F 1 "GNDREF" H 4200 3200 50  0000 C CNN
 F 2 "" H 4200 3350 50  0001 C CNN
 F 3 "" H 4200 3350 50  0001 C CNN
@@ -690,10 +659,10 @@ F 3 "" H 4200 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR22
+L GNDREF #PWR035
 U 1 1 5A7801D6
 P 2600 5000
-F 0 "#PWR22" H 2600 4750 50  0001 C CNN
+F 0 "#PWR035" H 2600 4750 50  0001 C CNN
 F 1 "GNDREF" H 2600 4850 50  0000 C CNN
 F 2 "" H 2600 5000 50  0001 C CNN
 F 3 "" H 2600 5000 50  0001 C CNN
@@ -701,10 +670,10 @@ F 3 "" H 2600 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR29
+L GNDREF #PWR036
 U 1 1 5A780229
 P 5350 4950
-F 0 "#PWR29" H 5350 4700 50  0001 C CNN
+F 0 "#PWR036" H 5350 4700 50  0001 C CNN
 F 1 "GNDREF" H 5350 4800 50  0000 C CNN
 F 2 "" H 5350 4950 50  0001 C CNN
 F 3 "" H 5350 4950 50  0001 C CNN
@@ -712,10 +681,10 @@ F 3 "" H 5350 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR33
+L GNDREF #PWR037
 U 1 1 5A78027C
 P 7550 3450
-F 0 "#PWR33" H 7550 3200 50  0001 C CNN
+F 0 "#PWR037" H 7550 3200 50  0001 C CNN
 F 1 "GNDREF" H 7550 3300 50  0000 C CNN
 F 2 "" H 7550 3450 50  0001 C CNN
 F 3 "" H 7550 3450 50  0001 C CNN
@@ -723,10 +692,10 @@ F 3 "" H 7550 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR32
+L GNDREF #PWR038
 U 1 1 5A7802FF
 P 7550 1750
-F 0 "#PWR32" H 7550 1500 50  0001 C CNN
+F 0 "#PWR038" H 7550 1500 50  0001 C CNN
 F 1 "GNDREF" H 7550 1600 50  0000 C CNN
 F 2 "" H 7550 1750 50  0001 C CNN
 F 3 "" H 7550 1750 50  0001 C CNN
@@ -734,10 +703,10 @@ F 3 "" H 7550 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR36
+L GNDREF #PWR039
 U 1 1 5A780433
 P 10600 4550
-F 0 "#PWR36" H 10600 4300 50  0001 C CNN
+F 0 "#PWR039" H 10600 4300 50  0001 C CNN
 F 1 "GNDREF" H 10600 4400 50  0000 C CNN
 F 2 "" H 10600 4550 50  0001 C CNN
 F 3 "" H 10600 4550 50  0001 C CNN
@@ -745,10 +714,10 @@ F 3 "" H 10600 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR37
+L GNDREF #PWR040
 U 1 1 5A780486
 P 10600 5200
-F 0 "#PWR37" H 10600 4950 50  0001 C CNN
+F 0 "#PWR040" H 10600 4950 50  0001 C CNN
 F 1 "GNDREF" H 10600 5050 50  0000 C CNN
 F 2 "" H 10600 5200 50  0001 C CNN
 F 3 "" H 10600 5200 50  0001 C CNN
@@ -756,14 +725,50 @@ F 3 "" H 10600 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDREF #PWR38
+L GNDREF #PWR041
 U 1 1 5A7804D9
 P 10600 5850
-F 0 "#PWR38" H 10600 5600 50  0001 C CNN
+F 0 "#PWR041" H 10600 5600 50  0001 C CNN
 F 1 "GNDREF" H 10600 5700 50  0000 C CNN
 F 2 "" H 10600 5850 50  0001 C CNN
 F 3 "" H 10600 5850 50  0001 C CNN
 	1    10600 5850
 	1    0    0    -1  
 $EndComp
+$Comp
+L R R13
+U 1 1 5B6C831B
+P 3050 4500
+F 0 "R13" V 3130 4500 50  0000 C CNN
+F 1 "15k" V 3050 4500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2980 4500 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 3050 4500 50  0001 C CNN
+F 4 "Yageo" V 3050 4500 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-0715KL" V 3050 4500 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 3050 4500 60  0001 C CNN "Vendor"
+F 7 "311-15.0KCRCT-ND" V 3050 4500 60  0001 C CNN "Vendor Part #"
+	1    3050 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R14
+U 1 1 5B6CBE76
+P 3900 2800
+F 0 "R14" V 3980 2800 50  0000 C CNN
+F 1 "15k" V 3900 2800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3830 2800 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" H 3900 2800 50  0001 C CNN
+F 4 "Yageo" V 3900 2800 60  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-0715KL" V 3900 2800 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" V 3900 2800 60  0001 C CNN "Vendor"
+F 7 "311-15.0KCRCT-ND" V 3900 2800 60  0001 C CNN "Vendor Part #"
+	1    3900 2800
+	0    -1   -1   0   
+$EndComp
+Text Notes 1900 2600 0    157  ~ 0
+*
+Text Notes 3950 2800 0    157  ~ 0
+*
+Text Notes 3100 4500 0    157  ~ 0
+*
 $EndSCHEMATC

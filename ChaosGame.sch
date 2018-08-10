@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BusinessCard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -38,12 +37,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "Fractal Calculator"
+Date "08/09/2018"
+Rev "1.2"
+Comp "Analog Zoo"
+Comment1 "http://www.analogzoo.com"
+Comment2 "Calculates and plots fractal images on an XY display using chaos theory"
 Comment3 ""
 Comment4 ""
 $EndDescr
