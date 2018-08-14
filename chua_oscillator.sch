@@ -31,7 +31,7 @@ LIBS:valves
 LIBS:tle2426
 LIBS:ina826
 LIBS:tlv271
-LIBS:BusinessCard-cache
+LIBS:ChaosGame-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268

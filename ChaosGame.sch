@@ -31,16 +31,16 @@ LIBS:valves
 LIBS:tle2426
 LIBS:ina826
 LIBS:tlv271
-LIBS:BusinessCard-cache
+LIBS:ChaosGame-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
-Title "Fractal Calculator"
+Title "Analog Chaos Computer"
 Date "08/09/2018"
 Rev "1.2"
-Comp "Analog Zoo"
+Comp "Craig Heffner"
 Comment1 "http://www.analogzoo.com"
 Comment2 "Calculates and plots fractal images on an XY display using chaos theory"
 Comment3 ""
@@ -82,4 +82,6 @@ U 5A76A5A9
 F0 "Unused" 79
 F1 "unused.sch" 79
 $EndSheet
+Text Notes 700  7350 0    60   ~ 0
+An analog computer that uses chaos theory to calculate and plot fractal images on an XY display.
 $EndSCHEMATC

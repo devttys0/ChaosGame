@@ -31,7 +31,7 @@ LIBS:valves
 LIBS:tle2426
 LIBS:ina826
 LIBS:tlv271
-LIBS:BusinessCard-cache
+LIBS:ChaosGame-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -47,7 +47,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 800  7550 0    60   ~ 0
-The D-type flip flop U4A samples and holds the high/low digital input from the CHUA_ATTRACTOR on the rising edge of both\nCLOCK_CYLE_0 and CLOCK_CYCLE_2.\n\nThe Chua oscillator's unpredictable switching between its two "strange attractors" (as indicated by the CHUA_ATTRACTOR's\nhigh/low state) is used to randomly select the next XY coordinate for the fractal generator.\n\nThere are two possible voltage outputs for either the X or Y coordinates:\n\n   o X = 2.5v or -2.5v\n   o Y = 2.5v or -2.5v\n\nThis results in a square fractal pattern with four XY coordinates at 2.5:2.5, 2.5:-2.5, -2.5:-2.5, and -2.5:2.5.
+The D-type flip flop U4A samples and holds the high/low digital input from the CHUA_ATTRACTOR on the rising edge of both\nCLOCK_CYLE_0 and CLOCK_CYCLE_2.\n\nThe Chua oscillator's unpredictable switching between its two "strange attractors" (as indicated by the CHUA_ATTRACTOR's\nhigh/low state) is used to randomly select the next XY coordinate for the fractal generator.\n\nThere are two possible voltage outputs for either the X or Y coordinates:\n\n   o X = 2.5v or -2.5v\n   o Y = 2.5v or -2.5v\n\nThis results in four possible XY coordinates at 2.5:2.5, 2.5:-2.5, -2.5:-2.5, and -2.5:2.5.
 $Comp
 L 74HC74 U4
 U 1 1 5A723337
